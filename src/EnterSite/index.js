@@ -38,7 +38,7 @@ export const EnterSite = compose(() => {
                 timeout={1000}
               >
                 <img
-                  src="/Unmotto.png"
+                  src="/UnMotto.png"
                   alt="Liverpool Street Capital Advisors"
                   className={styles.mottoUn}
                 />
