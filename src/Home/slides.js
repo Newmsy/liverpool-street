@@ -18,6 +18,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={3}
       >
         <p className={textStyles.contentTextLightSmallBold}>
           Business / shareholder change
@@ -40,6 +41,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={3}
       >
         <p className={textStyles.contentTextLightSmallBold}>Financial change</p>
         <div className={styles.indented}>
@@ -60,6 +62,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={3}
       >
         <p className={textStyles.contentTextLightSmallBold}>
           Business / financial distress
@@ -82,6 +85,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={2}
       >
         <p className={textStyles.contentTextLightSmallBold}>
           Asset / division divestment
@@ -104,6 +108,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={2}
       >
         <p className={textStyles.contentTextLightSmallBold}>Sell-side advice</p>
         <div className={styles.indented}>
@@ -124,6 +129,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={2}
       >
         <p className={textStyles.contentTextLightSmallBold}>Buy-side advice</p>
         <div className={styles.indented}>
@@ -144,6 +150,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={1}
       >
         <p className={textStyles.contentTextLightSmallBold}>Risk reduction</p>
         <div className={styles.indented}>
@@ -161,6 +168,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={1}
       >
         <p className={textStyles.contentTextLightSmallBold}>
           Rating re/negotiation
@@ -183,6 +191,7 @@ export const Slides = compose(() => {
         firmFlipped={firmFlipped}
         setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
+        zIndex={1}
       >
         <p className={textStyles.contentTextLightSmallBold}>
           Corporate acquisition
@@ -207,7 +216,12 @@ const CardItem = compose((props) => {
   const styles = useStyles();
   const textStyles = useTextStyles();
   return (
-    <Grid xs={4} item className={styles.slideItem}>
+    <Grid
+      xs={4}
+      item
+      className={styles.slideItem}
+      style={{ zIndex: props.zIndex }}
+    >
       <div
         onClick={() => props.setFirmFlipped(props.title)}
         onMouseEnter={() => props.setFlipped(props.title)}
@@ -241,9 +255,9 @@ const CardItem = compose((props) => {
               xs={12}
               alignItems="center"
               justify="center"
-              className={styles.paperFront}
+              className={styles.paperBack}
             >
-              <Grid item style={{ padding: 20 }}>
+              <Grid item style={{ padding: 20, paddingBottom: 5 }}>
                 {props.children}
               </Grid>
             </Grid>
@@ -259,17 +273,22 @@ const useStyles = makeStyles(() => ({
   slideItem: {
     borderRadius: 15,
     height: 220,
+    cursor: "default",
   },
   paperFront: {
     backgroundColor: "rgba(0,142,142,0.6)",
-    height: 200,
+    minHeight: 200,
     borderRadius: 15,
-    boxShadow: "5px 10px 10px #888888",
+    boxShadow: "2px 3px 10px #888888",
+  },
+  paperBack: {
+    backgroundColor: "rgba(0,142,142,0.6)",
+    minHeight: 200,
+    borderRadius: 15,
   },
   paper: {
-    height: 200,
+    minHeight: 200,
     borderRadius: 15,
-    boxShadow: "5px 10px 10px #888888",
   },
   itemWrapper: {
     borderRadius: 15,
