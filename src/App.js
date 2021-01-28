@@ -3,29 +3,51 @@ import "./App.css";
 import { Home } from "./Home/index";
 import { People } from "./People/index";
 import { PageLayout } from "./Layout/PageLayout";
+import { EnterSite } from "./EnterSite/index";
 import { AppBar } from "./Layout/AppBar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Fade } from "@material-ui/core";
 
 function App() {
   return (
     <>
-      <AppBar />
-      <PageLayout>
-        <Router>
-          <div>
-            {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-            <Switch>
-              <Route path="/people">
+      <Router>
+        <div
+          style={{
+            backgroundColor: "rgba(150,150,150,0.1)",
+            minHeight: "100vh",
+            overflowY: "hidden",
+          }}
+        >
+          <Switch>
+            <Route path="/people">
+              <AppBar />
+              <PageLayout>
                 <People />
-              </Route>
-              <Route path="/">
+              </PageLayout>
+            </Route>
+            <Route path="/home">
+              <AppBar />
+              <PageLayout>
                 <Home />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-      </PageLayout>
+              </PageLayout>
+            </Route>
+            <Route path="/home-fade">
+              <Fade in={true} timeout={1000}>
+                <div>
+                  <AppBar />
+                  <PageLayout>
+                    <Home />
+                  </PageLayout>
+                </div>
+              </Fade>
+            </Route>
+            <Route path="/">
+              <EnterSite />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 }

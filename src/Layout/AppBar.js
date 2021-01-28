@@ -1,9 +1,14 @@
 import React from "react";
 import { compose } from "redux";
 import { Box, Grid, makeStyles } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 export const AppBar = compose(() => {
   const styles = useStyles();
+  const history = useHistory();
+  const goHome = () => {
+    history.push("/home");
+  };
   return (
     <Grid xs={12} container className={styles.appbarBackground}>
       <Grid item xs={3}>
@@ -11,6 +16,7 @@ export const AppBar = compose(() => {
           src="/LogoSubtext.png"
           alt="Liverpool Street Capital Advisors"
           className={styles.appbarLogo}
+          onClick={goHome}
         />
       </Grid>
       <Grid item container xs={9} className={styles.appbarNav}>
@@ -79,11 +85,13 @@ const useStyles = makeStyles(() => ({
   appbarBackground: {
     height: 80,
     background:
-      "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.22) 100%)",
+      "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.22) 100%)",
   },
   appbarLogo: {
     height: 300,
     width: "auto",
+    position: "relative",
+    cursor: "pointer",
   },
   appbarNav: {
     marginTop: 20,

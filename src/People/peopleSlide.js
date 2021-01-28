@@ -3,15 +3,16 @@ import { compose } from "redux";
 import { Box, Grid, makeStyles, Slide } from "@material-ui/core";
 import { useTextStyles } from "../Styles/TextStyles";
 
-export const PeopleSlide = compose((person) => {
+export const PeopleSlide = ({ person, settingPerson }) => {
   const styles = useStyles();
   const [isClean, setIsClean] = React.useState(true);
 
+  console.log(settingPerson);
   return (
     <div>
       <div className={styles.slideRight}>
         <Slide
-          in={person.person === "Jason" && isClean}
+          in={person === "Jason" && settingPerson === "Jason"}
           direction="left"
           timeout={{ enter: 700, exit: 700 }}
           unmountOnExit
@@ -33,7 +34,7 @@ export const PeopleSlide = compose((person) => {
       </div>
       <div className={styles.slideRight}>
         <Slide
-          in={person.person === "Andrew" && isClean}
+          in={person === "Andrew" && settingPerson === "Andrew"}
           direction="left"
           timeout={{ enter: 700, exit: 700 }}
           unmountOnExit
@@ -55,7 +56,7 @@ export const PeopleSlide = compose((person) => {
       </div>
       <div className={styles.slideLeft}>
         <Slide
-          in={person.person === "Jason" && isClean}
+          in={person === "Jason" && settingPerson === "Jason"}
           direction="right"
           timeout={{ enter: 700, exit: 700 }}
           unmountOnExit
@@ -73,7 +74,7 @@ export const PeopleSlide = compose((person) => {
       </div>
       <div className={styles.slideLeft}>
         <Slide
-          in={person.person === "Andrew" && isClean}
+          in={person === "Andrew" && settingPerson === "Andrew"}
           direction="right"
           timeout={{ enter: 700, exit: 700 }}
           unmountOnExit
@@ -91,7 +92,7 @@ export const PeopleSlide = compose((person) => {
       </div>
     </div>
   );
-});
+};
 
 const RolesJason = () => {
   const styles = useStyles();

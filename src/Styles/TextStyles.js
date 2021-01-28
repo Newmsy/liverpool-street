@@ -19,6 +19,12 @@ export const useTextStyles = makeStyles(() => ({
     marginBottom: 5,
     opacity: 0.6,
   },
+  lightThickSubtitleBlue: {
+    fontFamily: "Banschrift",
+    marginTop: 5,
+    marginBottom: 5,
+    color: "rgb(255,255,255)",
+  },
   contentText: {
     fontFamily: "Arial",
     fontWeight: 100,
@@ -30,6 +36,27 @@ export const useTextStyles = makeStyles(() => ({
     fontWeight: 100,
     fontSize: 22,
     lineHeight: 1.4,
+  },
+  contentTextLightSmall: {
+    fontFamily: "SSLight",
+    fontWeight: 600,
+    fontSize: 16,
+    lineHeight: 1.4,
+    marginTop: -15,
+  },
+  contentTextLightSmallBold: {
+    fontFamily: "SSLight",
+    fontWeight: 900,
+    fontSize: 18,
+    lineHeight: 1.4,
+    marginTop: 0,
+  },
+  contentTextLightTight: {
+    fontFamily: "SSLight",
+    fontWeight: 100,
+    fontSize: 22,
+    lineHeight: 1.4,
+    marginTop: -20,
   },
   greenContentLead: {
     fontFamily: "SSLight",
