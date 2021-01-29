@@ -66,7 +66,7 @@ export const EnterSite = compose(() => {
                 onChange={(e, v) => setDelayFirst(v)}
                 value={delayFirst}
                 min={0}
-                max={5000}
+                max={10000}
                 defaultValue={0}
                 step={100}
                 style={{ width: 200 }}
@@ -80,7 +80,7 @@ export const EnterSite = compose(() => {
                 onChange={(e, v) => setDelaySecond(v)}
                 value={delaySecond}
                 min={0}
-                max={5000}
+                max={10000}
                 defaultValue={0}
                 step={100}
                 style={{ width: 200 }}
@@ -94,7 +94,7 @@ export const EnterSite = compose(() => {
                 onChange={(e, v) => setDelayThird(v)}
                 value={delayThird}
                 min={0}
-                max={5000}
+                max={10000}
                 defaultValue={0}
                 step={100}
                 style={{ width: 200 }}
@@ -108,7 +108,7 @@ export const EnterSite = compose(() => {
                 onChange={(e, v) => setDelayFourth(v)}
                 value={delayFourth}
                 min={0}
-                max={5000}
+                max={10000}
                 defaultValue={0}
                 step={100}
                 style={{ width: 200 }}
@@ -122,7 +122,7 @@ export const EnterSite = compose(() => {
                 onChange={(e, v) => setDelayFifth(v)}
                 value={delayFifth}
                 min={0}
-                max={5000}
+                max={10000}
                 defaultValue={0}
                 step={100}
                 style={{ width: 200 }}
