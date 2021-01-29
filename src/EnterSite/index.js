@@ -1,6 +1,14 @@
 import React from "react";
 import { compose } from "redux";
-import { Box, Grid, makeStyles, Fade, Button, Slider } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  makeStyles,
+  Fade,
+  Button,
+  Slider,
+  Paper,
+} from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { useTextStyles } from "../Styles/TextStyles";
 
@@ -11,6 +19,13 @@ export const EnterSite = compose(() => {
 
   const [entering, setEntering] = React.useState(false);
   const [opacity, setOpacity] = React.useState(0);
+  const [delayFirst, setDelayFirst] = React.useState(0);
+  const [delaySecond, setDelaySecond] = React.useState(0);
+  const [delayThird, setDelayThird] = React.useState(0);
+  const [delayFourth, setDelayFourth] = React.useState(0);
+  const [delayFifth, setDelayFifth] = React.useState(0);
+  const [delayFade, setDelayFade] = React.useState(0);
+  const [reset, setReset] = React.useState(true);
 
   const enterSite = () => {
     setEntering(true);
@@ -29,9 +44,12 @@ export const EnterSite = compose(() => {
         className={styles.enteringOpen}
         style={{ transition: "1.5s", overflowY: "hidden" }}
       >
-        <Fade in={!entering} timeout={1000}>
-          <Grid container xs={12} className={styles.enterSiteContainer}>
-            <Grid xs={12}>
+        <Paper className={styles.bottomPanel}>
+          <Grid container xs={12} justifyContent="center">
+            <Grid item xs={10}>
+              <h1 className={textStyles.contentTextLight}>
+                Background Opacity: {opacity}%
+              </h1>
               <Slider
                 onChange={(e, v) => setOpacity(v)}
                 value={opacity}
@@ -39,8 +57,104 @@ export const EnterSite = compose(() => {
                 step={1}
                 style={{ width: 200 }}
               />
-              <h1 className={textStyles.lightThickSubtitle}>{opacity}</h1>
             </Grid>
+            <Grid item xs={10}>
+              <h1 className={textStyles.contentTextLight}>
+                Delay logo {delayFirst} ms
+              </h1>
+              <Slider
+                onChange={(e, v) => setDelayFirst(v)}
+                value={delayFirst}
+                min={0}
+                max={5000}
+                defaultValue={0}
+                step={100}
+                style={{ width: 200 }}
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <h1 className={textStyles.contentTextLight}>
+                Delay Un {delaySecond} ms
+              </h1>
+              <Slider
+                onChange={(e, v) => setDelaySecond(v)}
+                value={delaySecond}
+                min={0}
+                max={5000}
+                defaultValue={0}
+                step={100}
+                style={{ width: 200 }}
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <h1 className={textStyles.contentTextLight}>
+                Delay Conventional {delayThird} ms
+              </h1>
+              <Slider
+                onChange={(e, v) => setDelayThird(v)}
+                value={delayThird}
+                min={0}
+                max={5000}
+                defaultValue={0}
+                step={100}
+                style={{ width: 200 }}
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <h1 className={textStyles.contentTextLight}>
+                Delay Wisdom {delayFourth} ms
+              </h1>
+              <Slider
+                onChange={(e, v) => setDelayFourth(v)}
+                value={delayFourth}
+                min={0}
+                max={5000}
+                defaultValue={0}
+                step={100}
+                style={{ width: 200 }}
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <h1 className={textStyles.contentTextLight}>
+                Delay Button {delayFifth} ms
+              </h1>
+              <Slider
+                onChange={(e, v) => setDelayFifth(v)}
+                value={delayFifth}
+                min={0}
+                max={5000}
+                defaultValue={0}
+                step={100}
+                style={{ width: 200 }}
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <h1 className={textStyles.contentTextLight}>
+                Fade Time {delayFade} ms
+              </h1>
+              <Slider
+                onChange={(e, v) => setDelayFade(v)}
+                value={delayFade}
+                min={0}
+                max={3000}
+                defaultValue={0}
+                step={100}
+                style={{ width: 200 }}
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <Button onClick={() => setReset(!reset)}>
+                {reset ? "Hide" : "Show"}
+              </Button>{" "}
+            </Grid>
+          </Grid>
+        </Paper>
+        <Fade
+          in={reset}
+          timeout={delayFade}
+          style={{ transitionDelay: reset ? delayFirst : 0 }}
+        >
+          <Grid container xs={12} className={styles.enterSiteContainer}>
             <Grid xs={8} md={4}>
               <img
                 src="/LogoMain.png"
@@ -51,9 +165,9 @@ export const EnterSite = compose(() => {
             <Grid xs={8} md={5} container className={styles.mottoContainer}>
               <Grid xs={4}>
                 <Fade
-                  in={true}
-                  style={{ transitionDelay: "1000ms" }}
-                  timeout={1000}
+                  in={reset}
+                  timeout={delayFade}
+                  style={{ transitionDelay: reset ? delaySecond : 0 }}
                 >
                   <img
                     src="/UnMotto.png"
@@ -64,9 +178,9 @@ export const EnterSite = compose(() => {
               </Grid>
               <Grid xs={4}>
                 <Fade
-                  in={true}
-                  style={{ transitionDelay: "2000ms" }}
-                  timeout={1000}
+                  in={reset}
+                  timeout={delayFade}
+                  style={{ transitionDelay: reset ? delayThird : 0 }}
                 >
                   <img
                     src="/ConventionalMotto.png"
@@ -77,9 +191,9 @@ export const EnterSite = compose(() => {
               </Grid>
               <Grid xs={3}>
                 <Fade
-                  in={true}
-                  style={{ transitionDelay: "3000ms" }}
-                  timeout={1000}
+                  in={reset}
+                  timeout={delayFade}
+                  style={{ transitionDelay: reset ? delayFourth : 0 }}
                 >
                   <img
                     src="/WisdomMotto.png"
@@ -91,9 +205,9 @@ export const EnterSite = compose(() => {
             </Grid>
             <Grid>
               <Fade
-                in={true}
-                style={{ transitionDelay: "4500ms" }}
-                timeout={1000}
+                in={reset}
+                timeout={delayFade}
+                style={{ transitionDelay: reset ? delayFifth : 0 }}
               >
                 <Button onClick={enterSite} className={styles.enterSiteButton}>
                   <h1 className={textStyles.lightThickSubtitleBlue}>
@@ -112,6 +226,15 @@ export const EnterSite = compose(() => {
 const useStyles = makeStyles(() => ({
   enteringOpen: {
     height: "100vh",
+  },
+  bottomPanel: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    width: 350,
+    height: 720,
+    paddingLeft: 45,
+    zIndex: 500,
   },
   enterSiteContainer: {
     justifyContent: "center",
