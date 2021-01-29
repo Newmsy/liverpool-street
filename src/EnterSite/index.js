@@ -143,7 +143,10 @@ export const EnterSite = compose(() => {
               />
             </Grid>
             <Grid item xs={10}>
-              <Button onClick={() => setReset(!reset)}>
+              <Button
+                onClick={() => setReset(!reset)}
+                style={{ backgroundColor: "lightblue", width: 180 }}
+              >
                 {reset ? "Hide" : "Show"}
               </Button>{" "}
             </Grid>
