@@ -18,13 +18,13 @@ export const EnterSite = compose(() => {
   const textStyles = useTextStyles();
 
   const [entering, setEntering] = React.useState(false);
-  const [opacity, setOpacity] = React.useState(0);
-  const [delayFirst, setDelayFirst] = React.useState(0);
-  const [delaySecond, setDelaySecond] = React.useState(0);
-  const [delayThird, setDelayThird] = React.useState(0);
-  const [delayFourth, setDelayFourth] = React.useState(0);
-  const [delayFifth, setDelayFifth] = React.useState(0);
-  const [delayFade, setDelayFade] = React.useState(0);
+  const [opacity, setOpacity] = React.useState(20);
+  const [delayFirst, setDelayFirst] = React.useState(2000);
+  const [delaySecond, setDelaySecond] = React.useState(3000);
+  const [delayThird, setDelayThird] = React.useState(3000);
+  const [delayFourth, setDelayFourth] = React.useState(3000);
+  const [delayFifth, setDelayFifth] = React.useState(5000);
+  const [delayFade, setDelayFade] = React.useState(2000);
   const [reset, setReset] = React.useState(true);
 
   const enterSite = () => {
@@ -152,75 +152,84 @@ export const EnterSite = compose(() => {
             </Grid>
           </Grid>
         </Paper>
-        <Fade
-          in={reset}
-          timeout={delayFade}
-          style={{ transitionDelay: reset ? delayFirst : 0 }}
-        >
-          <Grid container xs={12} className={styles.enterSiteContainer}>
-            <Grid xs={8} md={4}>
+        {/* Content: */}
+
+        <Grid container xs={12} className={styles.enterSiteContainer}>
+          <Grid xs={3} md={3}>
+            <img
+              src="/LogoSweep.gif"
+              alt="Liverpool Street Capital Advisors"
+              className={styles.logoGreen}
+            />
+          </Grid>
+          <Fade
+            in={reset}
+            timeout={delayFade}
+            style={{ transitionDelay: reset ? delayFirst : 0 }}
+          >
+            <Grid xs={12}>
               <img
-                src="/LogoMain.png"
+                src="/LogoWords.png"
                 alt="Liverpool Street Capital Advisors"
-                className={styles.logo}
+                className={styles.logoWords}
               />
             </Grid>
-            <Grid xs={8} md={5} container className={styles.mottoContainer}>
-              <Grid xs={4}>
-                <Fade
-                  in={reset}
-                  timeout={delayFade}
-                  style={{ transitionDelay: reset ? delaySecond : 0 }}
-                >
-                  <img
-                    src="/UnMotto.png"
-                    alt="Liverpool Street Capital Advisors"
-                    className={styles.mottoUn}
-                  />
-                </Fade>
-              </Grid>
-              <Grid xs={4}>
-                <Fade
-                  in={reset}
-                  timeout={delayFade}
-                  style={{ transitionDelay: reset ? delayThird : 0 }}
-                >
-                  <img
-                    src="/ConventionalMotto.png"
-                    alt="Liverpool Street Capital Advisors"
-                    className={styles.mottoC}
-                  />
-                </Fade>
-              </Grid>
-              <Grid xs={3}>
-                <Fade
-                  in={reset}
-                  timeout={delayFade}
-                  style={{ transitionDelay: reset ? delayFourth : 0 }}
-                >
-                  <img
-                    src="/WisdomMotto.png"
-                    alt="Liverpool Street Capital Advisors"
-                    className={styles.mottoW}
-                  />
-                </Fade>
-              </Grid>
-            </Grid>
-            <Grid>
+          </Fade>
+          <Grid xs={8} md={5} container className={styles.mottoContainer}>
+            <Grid xs={4}>
               <Fade
                 in={reset}
                 timeout={delayFade}
-                style={{ transitionDelay: reset ? delayFifth : 0 }}
+                style={{ transitionDelay: reset ? delaySecond : 0 }}
               >
-                <Button onClick={enterSite} className={styles.enterSiteButton}>
-                  <h1 className={textStyles.lightThickSubtitleBlue}>
-                    Enter Site
-                  </h1>
-                </Button>
+                <img
+                  src="/UnMotto.png"
+                  alt="Liverpool Street Capital Advisors"
+                  className={styles.mottoUn}
+                />
+              </Fade>
+            </Grid>
+            <Grid xs={4}>
+              <Fade
+                in={reset}
+                timeout={delayFade}
+                style={{ transitionDelay: reset ? delayThird : 0 }}
+              >
+                <img
+                  src="/ConventionalMotto.png"
+                  alt="Liverpool Street Capital Advisors"
+                  className={styles.mottoC}
+                />
+              </Fade>
+            </Grid>
+            <Grid xs={3}>
+              <Fade
+                in={reset}
+                timeout={delayFade}
+                style={{ transitionDelay: reset ? delayFourth : 0 }}
+              >
+                <img
+                  src="/WisdomMotto.png"
+                  alt="Liverpool Street Capital Advisors"
+                  className={styles.mottoW}
+                />
               </Fade>
             </Grid>
           </Grid>
-        </Fade>
+          <Grid>
+            <Fade
+              in={reset}
+              timeout={delayFade}
+              style={{ transitionDelay: reset ? delayFifth : 0 }}
+            >
+              <Button onClick={enterSite} className={styles.enterSiteButton}>
+                <h1 className={textStyles.lightThickSubtitleBlue}>
+                  Enter Site
+                </h1>
+              </Button>
+            </Fade>
+          </Grid>
+        </Grid>
       </div>
     </>
   );
@@ -248,6 +257,15 @@ const useStyles = makeStyles(() => ({
     marginTop: 0,
     zIndex: 100,
     position: "relative",
+  },
+  logoGreen: {
+    width: "70%",
+    marginLeft: "15%",
+  },
+  logoWords: {
+    position: "relative",
+    bottom: 80,
+    width: 300,
   },
   mottoContainer: {
     marginTop: -40,
