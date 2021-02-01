@@ -157,8 +157,7 @@ export const EnterSite = compose(() => {
         <Grid container xs={12} className={styles.enterSiteContainer}>
           <Grid xs={3} md={3}>
             <img
-              src="/LogoSweep.gif"
-              alt="Liverpool Street Capital Advisors"
+              src={reset ? "/LogoSweep.gif" : ""}
               className={styles.logoGreen}
             />
           </Grid>
