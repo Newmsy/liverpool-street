@@ -23,6 +23,7 @@ export const useTextStyles = makeStyles(() => ({
     fontFamily: "Banschrift",
     marginTop: 5,
     marginBottom: 5,
+    fontSize: 20,
     color: "rgb(255,255,255)",
   },
   contentText: {

@@ -19,12 +19,12 @@ export const EnterSite = compose(() => {
 
   const [entering, setEntering] = React.useState(false);
   const [opacity, setOpacity] = React.useState(20);
-  const [delayFirst, setDelayFirst] = React.useState(2000);
-  const [delaySecond, setDelaySecond] = React.useState(3000);
-  const [delayThird, setDelayThird] = React.useState(3000);
-  const [delayFourth, setDelayFourth] = React.useState(3000);
+  const [delayFirst, setDelayFirst] = React.useState(2500);
+  const [delaySecond, setDelaySecond] = React.useState(2500);
+  const [delayThird, setDelayThird] = React.useState(2500);
+  const [delayFourth, setDelayFourth] = React.useState(2500);
   const [delayFifth, setDelayFifth] = React.useState(5000);
-  const [delayFade, setDelayFade] = React.useState(2000);
+  const [delayFade, setDelayFade] = React.useState(3000);
   const [reset, setReset] = React.useState(true);
 
   const enterSite = () => {
@@ -174,7 +174,7 @@ export const EnterSite = compose(() => {
               />
             </Grid>
           </Fade>
-          <Grid xs={8} md={5} container className={styles.mottoContainer}>
+          <Grid xs={8} md={2} container className={styles.mottoContainer}>
             <Grid xs={4}>
               <Fade
                 in={reset}
@@ -258,16 +258,17 @@ const useStyles = makeStyles(() => ({
     position: "relative",
   },
   logoGreen: {
-    width: "70%",
-    marginLeft: "15%",
+    marginTop: "5vh",
+    height: "20vh",
   },
   logoWords: {
     position: "relative",
-    bottom: 80,
-    width: 300,
+    bottom: 48,
+    width: 180,
   },
   mottoContainer: {
     marginTop: -40,
+    marginLeft: "2vw",
   },
   logo: {
     width: "60%",
@@ -279,20 +280,22 @@ const useStyles = makeStyles(() => ({
   },
   mottoC: {
     width: "100%",
-    marginLeft: -16,
-    marginTop: 7,
+    marginLeft: -10,
+    marginTop: 4,
     position: "relative",
   },
   mottoW: {
     width: "89%",
-    marginLeft: -16,
-    marginTop: 7,
+    marginLeft: -10,
+    marginTop: 4,
   },
   enterSiteButton: {
-    width: 350,
-    height: 100,
+    width: 200,
+    height: 50,
+    marginTop: "20vh",
+    marginBottom: -50,
     backgroundColor: "rgba(0, 102, 102, 1)",
-    borderRadius: 15,
+    borderRadius: 1,
     transition: "1s",
     "&:hover": {
       backgroundColor: "rgba(0, 82, 82, 1)",

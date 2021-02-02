@@ -21,23 +21,23 @@ export const AppBar = compose(() => {
       </Grid>
       <Grid item container xs={9} className={styles.appbarNav}>
         <Grid item class="hvr-underline-from-center">
-          <a href="#" className={styles.undecorated}>
+          <a href="/home" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>Placeholder</h1>
+              <h1 className={styles.navText}>Home</h1>
             </div>
           </a>
         </Grid>
         <NavBreakPoint />
         <Grid item class="hvr-underline-from-center">
-          <a href="#" className={styles.undecorated}>
+          <a href="/why-now" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>Placeholder</h1>
+              <h1 className={styles.navText}>Why Now</h1>
             </div>
           </a>
         </Grid>
         <NavBreakPoint />
         <Grid item class="hvr-underline-from-center">
-          <a href="#" className={styles.undecorated}>
+          <a href="/selected-transactions" className={styles.undecorated}>
             <div className={styles.navbarItem}>
               <h1 className={styles.navText}>Transactions</h1>
             </div>

@@ -6,6 +6,8 @@ import { PageLayout } from "./Layout/PageLayout";
 import { EnterSite } from "./EnterSite/index";
 import { AppBar } from "./Layout/AppBar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { WhyNow } from "./WhyNow/index";
+import { SelectedTransactions } from "./SelectedTransactions/index";
 import { Fade } from "@material-ui/core";
 
 function App() {
@@ -32,8 +34,20 @@ function App() {
                 <Home />
               </PageLayout>
             </Route>
+            <Route path="/why-now">
+              <AppBar />
+              <PageLayout>
+                <WhyNow />
+              </PageLayout>
+            </Route>
+            <Route path="/selected-transactions">
+              <AppBar />
+              <PageLayout>
+                <SelectedTransactions />
+              </PageLayout>
+            </Route>
             <Route path="/home-fade">
-              <Fade in={true} timeout={1000}>
+              <Fade in={true} timeout={2000}>
                 <div>
                   <AppBar />
                   <PageLayout>
