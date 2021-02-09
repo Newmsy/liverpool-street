@@ -19,6 +19,7 @@
   src: url("./Fonts/Bahnschrift.ttf"); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
+  font-stretch: condensed;
 }
 @font-face {
   font-family: "ArialLight";

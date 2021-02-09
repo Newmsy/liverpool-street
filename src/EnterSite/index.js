@@ -17,18 +17,10 @@ export const EnterSite = compose(() => {
   const history = useHistory();
   const textStyles = useTextStyles();
 
-  const [entering, setEntering] = React.useState(false);
   const [opacity, setOpacity] = React.useState(20);
-  const [delayFirst, setDelayFirst] = React.useState(2500);
-  const [delaySecond, setDelaySecond] = React.useState(2500);
-  const [delayThird, setDelayThird] = React.useState(2500);
-  const [delayFourth, setDelayFourth] = React.useState(2500);
-  const [delayFifth, setDelayFifth] = React.useState(5000);
   const [delayFade, setDelayFade] = React.useState(3000);
-  const [reset, setReset] = React.useState(true);
 
   const enterSite = () => {
-    setEntering(true);
     setTimeout(() => history.push("/home-fade"), 1500);
   };
 
@@ -40,196 +32,39 @@ export const EnterSite = compose(() => {
         className={styles.backgroundImage}
         style={{ opacity: opacity / 100 }}
       />
-      <div
-        className={styles.enteringOpen}
-        style={{ transition: "1.5s", overflowY: "hidden" }}
-      >
-        <Paper className={styles.bottomPanel}>
-          <Grid container xs={12} justifyContent="center">
-            <Grid item xs={10}>
-              <h1 className={textStyles.contentTextLight}>
-                Background Opacity: {opacity}%
-              </h1>
-              <Slider
-                onChange={(e, v) => setOpacity(v)}
-                value={opacity}
-                defaultValue={0}
-                step={1}
-                style={{ width: 200 }}
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <h1 className={textStyles.contentTextLight}>
-                Delay logo {delayFirst} ms
-              </h1>
-              <Slider
-                onChange={(e, v) => setDelayFirst(v)}
-                value={delayFirst}
-                min={0}
-                max={10000}
-                defaultValue={0}
-                step={100}
-                style={{ width: 200 }}
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <h1 className={textStyles.contentTextLight}>
-                Delay Un {delaySecond} ms
-              </h1>
-              <Slider
-                onChange={(e, v) => setDelaySecond(v)}
-                value={delaySecond}
-                min={0}
-                max={10000}
-                defaultValue={0}
-                step={100}
-                style={{ width: 200 }}
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <h1 className={textStyles.contentTextLight}>
-                Delay Conventional {delayThird} ms
-              </h1>
-              <Slider
-                onChange={(e, v) => setDelayThird(v)}
-                value={delayThird}
-                min={0}
-                max={10000}
-                defaultValue={0}
-                step={100}
-                style={{ width: 200 }}
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <h1 className={textStyles.contentTextLight}>
-                Delay Wisdom {delayFourth} ms
-              </h1>
-              <Slider
-                onChange={(e, v) => setDelayFourth(v)}
-                value={delayFourth}
-                min={0}
-                max={10000}
-                defaultValue={0}
-                step={100}
-                style={{ width: 200 }}
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <h1 className={textStyles.contentTextLight}>
-                Delay Button {delayFifth} ms
-              </h1>
-              <Slider
-                onChange={(e, v) => setDelayFifth(v)}
-                value={delayFifth}
-                min={0}
-                max={10000}
-                defaultValue={0}
-                step={100}
-                style={{ width: 200 }}
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <h1 className={textStyles.contentTextLight}>
-                Fade Time {delayFade} ms
-              </h1>
-              <Slider
-                onChange={(e, v) => setDelayFade(v)}
-                value={delayFade}
-                min={0}
-                max={3000}
-                defaultValue={0}
-                step={100}
-                style={{ width: 200 }}
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <Button
-                onClick={() => setReset(!reset)}
-                style={{ backgroundColor: "lightblue", width: 180 }}
-              >
-                {reset ? "Hide" : "Show"}
-              </Button>{" "}
-            </Grid>
-          </Grid>
-        </Paper>
-        {/* Content: */}
 
-        <Grid container xs={12} className={styles.enterSiteContainer}>
-          <Grid xs={3} md={3}>
+      <Grid container xs={12} className={styles.enterSiteContainer}>
+        <Grid xs={3} md={3}>
+          <img src={"/swipe.gif"} className={styles.logoGreen} />
+        </Grid>
+        <Fade in={true} timeout={3000} style={{ transitionDelay: 4500 }}>
+          <Grid xs={12}>
             <img
-              src={reset ? "/LogoSweep.gif" : ""}
-              className={styles.logoGreen}
+              src="/LogoWords.png"
+              alt="Liverpool Street Capital Advisors"
+              className={styles.logoWords}
             />
           </Grid>
-          <Fade
-            in={reset}
-            timeout={delayFade}
-            style={{ transitionDelay: reset ? delayFirst : 0 }}
-          >
-            <Grid xs={12}>
+        </Fade>
+        <Grid xs={10} md={3} container className={styles.mottoContainer}>
+          <Fade in={true} timeout={delayFade} style={{ transitionDelay: 4500 }}>
+            <Grid xs={10}>
               <img
-                src="/LogoWords.png"
+                src="/UnconventionalWisdom.png"
                 alt="Liverpool Street Capital Advisors"
-                className={styles.logoWords}
+                className={styles.mottoUn}
               />
             </Grid>
           </Fade>
-          <Grid xs={8} md={2} container className={styles.mottoContainer}>
-            <Grid xs={4}>
-              <Fade
-                in={reset}
-                timeout={delayFade}
-                style={{ transitionDelay: reset ? delaySecond : 0 }}
-              >
-                <img
-                  src="/UnMotto.png"
-                  alt="Liverpool Street Capital Advisors"
-                  className={styles.mottoUn}
-                />
-              </Fade>
-            </Grid>
-            <Grid xs={4}>
-              <Fade
-                in={reset}
-                timeout={delayFade}
-                style={{ transitionDelay: reset ? delayThird : 0 }}
-              >
-                <img
-                  src="/ConventionalMotto.png"
-                  alt="Liverpool Street Capital Advisors"
-                  className={styles.mottoC}
-                />
-              </Fade>
-            </Grid>
-            <Grid xs={3}>
-              <Fade
-                in={reset}
-                timeout={delayFade}
-                style={{ transitionDelay: reset ? delayFourth : 0 }}
-              >
-                <img
-                  src="/WisdomMotto.png"
-                  alt="Liverpool Street Capital Advisors"
-                  className={styles.mottoW}
-                />
-              </Fade>
-            </Grid>
-          </Grid>
-          <Grid>
-            <Fade
-              in={reset}
-              timeout={delayFade}
-              style={{ transitionDelay: reset ? delayFifth : 0 }}
-            >
-              <Button onClick={enterSite} className={styles.enterSiteButton}>
-                <h1 className={textStyles.lightThickSubtitleBlue}>
-                  Enter Site
-                </h1>
-              </Button>
-            </Fade>
-          </Grid>
         </Grid>
-      </div>
+        <Grid>
+          <Fade in={true} timeout={delayFade} style={{ transitionDelay: 7500 }}>
+            <Button onClick={enterSite} className={styles.enterSiteButton}>
+              <h1 className={textStyles.lightThickSubtitleBlue}>Enter Site</h1>
+            </Button>
+          </Fade>
+        </Grid>
+      </Grid>
     </>
   );
 });
@@ -263,8 +98,8 @@ const useStyles = makeStyles(() => ({
   },
   logoWords: {
     position: "relative",
-    bottom: 48,
-    width: 180,
+    bottom: 35,
+    width: 160,
   },
   mottoContainer: {
     marginTop: -40,
@@ -274,29 +109,18 @@ const useStyles = makeStyles(() => ({
     width: "60%",
     marginLeft: "20%",
   },
-  motto: {},
   mottoUn: {
     width: "100%",
   },
-  mottoC: {
-    width: "100%",
-    marginLeft: -10,
-    marginTop: 4,
-    position: "relative",
-  },
-  mottoW: {
-    width: "89%",
-    marginLeft: -10,
-    marginTop: 4,
-  },
   enterSiteButton: {
-    width: 200,
+    width: 225,
     height: 50,
     marginTop: "20vh",
     marginBottom: -50,
     backgroundColor: "rgba(0, 102, 102, 1)",
     borderRadius: 1,
     transition: "1s",
+    paddingTop: 10,
     "&:hover": {
       backgroundColor: "rgba(0, 82, 82, 1)",
       transition: "1s",

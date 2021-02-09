@@ -7,6 +7,29 @@ export const TabContent = ({ index }) => {
   const styles = useStyles();
   const textStyles = useTextStyles();
 
+  //unconvential all on image
+  //enter site button
+  // green on image to match button
+  // 5s time box build
+  // image blurriness on enter site
+  // ls scene on back of all pages
+  // sizing slider for images
+
+  //10% opening bg, then fade in with time of enter site
+
+  //Appbar caps & smaller font
+  //All of fonts 20-30% smaller
+
+  //take off ability to fix
+  // equal green of logo for card
+
+  //appbar logo update to new no blue border
+  //use bahnschrift condensed font
+
+  //remove mouse scroll
+  //happy with tabs in ST
+  //google maps
+
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
       <TransactionItem
