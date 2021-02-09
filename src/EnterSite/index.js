@@ -48,7 +48,7 @@ export const EnterSite = compose(() => {
         </Fade>
         <Grid xs={10} md={3} container className={styles.mottoContainer}>
           <Fade in={true} timeout={delayFade} style={{ transitionDelay: 4500 }}>
-            <Grid xs={10}>
+            <Grid xs={10} style={{ justifyContent: "center", display: "flex" }}>
               <img
                 src="/UnconventionalWisdom.png"
                 alt="Liverpool Street Capital Advisors"
@@ -94,7 +94,7 @@ const useStyles = makeStyles(() => ({
   },
   logoGreen: {
     marginTop: "5vh",
-    height: "20vh",
+    height: 200,
   },
   logoWords: {
     position: "relative",
@@ -110,7 +110,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: "20%",
   },
   mottoUn: {
-    width: "100%",
+    width: 380,
   },
   enterSiteButton: {
     width: 225,
