@@ -44,7 +44,7 @@ export const EnterSite = compose(() => {
         <Fade in={true} timeout={3000} style={{ transitionDelay: 4500 }}>
           <Grid xs={12}>
             <img
-              src="/LogoWords.svg"
+              src="/logoWords.svg"
               alt="Liverpool Street Capital Advisors"
               className={styles.logoWords}
             />
