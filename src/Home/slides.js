@@ -8,15 +8,12 @@ export const Slides = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
   const [flipped, setFlipped] = React.useState("");
-  const [firmFlipped, setFirmFlipped] = React.useState("");
 
   return (
     <Grid container xs={6} className={styles.slidesContainer} spacing={5}>
       <CardItem
         title={"Strategic Review"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={3}
       >
@@ -38,8 +35,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Refinancing"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={3}
       >
@@ -59,8 +54,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Restructuring"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={3}
       >
@@ -82,8 +75,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Accelerated M&A"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={2}
       >
@@ -105,8 +96,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Staple Financing"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={2}
       >
@@ -126,8 +115,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Acquisition Facilities"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={2}
       >
@@ -147,8 +134,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Hedging Products"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={1}
       >
@@ -165,8 +150,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Rating Support"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={1}
       >
@@ -188,8 +171,6 @@ export const Slides = compose(() => {
       <CardItem
         title={"Corporate M&A"}
         flipped={flipped}
-        firmFlipped={firmFlipped}
-        setFirmFlipped={setFirmFlipped}
         setFlipped={setFlipped}
         zIndex={1}
       >
@@ -223,15 +204,12 @@ const CardItem = compose((props) => {
       style={{ zIndex: props.zIndex }}
     >
       <div
-        onClick={() => props.setFirmFlipped(props.title)}
         onMouseEnter={() => props.setFlipped(props.title)}
         onMouseLeave={() => props.setFlipped("")}
         className={styles.itemWrapper}
       >
         <ReactCardFlip
-          isFlipped={
-            props.flipped === props.title || props.firmFlipped === props.title
-          }
+          isFlipped={props.flipped === props.title}
           flipDirection="horizontal"
         >
           <Paper className={styles.paperFront}>
@@ -276,7 +254,7 @@ const useStyles = makeStyles(() => ({
     cursor: "default",
   },
   paperFront: {
-    backgroundColor: "rgba(0,142,142,0.6)",
+    backgroundColor: "rgba(20,122,122,1)",
     minHeight: 200,
     borderRadius: 15,
     boxShadow: "2px 3px 10px #888888",
@@ -285,6 +263,7 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "rgba(0,142,142,0.6)",
     minHeight: 200,
     borderRadius: 15,
+    boxShadow: "2px 3px 10px #888888",
   },
   paper: {
     minHeight: 200,

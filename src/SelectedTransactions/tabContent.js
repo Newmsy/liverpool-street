@@ -30,6 +30,11 @@ export const TabContent = ({ index }) => {
   //happy with tabs in ST
   //google maps
 
+  // build box the other way
+  // enter site words smaller
+  // other bits smaller
+  // use fonts instead of pictures
+
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
       <TransactionItem

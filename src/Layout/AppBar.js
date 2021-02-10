@@ -85,23 +85,27 @@ const useStyles = makeStyles(() => ({
   appbarBackground: {
     height: 80,
     background:
-      "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.22) 100%)",
+      "linear-gradient(0deg, rgba(0,0,0,0) 0%,  rgba(240,240,240,1) 100%)",
+    zIndex: 100,
   },
   appbarLogo: {
     height: 300,
     width: "auto",
     position: "relative",
     cursor: "pointer",
+    imageRendering: "-webkit-optimize-contrast",
+    zIndex: 1,
   },
   appbarNav: {
     marginTop: 20,
     height: 60,
+    zIndex: 100,
   },
   undecorated: {
     textDecoration: "none",
   },
   navText: {
-    fontFamily: "Arial",
+    fontFamily: "BanschriftNormal",
     fontSize: 26,
     fontWeight: 100,
     color: "rgba(0,0,0,0.8)",

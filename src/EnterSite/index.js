@@ -26,12 +26,16 @@ export const EnterSite = compose(() => {
 
   return (
     <>
-      <img
-        src="/LiverpoolStreet.png"
-        alt="Liverpool Street Capital Advisors"
-        className={styles.backgroundImage}
-        style={{ opacity: opacity / 100 }}
-      />
+      <Fade in={true} timeout={delayFade} style={{ transitionDelay: 7500 }}>
+        <div>
+          <img
+            src="/LiverpoolStreet.png"
+            alt="Liverpool Street Capital Advisors"
+            className={styles.backgroundImage}
+            style={{ opacity: opacity / 100 }}
+          />
+        </div>
+      </Fade>
 
       <Grid container xs={12} className={styles.enterSiteContainer}>
         <Grid xs={3} md={3}>
@@ -40,7 +44,7 @@ export const EnterSite = compose(() => {
         <Fade in={true} timeout={3000} style={{ transitionDelay: 4500 }}>
           <Grid xs={12}>
             <img
-              src="/LogoWords.png"
+              src="/LogoWords.svg"
               alt="Liverpool Street Capital Advisors"
               className={styles.logoWords}
             />
@@ -50,7 +54,7 @@ export const EnterSite = compose(() => {
           <Fade in={true} timeout={delayFade} style={{ transitionDelay: 4500 }}>
             <Grid xs={10} style={{ justifyContent: "center", display: "flex" }}>
               <img
-                src="/UnconventionalWisdom.png"
+                src="/UnconventionalWisdom.svg"
                 alt="Liverpool Street Capital Advisors"
                 className={styles.mottoUn}
               />
@@ -86,7 +90,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    backgroundColor: "rgba(0,0,0,0.1)",
+    backgroundColor: "rgba(0,0,0,0.05)",
     minHeight: "100vh",
     marginTop: 0,
     zIndex: 100,
@@ -94,12 +98,14 @@ const useStyles = makeStyles(() => ({
   },
   logoGreen: {
     marginTop: "5vh",
-    height: 200,
+    height: 170,
+    transform: "scaleX(-1)",
   },
   logoWords: {
     position: "relative",
-    bottom: 35,
-    width: 160,
+    bottom: 30,
+    width: 130,
+    imageRendering: "crisp-edges",
   },
   mottoContainer: {
     marginTop: -40,
@@ -110,11 +116,12 @@ const useStyles = makeStyles(() => ({
     marginLeft: "20%",
   },
   mottoUn: {
-    width: 380,
+    width: 300,
+    imageRendering: "-webkit-optimize-contrast",
   },
   enterSiteButton: {
-    width: 225,
-    height: 50,
+    width: 175,
+    height: 40,
     marginTop: "20vh",
     marginBottom: -50,
     backgroundColor: "rgba(0, 102, 102, 1)",

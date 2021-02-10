@@ -9,13 +9,16 @@ export const Home = compose(() => {
   const textStyles = useTextStyles();
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
-      <Grid item>
+      <Grid item style={{ marginTop: -40, marginBottom: 30 }}>
         <h1 className={textStyles.lightTitle}>
           <i>World Class Advice</i>
         </h1>
       </Grid>
 
       <Grid item container alignItems="space-between" justify="center">
+        <Grid item container xs={2} className={styles.contentContainer}></Grid>
+
+        <Slides />
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12}>
             <p className={textStyles.contentTextLight}>
@@ -38,10 +41,6 @@ export const Home = compose(() => {
               classes to help your business.
             </p>
           </Grid>
-        </Grid>
-
-        <Slides />
-        <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12}>
             <p className={textStyles.contentTextLight}>
               We strive to select the best elements from each credit market in
@@ -73,11 +72,12 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
   },
   unconventionalWisdom: {
-    width: 200,
+    width: 230,
     verticalAlign: "text-top",
     position: "relative",
     bottom: 5,
     left: 8,
+    imageRendering: "-webkit-optimize-contrast",
   },
   homeTitle: {
     fontFamily: "ArialLight",
