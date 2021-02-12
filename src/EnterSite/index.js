@@ -108,7 +108,7 @@ const useStyles = makeStyles(() => ({
     imageRendering: "crisp-edges",
   },
   mottoContainer: {
-    marginTop: -40,
+    marginTop: -30,
     marginLeft: "2vw",
   },
   logo: {
@@ -116,7 +116,8 @@ const useStyles = makeStyles(() => ({
     marginLeft: "20%",
   },
   mottoUn: {
-    width: 300,
+    width: 240,
+    marginLeft: 20,
     imageRendering: "-webkit-optimize-contrast",
   },
   enterSiteButton: {
