@@ -37,7 +37,7 @@ export const useTextStyles = makeStyles(() => ({
   contentTextLight: {
     fontFamily: "SSLight",
     fontWeight: 100,
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 1.4,
   },
   contentTextLightSmall: {

@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { WhyNow } from "./WhyNow/index";
 import { SelectedTransactions } from "./SelectedTransactions/index";
 import { Fade } from "@material-ui/core";
+import { compose } from "redux";
 
 function App() {
   return (
@@ -23,37 +24,30 @@ function App() {
         >
           <Switch>
             <Route path="/people">
-              <AppBar />
-              <PageLayout>
+              <Page>
                 <People />
-              </PageLayout>
+              </Page>
             </Route>
             <Route path="/home">
-              <AppBar />
-              <PageLayout>
+              <Page>
                 <Home />
-              </PageLayout>
+              </Page>
             </Route>
             <Route path="/why-now">
-              <AppBar />
-              <PageLayout>
+              <Page>
                 <WhyNow />
-              </PageLayout>
+              </Page>
             </Route>
             <Route path="/selected-transactions">
-              <AppBar />
-              <PageLayout>
+              <Page>
                 <SelectedTransactions />
-              </PageLayout>
+              </Page>
             </Route>
             <Route path="/home-fade">
               <Fade in={true} timeout={2000}>
-                <div>
-                  <AppBar />
-                  <PageLayout>
-                    <Home />
-                  </PageLayout>
-                </div>
+                <Page>
+                  <Home />
+                </Page>
               </Fade>
             </Route>
             <Route path="/">
@@ -65,5 +59,14 @@ function App() {
     </>
   );
 }
+
+export const Page = (props) => {
+  return (
+    <PageLayout>
+      <AppBar />
+      {props.children}
+    </PageLayout>
+  );
+};
 
 export default App;

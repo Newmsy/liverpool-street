@@ -5,8 +5,10 @@ import { Box, Grid, makeStyles } from "@material-ui/core";
 export const PageLayout = compose((props) => {
   const styles = useStyles();
   return (
-    <Grid container xs={12} justify="center">
-      <Grid xs={12}>{props.children}</Grid>
+    <Grid container xs={12} justify="center" className={styles.container}>
+      <Grid xs={12} className={styles.container}>
+        {props.children}
+      </Grid>
       <div>
         <img
           src="/LiverpoolStreet.png"
@@ -27,5 +29,10 @@ const useStyles = makeStyles(() => ({
     top: 0,
     left: 0,
     zIndex: 0,
+  },
+  container: {
+    zIndex: 2,
+    height: "100vh",
+    overflowY: "hidden",
   },
 }));

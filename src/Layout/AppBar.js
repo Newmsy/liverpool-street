@@ -83,7 +83,8 @@ const NavBreakPoint = () => {
 
 const useStyles = makeStyles(() => ({
   appbarBackground: {
-    height: 80,
+    height: 280,
+    marginBottom: -200,
     background:
       "linear-gradient(0deg, rgba(0,0,0,0) 0%,  rgba(240,240,240,1) 100%)",
     zIndex: 100,
@@ -95,9 +96,10 @@ const useStyles = makeStyles(() => ({
     cursor: "pointer",
     imageRendering: "-webkit-optimize-contrast",
     zIndex: 1,
+    marginTop: -10,
   },
   appbarNav: {
-    marginTop: 20,
+    marginTop: 10,
     height: 60,
     zIndex: 100,
   },
@@ -105,15 +107,15 @@ const useStyles = makeStyles(() => ({
     textDecoration: "none",
   },
   navText: {
-    fontFamily: "BanschriftNormal",
-    fontSize: 26,
+    fontFamily: "Banschrift",
+    fontSize: 30,
     fontWeight: 100,
-    color: "rgba(0,0,0,0.8)",
+    color: "rgba(0,0,0,0.7)",
     textDecoration: "none",
   },
   navTextBreakPoint: {
     fontFamily: "Arial",
-    fontSize: 26,
+    fontSize: 30,
     fontWeight: 100,
     color: "rgba(0,0,0,0.6)",
     cursor: "pointer",
