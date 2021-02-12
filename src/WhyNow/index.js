@@ -37,7 +37,7 @@ export const WhyNow = compose(() => {
               paddingLeft: 100,
               paddingRight: 50,
               paddingBottom: 20,
-              minHeight: 570,
+              height: 700,
             }}
             spacing={10}
             xs={12}
@@ -146,7 +146,7 @@ export const WhyNow = compose(() => {
               paddingLeft: 100,
               paddingRight: 50,
               paddingBottom: 20,
-              minHeight: 570,
+              height: 700,
             }}
             spacing={10}
             xs={12}

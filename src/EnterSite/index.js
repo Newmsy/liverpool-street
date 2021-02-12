@@ -90,7 +90,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    backgroundColor: "rgba(0,0,0,0.05)",
+
     minHeight: "100vh",
     marginTop: 0,
     zIndex: 100,
