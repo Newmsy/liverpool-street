@@ -109,7 +109,7 @@ export const WhyNow = compose(() => {
               </p>
             </Card>
             <Card
-              imagePath="/HandShake.svg"
+              imagePath="/Handshake.svg"
               expanded={topRowExpanded}
               setExpanded={() => setTopRowExpanded(true)}
             >
