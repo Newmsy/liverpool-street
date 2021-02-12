@@ -189,8 +189,8 @@ const useStyles = makeStyles(() => ({
     marginLeft: "20%",
   },
   mottoUn: {
-    width: 240,
-    marginLeft: 20,
+    width: 220,
+    marginLeft: 25,
     imageRendering: "-webkit-optimize-contrast",
   },
   enterSiteButton: {
