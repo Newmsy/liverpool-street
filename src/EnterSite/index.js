@@ -17,12 +17,14 @@ export const EnterSite = compose(() => {
   const history = useHistory();
   const textStyles = useTextStyles();
 
-  const [opacity, setOpacity] = React.useState(20);
+  const [opacity, setOpacity] = React.useState(30);
   const [delayFade, setDelayFade] = React.useState(3000);
   const [delayWords, setDelayWords] = React.useState(5000);
   const [delayEnter, setDelayEnter] = React.useState(7500);
   const [hide, setHide] = React.useState(false);
   const [fontSize, setFontSize] = React.useState(30);
+  //unconventional wisdom width
+  //split up ls-uw
 
   const enterSite = () => {
     setTimeout(() => history.push("/home-fade"), 1500);

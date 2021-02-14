@@ -254,7 +254,7 @@ const useStyles = makeStyles(() => ({
     cursor: "default",
   },
   paperFront: {
-    backgroundColor: "rgba(20,122,122,1)",
+    backgroundColor: "rgba(0,102,102,1)",
     minHeight: 200,
     borderRadius: 15,
     boxShadow: "2px 3px 10px #888888",
