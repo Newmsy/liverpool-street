@@ -10,6 +10,7 @@ import { WhyNow } from "./WhyNow/index";
 import { SelectedTransactions } from "./SelectedTransactions/index";
 import { Fade } from "@material-ui/core";
 import { compose } from "redux";
+import { Contact } from "./Contact";
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
             <Route path="/selected-transactions">
               <Page>
                 <SelectedTransactions />
+              </Page>
+            </Route>
+            <Route path="/contact">
+              <Page>
+                <Contact />
               </Page>
             </Route>
             <Route path="/home-fade">

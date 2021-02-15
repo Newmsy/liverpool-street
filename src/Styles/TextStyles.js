@@ -57,7 +57,7 @@ export const useTextStyles = makeStyles(() => ({
   contentTextLightTight: {
     fontFamily: "SSLight",
     fontWeight: 100,
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 1.4,
     marginTop: -20,
   },

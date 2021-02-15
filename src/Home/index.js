@@ -10,9 +10,7 @@ export const Home = compose(() => {
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
       <Grid item style={{ marginTop: -40, marginBottom: 30 }}>
-        <h1 className={textStyles.lightTitle}>
-          <i>World Class Advice</i>
-        </h1>
+        <h1 className={textStyles.lightTitle}>World Class Advice</h1>
       </Grid>
 
       <Grid item container alignItems="space-between" justify="center">

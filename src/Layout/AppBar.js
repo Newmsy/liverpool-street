@@ -93,7 +93,7 @@ export const AppBar = compose(() => {
         </Grid>
         <NavBreakPoint fontSize={fontSize} />
         <Grid item class="hvr-underline-from-center">
-          <a href="#" className={styles.undecorated}>
+          <a href="/contact" className={styles.undecorated}>
             <div className={styles.navbarItem}>
               <h1 className={styles.navText} style={{ fontSize: fontSize }}>
                 Contact
@@ -166,10 +166,11 @@ const useStyles = makeStyles(() => ({
     zIndex: 500,
   },
   appbarBackground: {
-    height: 60,
-    marginBottom: 0,
+    height: 70,
+    marginBottom: -10,
     background: "rgb(0,102,102)",
     zIndex: 100,
+    boxShadow: "2px 3px 10px #888888",
   },
   appbarLogo: {
     height: 200,
@@ -178,7 +179,7 @@ const useStyles = makeStyles(() => ({
     cursor: "pointer",
     imageRendering: "-webkit-optimize-contrast",
     zIndex: 1,
-    marginTop: 10,
+    marginTop: 30,
   },
   appbarNav: {
     marginTop: 0,

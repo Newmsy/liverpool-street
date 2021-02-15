@@ -18,11 +18,11 @@ export const EnterSite = compose(() => {
   const textStyles = useTextStyles();
 
   const [opacity, setOpacity] = React.useState(30);
-  const [delayFade, setDelayFade] = React.useState(3000);
+  const [delayFade, setDelayFade] = React.useState(5000);
   const [delayWords, setDelayWords] = React.useState(5000);
-  const [delayEnter, setDelayEnter] = React.useState(7500);
+  const [delayEnter, setDelayEnter] = React.useState(10000);
   const [hide, setHide] = React.useState(false);
-  const [fontSize, setFontSize] = React.useState(30);
+  const [fontSize, setFontSize] = React.useState(15);
   //unconventional wisdom width
   //split up ls-uw
 
@@ -116,11 +116,11 @@ export const EnterSite = compose(() => {
           <Fade
             in={!hide}
             timeout={delayFade}
-            style={{ transitionDelay: hide ? 100 : delayWords }}
+            style={{ transitionDelay: hide ? 100 : delayWords + 2000 }}
           >
             <Grid xs={10} style={{ justifyContent: "center", display: "flex" }}>
               <img
-                src="/UnconventionalWisdom.svg"
+                src="/UnconventionalWisdom.png"
                 alt="Liverpool Street Capital Advisors"
                 className={styles.mottoUn}
               />
@@ -183,7 +183,7 @@ const useStyles = makeStyles(() => ({
     imageRendering: "crisp-edges",
   },
   mottoContainer: {
-    marginTop: -30,
+    marginTop: -10,
     marginLeft: "2vw",
   },
   logo: {
@@ -191,7 +191,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: "20%",
   },
   mottoUn: {
-    width: 220,
+    width: 210,
     marginLeft: 25,
     imageRendering: "-webkit-optimize-contrast",
   },
