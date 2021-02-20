@@ -68,7 +68,7 @@ export const SelectedTransactions = compose(() => {
 const useStyles = makeStyles(() => ({
   transactionsContainer: {
     justifyContent: "center",
-    marginTop: 60,
+    marginTop: 30,
     flexDirection: "column",
     alignItems: "center",
   },

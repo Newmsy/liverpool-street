@@ -50,11 +50,11 @@ function App() {
               </Page>
             </Route>
             <Route path="/home-fade">
-              <Fade in={true} timeout={2000}>
-                <Page>
+              <Page>
+                <Fade in={true} timeout={1500}>
                   <Home />
-                </Page>
-              </Fade>
+                </Fade>
+              </Page>
             </Route>
             <Route path="/">
               <EnterSite />

@@ -40,6 +40,13 @@ export const useTextStyles = makeStyles(() => ({
     fontSize: 16,
     lineHeight: 1.4,
   },
+  contentTextLight2: {
+    fontFamily: "SSLight",
+    fontWeight: 100,
+    fontSize: 16,
+    lineHeight: 1.2,
+    marginBottom: -4,
+  },
   contentTextLightSmall: {
     fontFamily: "SSLight",
     fontWeight: 600,

@@ -17,133 +17,75 @@ export const EnterSite = compose(() => {
   const history = useHistory();
   const textStyles = useTextStyles();
 
-  const [opacity, setOpacity] = React.useState(30);
-  const [delayFade, setDelayFade] = React.useState(5000);
-  const [delayWords, setDelayWords] = React.useState(5000);
-  const [delayEnter, setDelayEnter] = React.useState(10000);
-  const [hide, setHide] = React.useState(false);
-  const [fontSize, setFontSize] = React.useState(15);
-  //unconventional wisdom width
-  //split up ls-uw
+  const [hide, setHide] = React.useState(true);
 
   const enterSite = () => {
+    setHide(true);
     setTimeout(() => history.push("/home-fade"), 1500);
   };
 
   return (
     <>
-      <Fade
-        in={!hide}
-        timeout={delayFade}
-        style={{ transitionDelay: hide ? 100 : delayEnter }}
-      >
+      <Fade in={!hide} timeout={1500}>
         <div>
-          <img
-            src="/LiverpoolStreet.png"
-            alt="Liverpool Street Capital Advisors"
-            className={styles.backgroundImage}
-            style={{ opacity: opacity / 100 }}
-          />
+          <Fade in={!hide} timeout={5000} style={{ transitionDelay: 10000 }}>
+            <div>
+              <img
+                src="/LiverpoolStreet.png"
+                alt="Liverpool Street Capital Advisors"
+                className={styles.backgroundImage}
+                style={{ opacity: 0.3 }}
+                onLoad={() => setHide(false)}
+              />
+            </div>
+          </Fade>
+
+          <Grid container xs={12} className={styles.enterSiteContainer}>
+            <Grid xs={3} md={3}>
+              <img src={"/swipe.gif"} className={styles.logoGreen} />
+            </Grid>
+            <Fade in={!hide} timeout={5000} style={{ transitionDelay: 5000 }}>
+              <Grid xs={12}>
+                <img
+                  src="/logoWords.svg"
+                  alt="Liverpool Street Capital Advisors"
+                  className={styles.logoWords}
+                />
+              </Grid>
+            </Fade>
+            <Grid xs={10} md={3} container className={styles.mottoContainer}>
+              <Fade in={!hide} timeout={5000} style={{ transitionDelay: 7000 }}>
+                <Grid
+                  xs={10}
+                  style={{ justifyContent: "center", display: "flex" }}
+                >
+                  <img
+                    src="/UnconventionalWisdom.svg"
+                    alt="Liverpool Street Capital Advisors"
+                    className={styles.mottoUn}
+                  />
+                </Grid>
+              </Fade>
+            </Grid>
+            <Grid>
+              <Fade
+                in={!hide}
+                timeout={5000}
+                style={{ transitionDelay: 10000 }}
+              >
+                <Button onClick={enterSite} className={styles.enterSiteButton}>
+                  <h1
+                    className={textStyles.lightThickSubtitleBlue}
+                    style={{ fontSize: 15 }}
+                  >
+                    Enter Site
+                  </h1>
+                </Button>
+              </Fade>
+            </Grid>
+          </Grid>
         </div>
       </Fade>
-      <div className={styles.bottomPanel}>
-        <Paper style={{ padding: 30 }}>
-          <p>Background Opacity {opacity}%</p>
-          <Slider
-            max={100}
-            min={0}
-            value={opacity}
-            onChange={(e, v) => setOpacity(v)}
-          />
-          <p>Fade in duration {delayFade}ms</p>
-          <Slider
-            max={5000}
-            min={0}
-            step={100}
-            value={delayFade}
-            onChange={(e, v) => setDelayFade(v)}
-          />
-          <p>Word Fade Delay {delayWords}ms</p>
-          <Slider
-            max={10000}
-            min={0}
-            step={100}
-            value={delayWords}
-            onChange={(e, v) => setDelayWords(v)}
-          />
-          <p>Button / Background Fade Delay {delayEnter}ms</p>
-          <Slider
-            max={12000}
-            min={0}
-            step={100}
-            value={delayEnter}
-            onChange={(e, v) => setDelayEnter(v)}
-          />
-          <p>Button font size {fontSize}</p>
-          <Slider
-            max={40}
-            min={0}
-            step={1}
-            value={fontSize}
-            onChange={(e, v) => setFontSize(v)}
-          />
-          <Button
-            onClick={() => setHide(!hide)}
-            style={{ backgroundColor: "rgb(200,200,200)" }}
-          >
-            <b>{hide ? "show" : "hide"}</b>
-          </Button>
-        </Paper>
-      </div>
-      <Grid container xs={12} className={styles.enterSiteContainer}>
-        <Grid xs={3} md={3}>
-          <img src={hide ? "" : "/swipe.gif"} className={styles.logoGreen} />
-        </Grid>
-        <Fade
-          in={!hide}
-          timeout={delayFade}
-          style={{ transitionDelay: hide ? 100 : delayWords }}
-        >
-          <Grid xs={12}>
-            <img
-              src="/logoWords.svg"
-              alt="Liverpool Street Capital Advisors"
-              className={styles.logoWords}
-            />
-          </Grid>
-        </Fade>
-        <Grid xs={10} md={3} container className={styles.mottoContainer}>
-          <Fade
-            in={!hide}
-            timeout={delayFade}
-            style={{ transitionDelay: hide ? 100 : delayWords + 2000 }}
-          >
-            <Grid xs={10} style={{ justifyContent: "center", display: "flex" }}>
-              <img
-                src="/UnconventionalWisdom.png"
-                alt="Liverpool Street Capital Advisors"
-                className={styles.mottoUn}
-              />
-            </Grid>
-          </Fade>
-        </Grid>
-        <Grid>
-          <Fade
-            in={!hide}
-            timeout={delayFade}
-            style={{ transitionDelay: hide ? 100 : delayEnter }}
-          >
-            <Button onClick={enterSite} className={styles.enterSiteButton}>
-              <h1
-                className={textStyles.lightThickSubtitleBlue}
-                style={{ fontSize: fontSize }}
-              >
-                Enter Site
-              </h1>
-            </Button>
-          </Fade>
-        </Grid>
-      </Grid>
     </>
   );
 });
@@ -191,7 +133,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: "20%",
   },
   mottoUn: {
-    width: 210,
+    width: 240,
     marginLeft: 25,
     imageRendering: "-webkit-optimize-contrast",
   },

@@ -18,7 +18,7 @@ export const AppBar = compose(() => {
   };
 
   const [fontSize, setFontSize] = React.useState(30);
-  const [logoSize, setLogoSize] = React.useState(200);
+
   const [logoPos, setLogoPos] = React.useState(1);
 
   //logo top right
@@ -30,24 +30,12 @@ export const AppBar = compose(() => {
 
   return (
     <Grid xs={12} container className={styles.appbarBackground}>
-      <Grid item xs={2}>
-        {!logoPos && (
-          <img
-            src="/LogoSubtext.png"
-            alt="Liverpool Street Capital Advisors"
-            className={styles.appbarLogo}
-            style={{ height: logoSize }}
-            onClick={goHome}
-          />
-        )}
-      </Grid>
+      <Grid item xs={2}></Grid>
       <Grid item container xs={8} className={styles.appbarNav}>
         <Grid item class="hvr-underline-from-center">
           <a href="/home" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText} style={{ fontSize: fontSize }}>
-                Home
-              </h1>
+              <h1 className={styles.navText}>Home</h1>
             </div>
           </a>
         </Grid>
@@ -55,9 +43,7 @@ export const AppBar = compose(() => {
         <Grid item class="hvr-underline-from-center">
           <a href="/why-now" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText} style={{ fontSize: fontSize }}>
-                Why Now
-              </h1>
+              <h1 className={styles.navText}>Why Now</h1>
             </div>
           </a>
         </Grid>
@@ -65,9 +51,7 @@ export const AppBar = compose(() => {
         <Grid item class="hvr-underline-from-center">
           <a href="/selected-transactions" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText} style={{ fontSize: fontSize }}>
-                Transactions
-              </h1>
+              <h1 className={styles.navText}>Transactions</h1>
             </div>
           </a>
         </Grid>
@@ -75,9 +59,7 @@ export const AppBar = compose(() => {
         <Grid item class="hvr-underline-from-center">
           <a href="/people" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText} style={{ fontSize: fontSize }}>
-                People
-              </h1>
+              <h1 className={styles.navText}>People</h1>
             </div>
           </a>
         </Grid>
@@ -85,9 +67,7 @@ export const AppBar = compose(() => {
         <Grid item class="hvr-underline-from-center">
           <a href="#" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText} style={{ fontSize: fontSize }}>
-                Placeholder
-              </h1>
+              <h1 className={styles.navText}>Placeholder</h1>
             </div>
           </a>
         </Grid>
@@ -95,9 +75,7 @@ export const AppBar = compose(() => {
         <Grid item class="hvr-underline-from-center">
           <a href="/contact" className={styles.undecorated}>
             <div className={styles.navbarItem}>
-              <h1 className={styles.navText} style={{ fontSize: fontSize }}>
-                Contact
-              </h1>
+              <h1 className={styles.navText}>Contact</h1>
             </div>
           </a>
         </Grid>
@@ -108,38 +86,11 @@ export const AppBar = compose(() => {
             src="/LogoSubtext.png"
             alt="Liverpool Street Capital Advisors"
             className={styles.appbarLogo}
-            style={{ height: logoSize }}
+            style={{ height: 230 }}
             onClick={goHome}
           />
         )}
       </Grid>
-      <div className={styles.bottomPanel}>
-        <Paper style={{ padding: 30 }}>
-          <p>Font Size {fontSize}</p>
-          <Slider
-            max={50}
-            min={0}
-            value={fontSize}
-            onChange={(e, v) => setFontSize(v)}
-          />
-          <p>Logo Size {logoSize}</p>
-          <Slider
-            max={500}
-            min={0}
-            step={5}
-            value={logoSize}
-            onChange={(e, v) => setLogoSize(v)}
-          />
-          <p>Logo Position: {logoPos ? "Right" : "Left"}</p>
-          <Slider
-            max={1}
-            min={0}
-            step={1}
-            value={logoPos}
-            onChange={(e, v) => setLogoPos(v)}
-          />
-        </Paper>
-      </div>
     </Grid>
   );
 });
@@ -148,9 +99,7 @@ const NavBreakPoint = ({ fontSize }) => {
   const styles = useStyles();
   return (
     <Grid item className={styles.navBreakpoint}>
-      <h1 className={styles.navTextBreakPoint} style={{ fontSize: fontSize }}>
-        •
-      </h1>
+      <h1 className={styles.navTextBreakPoint}>•</h1>
     </Grid>
   );
 };
@@ -166,8 +115,8 @@ const useStyles = makeStyles(() => ({
     zIndex: 500,
   },
   appbarBackground: {
-    height: 70,
-    marginBottom: -10,
+    height: 65,
+    marginBottom: -40,
     background: "rgb(0,102,102)",
     zIndex: 100,
     boxShadow: "2px 3px 10px #888888",
@@ -192,14 +141,14 @@ const useStyles = makeStyles(() => ({
   },
   navText: {
     fontFamily: "Banschrift",
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 100,
     color: "white",
     textDecoration: "none",
   },
   navTextBreakPoint: {
     fontFamily: "Arial",
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 100,
     color: "white",
     cursor: "pointer",

@@ -14,9 +14,6 @@ export const Home = compose(() => {
       </Grid>
 
       <Grid item container alignItems="space-between" justify="center">
-        <Grid item container xs={2} className={styles.contentContainer}></Grid>
-
-        <Slides />
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12}>
             <p className={textStyles.contentTextLight}>
@@ -57,6 +54,9 @@ export const Home = compose(() => {
             </p>
           </Grid>
         </Grid>
+
+        <Slides />
+        <Grid item container xs={2} className={styles.contentContainer}></Grid>
       </Grid>
     </Grid>
   );
