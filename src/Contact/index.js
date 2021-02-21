@@ -29,17 +29,29 @@ export const Contact = compose(() => {
           xs={6}
           style={{ height: "auto", alignContent: "flex-start" }}
         >
-          <Grid item xs={12} style={{ marginBottom: 40 }}>
+          <Grid
+            item
+            xs={7}
+            style={{ marginBottom: 40 }}
+            className={styles.textContainer}
+          >
             <p className={textStyles.contentTextLight2}>
-              <b style={{ fontSize: 22 }}>Liverpool Street Capital Advisors</b>
+              <b style={{ fontSize: 22 }}>
+                <img src="/Office.svg" className={styles.textImage} />
+                Liverpool Street Capital Advisors
+              </b>
             </p>
             <p className={textStyles.contentTextLight2}>46 New Broad Street</p>
             <p className={textStyles.contentTextLight2}>London</p>
             <p className={textStyles.contentTextLight2}>EC2M 1JH</p>
           </Grid>
-          <Grid item xs={6}>
+          <Grid xs={5} />
+          <Grid item xs={5} className={styles.textContainer}>
             <p className={textStyles.contentTextLight2}>
-              <b style={{ fontSize: 22 }}>Jason Green</b>
+              <b style={{ fontSize: 22 }}>
+                <img src="/User.svg" className={styles.textImage} />
+                Jason Green
+              </b>
             </p>
             <p className={textStyles.contentTextLight2}>Partner</p>
             <p className={textStyles.contentTextLight2}>
@@ -50,9 +62,13 @@ export const Contact = compose(() => {
             <p className={textStyles.contentTextLight2}>+44 (0) 203 651 5560</p>
             <p className={textStyles.contentTextLight2}>+44 (0) 7764 235 474</p>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={1} />
+          <Grid item xs={5} className={styles.textContainer}>
             <p className={textStyles.contentTextLight2}>
-              <b style={{ fontSize: 22 }}>Andrew Golding</b>
+              <b style={{ fontSize: 22 }}>
+                <img src="/User.svg" className={styles.textImage} />
+                Andrew Golding
+              </b>
             </p>
             <p className={textStyles.contentTextLight2}>Partner</p>
             <p className={textStyles.contentTextLight2}>
@@ -64,18 +80,25 @@ export const Contact = compose(() => {
             <p className={textStyles.contentTextLight2}>+44 (0) 7788 233006</p>
           </Grid>
 
-          <Grid item xs={12} style={{ marginTop: 40 }}>
-            <p className={textStyles.contentTextLight2}>
-              <b style={{ fontSize: 22 }}>Kelsey North</b>
-            </p>
-            <p className={textStyles.contentTextLight2}>EA to the Partners</p>
-            <p className={textStyles.contentTextLight2}>
-              <a href="mailto:kelseynorth@lscapitaladvisors.co.uk">
-                kelseynorth@lscapitaladvisors.co.uk
-              </a>
-            </p>
-            <p className={textStyles.contentTextLight2}>+44 (0) 203 651 5562</p>
-            <p className={textStyles.contentTextLight2}>+44 (0) 7584 668337</p>
+          <Grid item xs={5} style={{ marginTop: 40 }}>
+            <div className={styles.textContainer}>
+              <p className={textStyles.contentTextLight2}>
+                <img src="/User.svg" className={styles.textImage} />
+                <b style={{ fontSize: 22 }}>Kelsey North</b>
+              </p>
+              <p className={textStyles.contentTextLight2}>EA to the Partners</p>
+              <p className={textStyles.contentTextLight2}>
+                <a href="mailto:kelseynorth@lscapitaladvisors.co.uk">
+                  kelseynorth@lscapitaladvisors.co.uk
+                </a>
+              </p>
+              <p className={textStyles.contentTextLight2}>
+                +44 (0) 203 651 5562
+              </p>
+              <p className={textStyles.contentTextLight2}>
+                +44 (0) 7584 668337
+              </p>
+            </div>
           </Grid>
         </Grid>
       </Grid>
@@ -87,5 +110,22 @@ const useStyles = makeStyles(() => ({
   contactContainer: {
     justifyContent: "center",
     marginTop: 30,
+  },
+  textContainer: {
+    backgroundColor: "white",
+    padding: 10,
+    paddingLeft: 20,
+    borderRadius: 5,
+    boxShadow: "2px 3px 10px #888888",
+    marginBottom: 0,
+    marginTop: 10,
+    paddingBottom: 30,
+    width: "auto",
+  },
+  textImage: {
+    height: 30,
+    marginRight: 10,
+    position: "relative",
+    top: 5,
   },
 }));
