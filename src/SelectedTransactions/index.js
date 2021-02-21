@@ -33,27 +33,18 @@ export const SelectedTransactions = compose(() => {
           className={styles.tabBar}
         >
           <Tab
-            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
+            className={styles.transactionTab}
             label={"Transactions as Borrower"}
           />
+          <Tab className={styles.transactionTab} label={"Real Estate"} />
+          <Tab className={styles.transactionTab} label={"Corporate"} />
+          <Tab className={styles.transactionTab} label={"Private Equity"} />
           <Tab
-            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
-            label={"Real Estate"}
-          />
-          <Tab
-            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
-            label={"Corporate"}
-          />
-          <Tab
-            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
-            label={"Private Equity"}
-          />
-          <Tab
-            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
+            className={styles.transactionTab}
             label={"Energy, Mining & Infrastructure (1)"}
           />
           <Tab
-            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
+            className={styles.transactionTab}
             label={"Energy, Mining & Infrastructure (2)"}
           />
         </Tabs>
@@ -73,6 +64,12 @@ const useStyles = makeStyles(() => ({
   transactionTab: {
     backgroundColor: "rgb(0,102,102)",
     //minWidth: "19%",
+    fontFamily: "Banschrift",
+    marginTop: 5,
+    marginBottom: 5,
+    fontSize: 20,
+    fontWeight: 100,
+    color: "rgb(255,255,255)",
   },
   tabBar: {
     width: "100%",
