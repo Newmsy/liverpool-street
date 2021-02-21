@@ -10,9 +10,7 @@ export const WhyNow = compose(() => {
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
       <Grid item>
-        <h1 className={textStyles.lightTitle}>
-          <i>Why Now?</i>
-        </h1>
+        <h1 className={textStyles.lightTitle}>Why Now?</h1>
       </Grid>
       <Grid
         item

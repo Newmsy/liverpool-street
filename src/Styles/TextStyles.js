@@ -5,8 +5,8 @@ export const useTextStyles = makeStyles(() => ({
     fontFamily: "ArialLight",
     fontSize: 60,
     fontWeight: 100,
-    opacity: 0.8,
-    color: "rgb(30,30,30)",
+
+    color: "rgb(0,0,0)",
   },
   mediumSubtitle: {
     fontFamily: "Arial",
@@ -25,6 +25,14 @@ export const useTextStyles = makeStyles(() => ({
     marginTop: 5,
     marginBottom: 5,
     fontSize: 25,
+    fontWeight: 100,
+    color: "rgb(255,255,255)",
+  },
+  Banschrift2: {
+    fontFamily: "Banschrift",
+    marginTop: 5,
+    marginBottom: 5,
+    fontSize: 20,
     fontWeight: 100,
     color: "rgb(255,255,255)",
   },
@@ -66,7 +74,7 @@ export const useTextStyles = makeStyles(() => ({
     fontWeight: 100,
     fontSize: 16,
     lineHeight: 1.4,
-    marginTop: -20,
+    marginTop: -10,
   },
   greenContentLead: {
     fontFamily: "SSLight",

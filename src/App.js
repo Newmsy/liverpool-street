@@ -50,11 +50,13 @@ function App() {
               </Page>
             </Route>
             <Route path="/home-fade">
-              <Page>
-                <Fade in={true} timeout={1500}>
-                  <Home />
-                </Fade>
-              </Page>
+              <Fade in={true} timeout={1500}>
+                <div>
+                  <Page>
+                    <Home />
+                  </Page>
+                </div>
+              </Fade>
             </Route>
             <Route path="/">
               <EnterSite />
@@ -69,8 +71,7 @@ function App() {
 export const Page = (props) => {
   return (
     <PageLayout>
-      <AppBar />
-      {props.children}
+      <div>{props.children}</div>
     </PageLayout>
   );
 };

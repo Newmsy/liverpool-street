@@ -17,9 +17,7 @@ export const SelectedTransactions = compose(() => {
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
       <Grid item>
-        <h1 className={textStyles.lightTitle}>
-          <i>Selected Transactions</i>
-        </h1>
+        <h1 className={textStyles.lightTitle}>Selected Transactions</h1>
       </Grid>
 
       <Grid item container xs={9} alignItems="space-between" justify="center">
@@ -35,27 +33,27 @@ export const SelectedTransactions = compose(() => {
           className={styles.tabBar}
         >
           <Tab
-            className={`${styles.transactionTab} ${textStyles.lightThickSubtitleBlue}`}
+            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
             label={"Transactions as Borrower"}
           />
           <Tab
-            className={`${styles.transactionTab} ${textStyles.lightThickSubtitleBlue}`}
+            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
             label={"Real Estate"}
           />
           <Tab
-            className={`${styles.transactionTab} ${textStyles.lightThickSubtitleBlue}`}
+            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
             label={"Corporate"}
           />
           <Tab
-            className={`${styles.transactionTab} ${textStyles.lightThickSubtitleBlue}`}
+            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
             label={"Private Equity"}
           />
           <Tab
-            className={`${styles.transactionTab} ${textStyles.lightThickSubtitleBlue}`}
+            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
             label={"Energy, Mining & Infrastructure (1)"}
           />
           <Tab
-            className={`${styles.transactionTab} ${textStyles.lightThickSubtitleBlue}`}
+            className={`${styles.transactionTab} ${textStyles.Banschrift2}`}
             label={"Energy, Mining & Infrastructure (2)"}
           />
         </Tabs>

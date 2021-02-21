@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
-export const AppBar = compose(() => {
+export const AppBar = compose(({ changeLoc }) => {
   const styles = useStyles();
   const history = useHistory();
   const goHome = () => {
@@ -33,51 +33,53 @@ export const AppBar = compose(() => {
       <Grid item xs={2}></Grid>
       <Grid item container xs={8} className={styles.appbarNav}>
         <Grid item class="hvr-underline-from-center">
-          <a href="/home" className={styles.undecorated}>
-            <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>Home</h1>
-            </div>
-          </a>
+          <div className={styles.navbarItem} onClick={() => changeLoc("/home")}>
+            <h1 className={styles.navText}>Home</h1>
+          </div>
         </Grid>
         <NavBreakPoint fontSize={fontSize} />
         <Grid item class="hvr-underline-from-center">
-          <a href="/why-now" className={styles.undecorated}>
-            <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>Why Now</h1>
-            </div>
-          </a>
+          <div className={styles.navbarItem} onClick={() => changeLoc("#")}>
+            <h1 className={styles.navText}>Why LSCA</h1>
+          </div>
         </Grid>
         <NavBreakPoint fontSize={fontSize} />
         <Grid item class="hvr-underline-from-center">
-          <a href="/selected-transactions" className={styles.undecorated}>
-            <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>Transactions</h1>
-            </div>
-          </a>
+          <div
+            className={styles.navbarItem}
+            onClick={() => changeLoc("/why-now")}
+          >
+            <h1 className={styles.navText}>Why Now</h1>
+          </div>
+        </Grid>
+        <NavBreakPoint fontSize={fontSize} />
+
+        <Grid item class="hvr-underline-from-center">
+          <div
+            className={styles.navbarItem}
+            onClick={() => changeLoc("/selected-transactions")}
+          >
+            <h1 className={styles.navText}>Transactions</h1>
+          </div>
         </Grid>
         <NavBreakPoint fontSize={fontSize} />
         <Grid item class="hvr-underline-from-center">
-          <a href="/people" className={styles.undecorated}>
-            <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>People</h1>
-            </div>
-          </a>
+          <div
+            className={styles.navbarItem}
+            onClick={() => changeLoc("/people")}
+          >
+            <h1 className={styles.navText}>People</h1>
+          </div>
         </Grid>
+
         <NavBreakPoint fontSize={fontSize} />
         <Grid item class="hvr-underline-from-center">
-          <a href="#" className={styles.undecorated}>
-            <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>Placeholder</h1>
-            </div>
-          </a>
-        </Grid>
-        <NavBreakPoint fontSize={fontSize} />
-        <Grid item class="hvr-underline-from-center">
-          <a href="/contact" className={styles.undecorated}>
-            <div className={styles.navbarItem}>
-              <h1 className={styles.navText}>Contact</h1>
-            </div>
-          </a>
+          <div
+            className={styles.navbarItem}
+            onClick={() => changeLoc("/contact")}
+          >
+            <h1 className={styles.navText}>Contact</h1>
+          </div>
         </Grid>
       </Grid>
       <Grid item xs={2} style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -87,7 +89,7 @@ export const AppBar = compose(() => {
             alt="Liverpool Street Capital Advisors"
             className={styles.appbarLogo}
             style={{ height: 230 }}
-            onClick={goHome}
+            onClick={() => changeLoc("/home")}
           />
         )}
       </Grid>
@@ -166,5 +168,6 @@ const useStyles = makeStyles(() => ({
     borderRadius: 10,
     padding: 7,
     paddingBottom: -10,
+    cursor: "pointer",
   },
 }));
