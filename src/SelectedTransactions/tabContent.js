@@ -699,7 +699,7 @@ const TransactionItem = ({
       <Grid item style={{ marginTop: -10 }}>
         <h1
           className={textStyles.mediumSubtitle}
-          style={{ textAlign: "center" }}
+          style={{ textAlign: "center", color: "rgb(0,102,102)" }}
         >
           {title}
         </h1>
@@ -708,12 +708,13 @@ const TransactionItem = ({
         <Grid item>
           {company.length > 0 && (
             <p
-              className={textStyles.contentTextLight}
+              className={textStyles.contentText}
               style={{
-                fontSize: 18,
+                fontSize: 22,
                 textAlign: "center",
                 marginBottom: -15,
-                marginTop: -2,
+                marginTop: 2,
+                color: "rgb(0,31,96)",
               }}
             >
               {company}
@@ -722,15 +723,28 @@ const TransactionItem = ({
         </Grid>
 
         <Grid item style={{ marginTop: -10, marginBottom: -10 }}>
-          <p className={textStyles.contentTextLight} style={{ fontSize: 22 }}>
+          <p
+            className={textStyles.contentText}
+            style={{
+              fontSize: 22,
+              color: "rgb(0,31,96)",
+              marginTop: 0,
+              marginBottom: 0,
+            }}
+          >
             {cur}
             {value}
           </p>
         </Grid>
-        <Grid item style={{ marginTop: -10, marginBottom: -10 }}>
+        <Grid item style={{ marginTop: -10, marginBottom: -15 }}>
           <p
-            className={textStyles.contentTextLight}
-            style={{ textAlign: "center" }}
+            className={textStyles.contentText}
+            style={{
+              textAlign: "center",
+              fontSize: 20,
+              color: "rgb(0,31,96)",
+              marginTop: 0,
+            }}
           >
             {description}
           </p>
@@ -745,7 +759,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
     alignContent: "flex-start",
     backgroundColor: "rgb(0,102,102)",
-    minHeight: 1000,
+    paddingBottom: "3vh",
   },
   subPaper: {
     flexDirection: "column",
@@ -753,14 +767,16 @@ const useStyles = makeStyles(() => ({
     justifyContent: "space-between",
     backgroundColor: "white",
     minHeight: 150,
-    marginTop: -10,
+    marginTop: -30,
     borderRadius: 5,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
+    overflowY: "hidden",
+    overflowX: "hidden",
   },
   tabContainerItem: {
     minHeight: 200,
-    boxShadow: "1px 1px 5px #000000",
+    boxShadow: "1px 1px 8px #000000",
     backgroundColor: "rgb(230,230,230)",
     borderRadius: 5,
     marginLeft: "1%",
@@ -770,6 +786,8 @@ const useStyles = makeStyles(() => ({
     marginBottom: 5,
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
+    overflowY: "hidden",
+    overflowX: "hidden",
   },
 }));

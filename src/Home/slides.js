@@ -10,24 +10,24 @@ export const Slides = compose(() => {
   const [flipped, setFlipped] = React.useState("");
 
   return (
-    <Grid container xs={6} className={styles.slidesContainer} spacing={5}>
+    <Grid container className={styles.slidesContainer} spacing={2}>
       <CardItem
         title={"Strategic Review"}
         flipped={flipped}
         setFlipped={setFlipped}
         zIndex={3}
       >
-        <p className={textStyles.contentTextLightSmallBold}>
+        <p className={textStyles.contentTextGreen}>
           Business / shareholder change
         </p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Identify and rank debt / equity solutions
           </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Achieve stakeholder objectives
           </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Minimise transaction time / disruption / cost
           </p>
         </div>
@@ -38,17 +38,15 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={3}
       >
-        <p className={textStyles.contentTextLightSmallBold}>Financial change</p>
+        <p className={textStyles.contentTextGreen}>Financial change</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Improve lending terms / generate cash out
           </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Introduce new lenders / investors
           </p>
-          <p className={textStyles.contentTextLightSmall}>
-            • Extend maturities
-          </p>
+          <p className={textStyles.contentText}>• Extend maturities</p>
         </div>
       </CardItem>
       <CardItem
@@ -57,17 +55,15 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={3}
       >
-        <p className={textStyles.contentTextLightSmallBold}>
+        <p className={textStyles.contentTextGreen}>
           Business / financial distress
         </p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Keep you in control / preserve equity value
           </p>
-          <p className={textStyles.contentTextLightSmall}>
-            • Remove problem lenders
-          </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>• Remove problem lenders</p>
+          <p className={textStyles.contentText}>
             • Introduce new capital to facilitate turnaround plan
           </p>
         </div>
@@ -78,17 +74,17 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={2}
       >
-        <p className={textStyles.contentTextLightSmallBold}>
+        <p className={textStyles.contentTextGreen}>
           Asset / division divestment
         </p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Disposal to delever / raise money
           </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Part of financial restructuring / balance sheet optimisation
           </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Transform borrower leverage profile
           </p>
         </div>
@@ -99,15 +95,11 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={2}
       >
-        <p className={textStyles.contentTextLightSmallBold}>Sell-side advice</p>
+        <p className={textStyles.contentTextGreen}>Sell-side advice</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
-            • Remove funding uncertainty
-          </p>
-          <p className={textStyles.contentTextLightSmall}>
-            • Set hurdle for bidders
-          </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>• Remove funding uncertainty</p>
+          <p className={textStyles.contentText}>• Set hurdle for bidders</p>
+          <p className={textStyles.contentText}>
             • Maximise competitive tension in your process
           </p>
         </div>
@@ -118,15 +110,13 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={2}
       >
-        <p className={textStyles.contentTextLightSmallBold}>Buy-side advice</p>
+        <p className={textStyles.contentTextGreen}>Buy-side advice</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Beat staple to give you competitive advantage
           </p>
-          <p className={textStyles.contentTextLightSmall}>
-            • Confirm deliverability
-          </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>• Confirm deliverability</p>
+          <p className={textStyles.contentText}>
             • Enable you to focus on deal fundamentals / value drivers
           </p>
         </div>
@@ -137,14 +127,14 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={1}
       >
-        <p className={textStyles.contentTextLightSmallBold}>Risk reduction</p>
+        <p className={textStyles.contentTextGreen}>Risk reduction</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Linking hedging products to financing goals across
           </p>
-          <p className={textStyles.contentTextLightSmall}>• Rates</p>
-          <p className={textStyles.contentTextLightSmall}>• Currency</p>
-          <p className={textStyles.contentTextLightSmall}>• Commodity</p>
+          <p className={textStyles.contentText}>• Rates</p>
+          <p className={textStyles.contentText}>• Currency</p>
+          <p className={textStyles.contentText}>• Commodity</p>
         </div>
       </CardItem>
       <CardItem
@@ -153,17 +143,13 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={1}
       >
-        <p className={textStyles.contentTextLightSmallBold}>
-          Rating re/negotiation
-        </p>
+        <p className={textStyles.contentTextGreen}>Rating re/negotiation</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Effective presentation of credit profile to agencies
           </p>
-          <p className={textStyles.contentTextLightSmall}>
-            • Optimise rating outcome
-          </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>• Optimise rating outcome</p>
+          <p className={textStyles.contentText}>
             • Achieve tightest spread to gilts
           </p>
         </div>
@@ -174,17 +160,13 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={1}
       >
-        <p className={textStyles.contentTextLightSmallBold}>
-          Corporate acquisition
-        </p>
+        <p className={textStyles.contentTextGreen}>Corporate acquisition</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentTextLightSmall}>
-            • Raise incremental finance
-          </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>• Raise incremental finance</p>
+          <p className={textStyles.contentText}>
             • Provide funding / bid certainty
           </p>
-          <p className={textStyles.contentTextLightSmall}>
+          <p className={textStyles.contentText}>
             • Integrate new financing into existing acquiror balance sheet
           </p>
         </div>
@@ -247,26 +229,33 @@ const CardItem = compose((props) => {
 });
 
 const useStyles = makeStyles(() => ({
-  slidesContainer: { marginBottom: 50 },
+  slidesContainer: {
+    marginBottom: 50,
+    marginTop: 40,
+    width: "35%",
+    height: "auto",
+    paddingBottom: 50,
+  },
   slideItem: {
     borderRadius: 15,
-    height: 220,
+    marginBottom: -50,
+    height: 140,
     cursor: "default",
   },
   paperFront: {
     backgroundColor: "rgba(0,102,102,1)",
-    minHeight: 200,
+    minHeight: 140,
     borderRadius: 15,
-    boxShadow: "2px 3px 10px #888888",
+    boxShadow: "3px 3px 10px #000000",
   },
   paperBack: {
-    backgroundColor: "rgba(0,142,142,0.6)",
-    minHeight: 200,
+    backgroundColor: "rgba(255,255,255,1)",
+    minHeight: 140,
     borderRadius: 15,
-    boxShadow: "2px 3px 10px #888888",
+    boxShadow: "3px 3px 10px #000000",
   },
   paper: {
-    minHeight: 200,
+    minHeight: 140,
     borderRadius: 15,
   },
   itemWrapper: {

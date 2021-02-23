@@ -16,10 +16,6 @@ export const SelectedTransactions = compose(() => {
 
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
-      <Grid item>
-        <h1 className={textStyles.lightTitle}>Selected Transactions</h1>
-      </Grid>
-
       <Grid item container xs={9} alignItems="space-between" justify="center">
         <Tabs
           value={activeTab}
@@ -57,13 +53,14 @@ export const SelectedTransactions = compose(() => {
 const useStyles = makeStyles(() => ({
   transactionsContainer: {
     justifyContent: "center",
-    marginTop: 30,
+    marginTop: 100,
     flexDirection: "column",
     alignItems: "center",
+    position: "absolute",
+    bottom: 0,
   },
   transactionTab: {
     backgroundColor: "rgb(0,102,102)",
-    //minWidth: "19%",
     fontFamily: "Banschrift",
     marginTop: 5,
     marginBottom: 5,

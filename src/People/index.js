@@ -7,174 +7,149 @@ import { useTextStyles } from "../Styles/TextStyles";
 export const People = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-  const [activePerson, setActivePerson] = React.useState(null);
-  const [settingPerson, setSettingPerson] = React.useState(null);
-  const [hoverPerson, setHoverPerson] = React.useState(null);
-
-  const getHoverStyles = (person) => {
-    if (settingPerson === person || hoverPerson === person)
-      return styles.peopleIndividual;
-    if (settingPerson === null && hoverPerson === null)
-      return styles.peopleIndividualHalfOpacity;
-    return styles.peopleIndividualLowOpacity;
-  };
-
-  const changePerson = (person) => {
-    setSettingPerson(person);
-    setTimeout(() => setActivePerson(person), 700);
-  };
 
   return (
-    <>
-      <Grid item container xs={10} className={styles.peopleContainer}>
-        <Grid
-          item
-          xs={10}
-          className={
-            settingPerson === null
-              ? styles.titleContainer
-              : styles.titleContainerHidden
-          }
-          style={{ transition: "1.5s" }}
-        >
-          <h1 className={styles.peopleTitle}>
-            <i>World Class Experience</i>
-          </h1>
+    <Grid item container xs={12} className={styles.peopleContainer}>
+      <Grid item container xs={10} spacing={4}>
+        <Grid item xs={4} className={styles.descriptionTextBox}>
+          <p className={textStyles.contentTextLarge}>
+            <span className={textStyles.greenContentLead}>Jason </span> has more
+            than 25 years’ financial markets experience having held senior
+            financial roles in a FTSE100 company, corporate & investment banks,
+            and is a former ‘Big 4’ corporate finance partner.
+          </p>
+          <p className={textStyles.contentTextLarge}>
+            Most recently, Jason has operated in a principal role, as Group CEO,
+            overseeing all financing and investment activities for a single
+            family office Substantial transaction leadership experience in M&A,
+            refinancings, restructurings and recapitalisations, risk committees
+            and credit committees and has provided written and oral expert
+            testimony, having been called as an expert witness in US$2.2bn ICC
+            Arbitration proceedings Emerging and developed markets experience in
+            EMEA, Americas and SE Asia.
+          </p>
+          <p className={textStyles.contentTextLarge}>
+            Experienced across the entire range of public and private debt /
+            capital markets products and the credit rating spectrum MBA from
+            Aston Business School in 1992. First time pass in Securities &
+            Futures Authority’s (now Financial Conduct Authority) corporate
+            finance exams in 1999
+          </p>
         </Grid>
-        <Grid item container xs={12} justify="center">
-          <Grid
-            xs={10}
-            item
-            container
-            className={styles.employeeContainer}
-            justify="center"
-          >
-            <Grid
-              item
-              xs={4}
-              className={getHoverStyles("Jason")}
-              onClick={() => changePerson("Jason")}
-              onMouseEnter={() => setHoverPerson("Jason")}
-              onMouseLeave={() => setHoverPerson(null)}
-              style={{ transition: "0.5s" }}
-            >
-              <img
-                src="/JasonPeopleImage.png"
-                alt="Jason Green"
-                className={styles.peoplePhoto}
-              />
-              <h1 className={styles.peopleName}>
-                Jason Green, <span className={styles.peopleRole}>Partner</span>
-              </h1>
-            </Grid>
-            <Grid
-              item
-              xs={4}
-              className={getHoverStyles("Andrew")}
-              onClick={() => changePerson("Andrew")}
-              onMouseEnter={() => setHoverPerson("Andrew")}
-              onMouseLeave={() => setHoverPerson(null)}
-              style={{ transition: "0.5s" }}
-            >
-              <img
-                src="/AndrewPeopleImage.png"
-                alt="Andrew Golding"
-                className={styles.peoplePhoto}
-              />
-              <h1 className={styles.peopleName}>
-                Andrew Golding,{" "}
-                <span className={styles.peopleRole}>Partner</span>
-              </h1>
-            </Grid>
-            {settingPerson === "Jason" && (
-              <Grid item xs={11} style={{ marginLeft: 25 }}>
-                <p className={textStyles.contentTextLight}>
-                  <span className={textStyles.greenContentLead}>Jason </span>{" "}
-                  has more than 25 years’ financial markets experience having
-                  held senior financial roles in a FTSE100 company, corporate &
-                  investment banks, and is a former ‘Big 4’ corporate finance
-                  partner.
-                </p>
-                <p className={textStyles.contentTextLight}>
-                  Most recently, Jason has operated in a principal role, as
-                  Group CEO, overseeing all financing and investment activities
-                  for a single family office Substantial transaction leadership
-                  experience in M&A, refinancings, restructurings and
-                  recapitalisations, risk committees and credit committees and
-                  has provided written and oral expert testimony, having been
-                  called as an expert witness in US$2.2bn ICC Arbitration
-                  proceedings Emerging and developed markets experience in EMEA,
-                  Americas and SE Asia.
-                </p>
-                <p className={textStyles.contentTextLight}>
-                  Experienced across the entire range of public and private debt
-                  / capital markets products and the credit rating spectrum MBA
-                  from Aston Business School in 1992. First time pass in
-                  Securities & Futures Authority’s (now Financial Conduct
-                  Authority) corporate finance exams in 1999
-                </p>
-              </Grid>
-            )}
-            {settingPerson === "Andrew" && (
-              <Grid item xs={11} style={{ marginLeft: 25 }}>
-                <p className={textStyles.contentTextLight}>
-                  <span className={textStyles.greenContentLead}>Andrew </span>{" "}
-                  has more than 35 years’ financial markets experience having
-                  held senior financial roles in investment banking and private
-                  equity and sat on numerous bank and fund boards in both
-                  executive and non-executive capacities.
-                </p>
-                <p className={textStyles.contentTextLight}>
-                  Most recently, Andrew has advised Alcentra, a sub investment
-                  grade credit management firm and Bira, a UK SME Bank
-                  Substantial transaction leadership experience in LBOs,
-                  leveraged loans / growth capital and syndications, investment
-                  committees and credit committees and founded debt management
-                  businesses for 3i (built £4bn AUM) and Spire, UK-based
-                  boutique managing US$500M fund Experience in major capital
-                  markets in UK, Europe and the United States.
-                </p>
-                <p className={textStyles.contentTextLight}>
-                  Experience across investment grade and sub investment grade
-                  credit MA in Modern History from Magdalen College, Oxford in
-                  1984. Rotary Scholarship in Political Science from Tulane
-                  University, New Orleans, in 1985
-                </p>
-              </Grid>
-            )}
-            {activePerson === null && (
-              <p className={textStyles.contentTextLight}>
-                Jason and Andrew are two of the most experienced advisors in the
-                EMEA Debt Advisory and Financial Restructuring marketplace
-              </p>
-            )}
-            <PeopleSlide
-              person={activePerson ?? ""}
-              settingPerson={settingPerson ?? ""}
+        <Grid
+          xs={4}
+          item
+          container
+          className={styles.employeeContainer}
+          justify="center"
+        >
+          <Grid item xs={5}>
+            <img
+              src="/Jason.png"
+              alt="Jason Green"
+              className={styles.peoplePhoto}
             />
+            <h1 className={styles.peopleName}>
+              Jason Green, <span className={styles.peopleRole}>Partner</span>
+            </h1>
+          </Grid>
+          <Grid item xs={5}>
+            <img
+              src="/AndrewPeopleImage.png"
+              alt="Andrew Golding"
+              className={styles.peoplePhoto}
+            />
+            <h1 className={styles.peopleName}>
+              Andrew Golding, <span className={styles.peopleRole}>Partner</span>
+            </h1>
+          </Grid>
+          <Grid container xs={6} className={styles.previousRoles}>
+            <Grid item container xs={12}>
+              <Grid item xs={12} className={styles.previousRolesTitle}>
+                <h1 className={textStyles.lightThickSubtitle}>
+                  Previous Key Roles
+                </h1>
+              </Grid>
+              <Grid item xs={10}>
+                <p className={textStyles.contentText}>
+                  • Chief Executive, <b>Single Family Office</b>
+                </p>
+                <p className={textStyles.contentText}>
+                  • MD, Head of Financing Advisory, <b>Investec</b>
+                </p>
+                <p className={textStyles.contentText}>
+                  • Co-Head, Debt Advisory, <b>PwC</b>
+                </p>
+                <p className={textStyles.contentText}>
+                  • Debt Expert Witness, <b>ICC Arbitration Proceedings</b>
+                </p>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid container xs={6} className={styles.previousRoles}>
+            <Grid item container xs={12}>
+              <Grid item xs={12} className={styles.previousRolesTitle}>
+                <h1 className={textStyles.lightThickSubtitle}>
+                  Previous Key Roles
+                </h1>
+              </Grid>
+              <Grid xs={12} marginTop={10} />
+              <Grid item xs={10}>
+                <p className={textStyles.contentText}>
+                  • MD, Head of Debt Management, <b>3i</b>
+                </p>
+                <p className={textStyles.contentText}>
+                  • MD, Financial Sponsor Group, <b>Bank of America</b>
+                </p>
+                <p className={textStyles.contentText}>
+                  • Head of Leveraged Loans, <b>Barclays Capital</b>
+                </p>
+                <p className={textStyles.contentText}>
+                  • Head of Financial Sponsors, <b>HSBC</b>
+                </p>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
+
+        <Grid item xs={4} className={styles.descriptionTextBox}>
+          <p className={textStyles.contentTextLarge}>
+            <span className={textStyles.greenContentLead}>Andrew </span> has
+            more than 35 years’ financial markets experience having held senior
+            financial roles in investment banking and private equity and sat on
+            numerous bank and fund boards in both executive and non-executive
+            capacities.
+          </p>
+          <p className={textStyles.contentTextLarge}>
+            Most recently, Andrew has advised Alcentra, a sub investment grade
+            credit management firm and Bira, a UK SME Bank Substantial
+            transaction leadership experience in LBOs, leveraged loans / growth
+            capital and syndications, investment committees and credit
+            committees and founded debt management businesses for 3i (built £4bn
+            AUM) and Spire, UK-based boutique managing US$500M fund Experience
+            in major capital markets in UK, Europe and the United States.
+          </p>
+          <p className={textStyles.contentTextLarge}>
+            Experience across investment grade and sub investment grade credit
+            MA in Modern History from Magdalen College, Oxford in 1984. Rotary
+            Scholarship in Political Science from Tulane University, New
+            Orleans, in 1985
+          </p>
+        </Grid>
       </Grid>
-    </>
+    </Grid>
   );
 });
 
 const useStyles = makeStyles(() => ({
   peopleContainer: {
     justifyContent: "center",
-    marginTop: 10,
-    marginLeft: "12vw",
-  },
-  peopleTitle: {
-    fontFamily: "ArialLight",
-    fontSize: 60,
-    fontWeight: 100,
-    opacity: 0.8,
+    marginTop: 100,
   },
   peopleRole: {
-    fontFamily: "ArialLight",
+    fontFamily: "Banschrift",
     fontSize: 30,
-    fontWeight: 900,
+    fontWeight: 100,
     opacity: 0.8,
   },
   titleContainer: {
@@ -196,10 +171,12 @@ const useStyles = makeStyles(() => ({
     justifyContent: "space-around",
   },
   peoplePhoto: {
-    width: "50%",
+    width: 200,
+    height: 235,
+    boxShadow: "5px 5px 15px #000000",
   },
   peopleName: {
-    fontFamily: "Arial",
+    fontFamily: "Banschrift",
     fontSize: 30,
     fontWeight: 100,
     opacity: 0.8,
@@ -217,5 +194,16 @@ const useStyles = makeStyles(() => ({
     textAlign: "center",
     cursor: "pointer",
     opacity: 0.5,
+  },
+  previousRolesTitle: {
+    textAlign: "left",
+    borderLeftWidth: "6px",
+    borderStyle: "none none none solid",
+    borderColor: "rgba(40, 142, 142, 0.4)",
+    paddingLeft: 10,
+    marginLeft: -15,
+  },
+  descriptionTextBox: {
+    marginTop: 250,
   },
 }));

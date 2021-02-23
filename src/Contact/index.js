@@ -9,109 +9,221 @@ export const Contact = compose(() => {
   const textStyles = useTextStyles();
   return (
     <Grid container xs={12} className={styles.contactContainer}>
-      <Grid item>
-        <h1 className={textStyles.lightTitle}>Contact</h1>
-      </Grid>
-      <Grid item xs={12}></Grid>
-      <Grid item container xs={9}>
-        <Grid item xs={6}>
-          <Map />
+      <Grid item container xs={10}>
+        <Grid item xs={4}>
           <Grid item xs={12}>
             <img
-              src={"/Building2.jpg"}
-              style={{ width: "90%", marginTop: 30 }}
+              src={"/Building1.jpg"}
+              style={{
+                width: 527,
+                height: 592,
+                objectFit: "cover",
+                boxShadow: "2px 3px 10px #888888",
+                marginTop: 30,
+              }}
             />
           </Grid>
         </Grid>
         <Grid
           item
           container
-          xs={6}
+          xs={4}
           style={{ height: "auto", alignContent: "flex-start" }}
         >
-          <Grid
-            item
-            xs={7}
-            style={{ marginBottom: 40 }}
-            className={styles.textContainer}
-          >
-            <p className={textStyles.contentTextLight2}>
-              <b style={{ fontSize: 22 }}>
-                <img src="/Office.svg" className={styles.textImage} />
-                Liverpool Street Capital Advisors
-              </b>
+          <Grid item xs={12} className={styles.textContainer}>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{
+                fontSize: 22,
+                color: "rgb(0,31,96)",
+                textAlign: "center",
+              }}
+            >
+              <b>Jason Green</b>
             </p>
-            <p className={textStyles.contentTextLight2}>46 New Broad Street</p>
-            <p className={textStyles.contentTextLight2}>London</p>
-            <p className={textStyles.contentTextLight2}>EC2M 1JH</p>
-          </Grid>
-          <Grid xs={5} />
-          <Grid item xs={5} className={styles.textContainer}>
-            <p className={textStyles.contentTextLight2}>
-              <b style={{ fontSize: 22 }}>
-                <img src="/User.svg" className={styles.textImage} />
-                Jason Green
-              </b>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{
+                color: "rgb(0,31,96)",
+                textAlign: "center",
+                fontSize: 18,
+              }}
+            >
+              <b>Partner</b>
             </p>
-            <p className={textStyles.contentTextLight2}>Partner</p>
-            <p className={textStyles.contentTextLight2}>
-              <a href="mailto:jasongreen@lscapitaladvisors.co.uk">
-                jasongreen@lscapitaladvisors.co.uk
+            <p
+              className={textStyles.contentTextLight2}
+              style={{
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+                fontSize: 18,
+              }}
+            >
+              <a
+                href="mailto:jasongreen@lscapitaladvisors.co.uk"
+                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              >
+                <b>jasongreen@lscapitaladvisors.co.uk</b>
               </a>
             </p>
-            <p className={textStyles.contentTextLight2}>+44 (0) 203 651 5560</p>
-            <p className={textStyles.contentTextLight2}>+44 (0) 7764 235 474</p>
-          </Grid>
-          <Grid item xs={1} />
-          <Grid item xs={5} className={styles.textContainer}>
-            <p className={textStyles.contentTextLight2}>
-              <b style={{ fontSize: 22 }}>
-                <img src="/User.svg" className={styles.textImage} />
-                Andrew Golding
-              </b>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+            >
+              <b>+44 (0) 203 651 5560</b>
             </p>
-            <p className={textStyles.contentTextLight2}>Partner</p>
-            <p className={textStyles.contentTextLight2}>
-              <a href="mailto:andrewgolding@lscapitaladvisors.co.uk">
-                andrewgolding@lscapitaladvisors.co.uk
-              </a>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+            >
+              <b>+44 (0) 7764 235 474</b>
             </p>
-            <p className={textStyles.contentTextLight2}>+44 (0) 203 651 5561</p>
-            <p className={textStyles.contentTextLight2}>+44 (0) 7788 233006</p>
           </Grid>
-
-          <Grid item xs={5} style={{ marginTop: 40 }}>
-            <div className={styles.textContainer}>
-              <p className={textStyles.contentTextLight2}>
-                <img src="/User.svg" className={styles.textImage} />
-                <b style={{ fontSize: 22 }}>Kelsey North</b>
-              </p>
-              <p className={textStyles.contentTextLight2}>EA to the Partners</p>
-              <p className={textStyles.contentTextLight2}>
-                <a href="mailto:kelseynorth@lscapitaladvisors.co.uk">
-                  kelseynorth@lscapitaladvisors.co.uk
+          <Grid item xs={12} className={styles.textContainer}>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{
+                fontSize: 22,
+                color: "rgb(0,31,96)",
+                textAlign: "center",
+              }}
+            >
+              <b>Andrew Golding</b>
+            </p>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{
+                color: "rgb(0,31,96)",
+                textAlign: "center",
+                fontSize: 18,
+              }}
+            >
+              <b>Partner</b>
+            </p>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+                fontSize: 18,
+              }}
+            >
+              <b>
+                <a
+                  href="mailto:andrewgolding@lscapitaladvisors.co.uk"
+                  style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+                >
+                  andrewgolding@lscapitaladvisors.co.uk
                 </a>
+              </b>
+            </p>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+            >
+              <b>+44 (0) 203 651 5561</b>
+            </p>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+            >
+              <b>+44 (0) 7788 233006</b>
+            </p>
+          </Grid>
+          <Grid item xs={12}>
+            <div className={styles.textContainer}>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{
+                  fontSize: 22,
+                  color: "rgb(0,31,96)",
+                  textAlign: "center",
+                }}
+              >
+                <b>Kelsey North</b>
               </p>
-              <p className={textStyles.contentTextLight2}>
-                +44 (0) 203 651 5562
+              <p
+                className={textStyles.contentTextLight2}
+                style={{
+                  color: "rgb(0,31,96)",
+                  textAlign: "center",
+                  fontSize: 18,
+                }}
+              >
+                <b>EA to the Partners</b>
               </p>
-              <p className={textStyles.contentTextLight2}>
-                +44 (0) 7584 668337
+              <p
+                className={textStyles.contentTextLight2}
+                style={{
+                  color: "rgb(0,102,102)",
+                  textAlign: "center",
+                  fontSize: 18,
+                }}
+              >
+                <b>
+                  <a
+                    href="mailto:kelseynorth@lscapitaladvisors.co.uk"
+                    style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+                  >
+                    kelseynorth@lscapitaladvisors.co.uk
+                  </a>
+                </b>
+              </p>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              >
+                <b> +44 (0) 203 651 5562</b>
+              </p>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              >
+                <b> +44 (0) 7584 668337</b>
               </p>
             </div>
           </Grid>
+          <Grid item xs={12}>
+            <div className={styles.textContainer}>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{
+                  fontSize: 22,
+
+                  textAlign: "center",
+                }}
+              >
+                <a
+                  href="mailto:info@lscapitaladvisors.com"
+                  style={{ color: "rgb(0,31,96)" }}
+                >
+                  <b>info@lscapitaladvisors.com</b>
+                </a>
+              </p>
+            </div>
+          </Grid>
+        </Grid>
+        <Grid item container style={{ justifyContent: "center" }} xs={4}>
+          <Map />
         </Grid>
       </Grid>
     </Grid>
   );
 });
 
+// use static image for the map using the pointer in between words
+// put address box in top let with company name and address
+
 const useStyles = makeStyles(() => ({
   contactContainer: {
     justifyContent: "center",
-    marginTop: 30,
+    marginTop: 100,
   },
   textContainer: {
+    marginBottom: 30,
+    paddingTop: 10,
+  },
+  textContainer2: {
     backgroundColor: "white",
     padding: 10,
     paddingLeft: 20,
@@ -121,6 +233,9 @@ const useStyles = makeStyles(() => ({
     marginTop: 10,
     paddingBottom: 30,
     width: "auto",
+    position: "relative",
+    top: 250,
+    marginTop: -250,
   },
   textImage: {
     height: 30,

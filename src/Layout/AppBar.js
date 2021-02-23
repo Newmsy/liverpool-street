@@ -9,6 +9,7 @@ import {
   Slider,
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { ReactComponent as ArrowWhite } from "../Assets/ArrowWhite.svg";
 
 export const AppBar = compose(({ changeLoc }) => {
   const styles = useStyles();
@@ -16,88 +17,90 @@ export const AppBar = compose(({ changeLoc }) => {
   const goHome = () => {
     history.push("/home");
   };
-
-  const [fontSize, setFontSize] = React.useState(30);
-
-  const [logoPos, setLogoPos] = React.useState(1);
-
-  //logo top right
-  //same size as enter site
-  //green background app bar
-  //white fonts
-  //caps app bar 15font size
-  //remove people image companies
+  const currentLoc = window.location.pathname;
 
   return (
     <Grid xs={12} container className={styles.appbarBackground}>
       <Grid item xs={2}></Grid>
       <Grid item container xs={8} className={styles.appbarNav}>
-        <Grid item class="hvr-underline-from-center">
-          <div className={styles.navbarItem} onClick={() => changeLoc("/home")}>
-            <h1 className={styles.navText}>Home</h1>
+        <Grid item>
+          <div
+            className={styles.navbarItem}
+            onClick={() => changeLoc("/world-class-advice")}
+          >
+            <h1 className={styles.navText}>WORLD CLASS ADVICE</h1>
+            {currentLoc === "/world-class-advice" && (
+              <ArrowWhite fill="black" className={styles.arrow} />
+            )}
           </div>
         </Grid>
-        <NavBreakPoint fontSize={fontSize} />
-        <Grid item class="hvr-underline-from-center">
-          <div className={styles.navbarItem} onClick={() => changeLoc("#")}>
-            <h1 className={styles.navText}>Why LSCA</h1>
+        <NavBreakPoint />
+
+        <Grid item>
+          <div
+            className={styles.navbarItem}
+            onClick={() => changeLoc("/world-class-experience")}
+          >
+            <h1 className={styles.navText}>WORLD CLASS EXPERIENCE</h1>
+            {currentLoc === "/world-class-experience" && (
+              <ArrowWhite fill="black" className={styles.arrow} />
+            )}
           </div>
         </Grid>
-        <NavBreakPoint fontSize={fontSize} />
-        <Grid item class="hvr-underline-from-center">
+
+        <NavBreakPoint />
+        <Grid item>
           <div
             className={styles.navbarItem}
             onClick={() => changeLoc("/why-now")}
           >
-            <h1 className={styles.navText}>Why Now</h1>
+            <h1 className={styles.navText}>Why Now?</h1>
+            {currentLoc === "/why-now" && (
+              <ArrowWhite fill="black" className={styles.arrow} />
+            )}
           </div>
         </Grid>
-        <NavBreakPoint fontSize={fontSize} />
+        <NavBreakPoint />
 
-        <Grid item class="hvr-underline-from-center">
+        <Grid item>
           <div
             className={styles.navbarItem}
             onClick={() => changeLoc("/selected-transactions")}
           >
             <h1 className={styles.navText}>Transactions</h1>
-          </div>
-        </Grid>
-        <NavBreakPoint fontSize={fontSize} />
-        <Grid item class="hvr-underline-from-center">
-          <div
-            className={styles.navbarItem}
-            onClick={() => changeLoc("/people")}
-          >
-            <h1 className={styles.navText}>People</h1>
+            {currentLoc === "/selected-transactions" && (
+              <ArrowWhite fill="black" className={styles.arrow} />
+            )}
           </div>
         </Grid>
 
-        <NavBreakPoint fontSize={fontSize} />
-        <Grid item class="hvr-underline-from-center">
+        <NavBreakPoint />
+        <Grid item>
           <div
             className={styles.navbarItem}
             onClick={() => changeLoc("/contact")}
           >
-            <h1 className={styles.navText}>Contact</h1>
+            <h1 className={styles.navText}>Contact us</h1>
+            {currentLoc === "/contact" && (
+              <ArrowWhite fill="black" className={styles.arrow} />
+            )}
           </div>
         </Grid>
       </Grid>
       <Grid item xs={2} style={{ display: "flex", justifyContent: "flex-end" }}>
-        {logoPos && (
-          <img
-            src="/LogoSubtext.png"
-            alt="Liverpool Street Capital Advisors"
-            className={styles.appbarLogo}
-            style={{ height: 230 }}
-            onClick={() => changeLoc("/home")}
-          />
-        )}
+        <img
+          src="/LogoSubtext.png"
+          alt="Liverpool Street Capital Advisors"
+          className={styles.appbarLogo}
+          style={{ height: 230 }}
+          onClick={() => changeLoc("/world-class-advice")}
+        />
       </Grid>
     </Grid>
   );
 });
 
-const NavBreakPoint = ({ fontSize }) => {
+const NavBreakPoint = () => {
   const styles = useStyles();
   return (
     <Grid item className={styles.navBreakpoint}>
@@ -117,11 +120,11 @@ const useStyles = makeStyles(() => ({
     zIndex: 500,
   },
   appbarBackground: {
-    height: 65,
+    height: 150,
     marginBottom: -40,
     background: "rgb(0,102,102)",
     zIndex: 100,
-    boxShadow: "2px 3px 10px #888888",
+    boxShadow: "0px 0px 10px #000000",
   },
   appbarLogo: {
     height: 200,
@@ -130,11 +133,17 @@ const useStyles = makeStyles(() => ({
     cursor: "pointer",
     imageRendering: "-webkit-optimize-contrast",
     zIndex: 1,
-    marginTop: 30,
+    marginTop: 0,
+  },
+  arrow: {
+    height: 15,
+    position: "relative",
+    bottom: 10,
+    fill: "rgb(0,31,96)",
   },
   appbarNav: {
     marginTop: 0,
-    height: 60,
+    height: 150,
     zIndex: 100,
     justifyContent: "center",
   },
@@ -143,14 +152,15 @@ const useStyles = makeStyles(() => ({
   },
   navText: {
     fontFamily: "Banschrift",
-    fontSize: 25,
+    fontSize: 18,
     fontWeight: 100,
     color: "white",
     textDecoration: "none",
+    textTransform: "uppercase",
   },
   navTextBreakPoint: {
     fontFamily: "Arial",
-    fontSize: 25,
+    fontSize: 18,
     fontWeight: 100,
     color: "white",
     cursor: "pointer",
@@ -159,15 +169,20 @@ const useStyles = makeStyles(() => ({
     height: 60,
     paddingTop: 7,
     paddingBottom: 7,
+    marginTop: 107,
   },
   navbarItem: {
-    marginRight: 20,
-    marginLeft: 20,
-    marginBottom: -10,
+    paddingRight: 20,
+    paddingLeft: 20,
+    marginRight: 5,
+    marginLeft: 5,
+    marginBottom: -50,
+    marginTop: 107,
     height: 60,
-    borderRadius: 10,
     padding: 7,
-    paddingBottom: -10,
     cursor: "pointer",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
   },
 }));

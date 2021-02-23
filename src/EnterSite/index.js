@@ -21,7 +21,7 @@ export const EnterSite = compose(() => {
 
   const enterSite = () => {
     setHide(true);
-    setTimeout(() => history.push("/home-fade"), 1500);
+    setTimeout(() => history.push("/world-class-advice"), 1500);
   };
 
   return (
@@ -89,6 +89,8 @@ export const EnterSite = compose(() => {
     </>
   );
 });
+
+//change unconventional wisdom sizing
 
 const useStyles = makeStyles(() => ({
   enteringOpen: {

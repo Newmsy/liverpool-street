@@ -24,12 +24,12 @@ function App() {
           }}
         >
           <Switch>
-            <Route path="/people">
+            <Route path="/world-class-experience">
               <Page>
                 <People />
               </Page>
             </Route>
-            <Route path="/home">
+            <Route path="/world-class-advice">
               <Page>
                 <Home />
               </Page>
@@ -49,15 +49,7 @@ function App() {
                 <Contact />
               </Page>
             </Route>
-            <Route path="/home-fade">
-              <Fade in={true} timeout={1500}>
-                <div>
-                  <Page>
-                    <Home />
-                  </Page>
-                </div>
-              </Fade>
-            </Route>
+
             <Route path="/">
               <EnterSite />
             </Route>
