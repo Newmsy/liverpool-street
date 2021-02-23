@@ -710,7 +710,7 @@ const TransactionItem = ({
             <p
               className={textStyles.contentText}
               style={{
-                fontSize: 22,
+                fontSize: 17,
                 textAlign: "center",
                 marginBottom: -15,
                 marginTop: 2,
@@ -741,7 +741,7 @@ const TransactionItem = ({
             className={textStyles.contentText}
             style={{
               textAlign: "center",
-              fontSize: 20,
+              fontSize: 17,
               color: "rgb(0,31,96)",
               marginTop: 0,
             }}
