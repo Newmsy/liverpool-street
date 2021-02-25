@@ -16,13 +16,14 @@ export const SelectedTransactions = compose(() => {
 
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
-      <Grid item container xs={9} alignItems="space-between" justify="center">
+      <Grid item container xs={7} alignItems="space-between" justify="center">
         <Tabs
           value={activeTab}
           onChange={onChangeTab}
           TabIndicatorProps={{
             style: {
-              height: "0px",
+              backgroundColor: "rgb(0,102,102)",
+              height: 7,
             },
           }}
           variant="fullWidth"
@@ -31,17 +32,50 @@ export const SelectedTransactions = compose(() => {
           <Tab
             className={styles.transactionTab}
             label={"Transactions as Borrower"}
+            style={{
+              backgroundColor:
+                activeTab === 0 ? "rgba(0,102,102, 0.15)" : "transparent",
+            }}
           />
-          <Tab className={styles.transactionTab} label={"Real Estate"} />
-          <Tab className={styles.transactionTab} label={"Corporate"} />
-          <Tab className={styles.transactionTab} label={"Private Equity"} />
+          <Tab
+            className={styles.transactionTab}
+            label={"Real Estate"}
+            style={{
+              backgroundColor:
+                activeTab === 1 ? "rgba(0,102,102, 0.15)" : "transparent",
+            }}
+          />
+          <Tab
+            className={styles.transactionTab}
+            label={"Corporate"}
+            style={{
+              backgroundColor:
+                activeTab === 2 ? "rgba(0,102,102, 0.15)" : "transparent",
+            }}
+          />
+          <Tab
+            className={styles.transactionTab}
+            label={"Private Equity"}
+            style={{
+              backgroundColor:
+                activeTab === 3 ? "rgba(0,102,102, 0.15)" : "transparent",
+            }}
+          />
           <Tab
             className={styles.transactionTab}
             label={"Energy, Mining & Infrastructure (1)"}
+            style={{
+              backgroundColor:
+                activeTab === 4 ? "rgba(0,102,102, 0.15)" : "transparent",
+            }}
           />
           <Tab
             className={styles.transactionTab}
             label={"Energy, Mining & Infrastructure (2)"}
+            style={{
+              backgroundColor:
+                activeTab === 5 ? "rgba(0,102,102, 0.15)" : "transparent",
+            }}
           />
         </Tabs>
         <TabContent index={activeTab} />
@@ -60,13 +94,13 @@ const useStyles = makeStyles(() => ({
     bottom: 0,
   },
   transactionTab: {
-    backgroundColor: "rgb(0,102,102)",
+    backgroundColor: "transparent",
     fontFamily: "Banschrift",
     marginTop: 5,
     marginBottom: 5,
     fontSize: 20,
     fontWeight: 100,
-    color: "rgb(255,255,255)",
+    color: "rgb(0,102,102)",
   },
   tabBar: {
     width: "100%",

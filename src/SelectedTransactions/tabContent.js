@@ -699,7 +699,7 @@ const TransactionItem = ({
       <Grid item style={{ marginTop: -10 }}>
         <h1
           className={textStyles.mediumSubtitle}
-          style={{ textAlign: "center", color: "rgb(0,102,102)" }}
+          style={{ textAlign: "center", color: "rgb(255,255,255)" }}
         >
           {title}
         </h1>
@@ -758,7 +758,7 @@ const useStyles = makeStyles(() => ({
   transactionsContainer: {
     justifyContent: "center",
     alignContent: "flex-start",
-    backgroundColor: "rgb(0,102,102)",
+    backgroundColor: "transparent",
     paddingBottom: "3vh",
   },
   subPaper: {
@@ -777,7 +777,7 @@ const useStyles = makeStyles(() => ({
   tabContainerItem: {
     minHeight: 200,
     boxShadow: "1px 1px 8px #000000",
-    backgroundColor: "rgb(230,230,230)",
+    backgroundColor: "rgb(0,102,102)",
     borderRadius: 5,
     marginLeft: "1%",
     marginRight: "1%",

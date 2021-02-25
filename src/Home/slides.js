@@ -7,7 +7,8 @@ import ReactCardFlip from "react-card-flip";
 export const Slides = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-  const [flipped, setFlipped] = React.useState("");
+  const [flipped, setFlipped] = React.useState("Strategic Review");
+  //top left flips 2 seconds into landing then 5 secoonds after flips back
 
   return (
     <Grid container className={styles.slidesContainer} spacing={2}>
@@ -143,7 +144,7 @@ export const Slides = compose(() => {
         setFlipped={setFlipped}
         zIndex={1}
       >
-        <p className={textStyles.contentTextGreen}>Rating re/negotiation</p>
+        <p className={textStyles.contentTextGreen}>Rating re / negotiation</p>
         <div className={styles.indented}>
           <p className={textStyles.contentText}>
             • Effective presentation of credit profile to agencies
@@ -162,11 +163,11 @@ export const Slides = compose(() => {
       >
         <p className={textStyles.contentTextGreen}>Corporate acquisition</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>• Raise incremental finance</p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>• Raise incremental finance</p>
+          <p className={textStyles.contentText2}>
             • Provide funding / bid certainty
           </p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Integrate new financing into existing acquiror balance sheet
           </p>
         </div>
@@ -246,13 +247,13 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "rgba(0,102,102,1)",
     minHeight: 140,
     borderRadius: 15,
-    boxShadow: "3px 3px 10px #000000",
+    boxShadow: "3px 3px 6px #000000",
   },
   paperBack: {
     backgroundColor: "rgba(255,255,255,1)",
-    minHeight: 140,
+    minHeight: 240,
     borderRadius: 15,
-    boxShadow: "3px 3px 10px #000000",
+    boxShadow: "3px 3px 6px #000000",
   },
   paper: {
     minHeight: 140,

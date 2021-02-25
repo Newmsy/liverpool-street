@@ -7,6 +7,9 @@ import { Map } from "./map";
 export const Contact = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
+  //copy of the map pin next to the LSCA and bring down a font size
+  //zoom out a bit more on map - include bank and liverpool street
+  //align a bit more with top and bottom of images
   return (
     <Grid container xs={12} className={styles.contactContainer}>
       <Grid item container xs={10}>
@@ -15,11 +18,11 @@ export const Contact = compose(() => {
             <img
               src={"/Building1.jpg"}
               style={{
-                width: 527,
-                height: 592,
+                width: 420,
                 objectFit: "cover",
                 boxShadow: "2px 3px 10px #888888",
-                marginTop: 30,
+                marginTop: 60,
+                marginLeft: 150,
               }}
             />
           </Grid>
@@ -51,6 +54,19 @@ export const Contact = compose(() => {
             >
               <b>Partner</b>
             </p>
+
+            <p
+              className={textStyles.contentTextLight2}
+              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+            >
+              <b>+44 (0) 203 651 5560</b>
+            </p>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+            >
+              <b>+44 (0) 7764 235 474</b>
+            </p>
             <p
               className={textStyles.contentTextLight2}
               style={{
@@ -63,20 +79,8 @@ export const Contact = compose(() => {
                 href="mailto:jasongreen@lscapitaladvisors.co.uk"
                 style={{ color: "rgb(0,102,102)", textAlign: "center" }}
               >
-                <b>jasongreen@lscapitaladvisors.co.uk</b>
+                jasongreen@lscapitaladvisors.co.uk
               </a>
-            </p>
-            <p
-              className={textStyles.contentTextLight2}
-              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-            >
-              <b>+44 (0) 203 651 5560</b>
-            </p>
-            <p
-              className={textStyles.contentTextLight2}
-              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-            >
-              <b>+44 (0) 7764 235 474</b>
             </p>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
@@ -100,23 +104,7 @@ export const Contact = compose(() => {
             >
               <b>Partner</b>
             </p>
-            <p
-              className={textStyles.contentTextLight2}
-              style={{
-                color: "rgb(0,102,102)",
-                textAlign: "center",
-                fontSize: 18,
-              }}
-            >
-              <b>
-                <a
-                  href="mailto:andrewgolding@lscapitaladvisors.co.uk"
-                  style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-                >
-                  andrewgolding@lscapitaladvisors.co.uk
-                </a>
-              </b>
-            </p>
+
             <p
               className={textStyles.contentTextLight2}
               style={{ color: "rgb(0,102,102)", textAlign: "center" }}
@@ -128,6 +116,21 @@ export const Contact = compose(() => {
               style={{ color: "rgb(0,102,102)", textAlign: "center" }}
             >
               <b>+44 (0) 7788 233006</b>
+            </p>
+            <p
+              className={textStyles.contentTextLight2}
+              style={{
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+                fontSize: 18,
+              }}
+            >
+              <a
+                href="mailto:andrewgolding@lscapitaladvisors.co.uk"
+                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              >
+                andrewgolding@lscapitaladvisors.co.uk
+              </a>
             </p>
           </Grid>
           <Grid item xs={12}>
@@ -152,6 +155,23 @@ export const Contact = compose(() => {
               >
                 <b>EA to the Partners</b>
               </p>
+
+              <p
+                className={textStyles.contentTextLight2}
+                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              >
+                <b>
+                  +44 (0) 203 651 5562 <span style={{ marginLeft: 5 }}></span>|
+                  <span style={{ marginLeft: 5 }}></span>
+                  +44 (0) 7584 668337
+                </b>
+              </p>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              >
+                <b></b>
+              </p>
               <p
                 className={textStyles.contentTextLight2}
                 style={{
@@ -160,26 +180,12 @@ export const Contact = compose(() => {
                   fontSize: 18,
                 }}
               >
-                <b>
-                  <a
-                    href="mailto:kelseynorth@lscapitaladvisors.co.uk"
-                    style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-                  >
-                    kelseynorth@lscapitaladvisors.co.uk
-                  </a>
-                </b>
-              </p>
-              <p
-                className={textStyles.contentTextLight2}
-                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-              >
-                <b> +44 (0) 203 651 5562</b>
-              </p>
-              <p
-                className={textStyles.contentTextLight2}
-                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-              >
-                <b> +44 (0) 7584 668337</b>
+                <a
+                  href="mailto:kelseynorth@lscapitaladvisors.co.uk"
+                  style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+                >
+                  kelseynorth@lscapitaladvisors.co.uk
+                </a>
               </p>
             </div>
           </Grid>

@@ -7,6 +7,7 @@ import { Slides } from "./slides";
 export const Home = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
+  //jusitfy text left and right
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
       <Grid item container alignItems="space-between" justify="center">
@@ -39,7 +40,7 @@ export const Home = compose(() => {
             </p>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <p className={textStyles.contentText}>
+            <p className={textStyles.contentText} style={{ textAlign: "left" }}>
               We believe this is unique in the debt advisory and financial
               restructuring market which is why we call this
               <img
@@ -67,6 +68,7 @@ export const Home = compose(() => {
             </p>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
+            {/* jusitfy text left and right */}
             <p className={textStyles.contentText}>We have:</p>
             <div className={styles.indented}>
               <p className={textStyles.contentTextLightTight}>
@@ -116,14 +118,14 @@ const useStyles = makeStyles(() => ({
     marginRight: 50,
     paddingBottom: 50,
     flexDirection: "row",
-    alignContent: "center",
+    alignContent: "space-between",
   },
   textContainer: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     padding: 10,
     paddingLeft: 20,
     borderRadius: 5,
-    boxShadow: "2px 3px 10px #888888",
+    //boxShadow: "2px 3px 10px #888888",
     marginBottom: 15,
   },
 }));

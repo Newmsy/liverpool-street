@@ -33,6 +33,7 @@ export const useTextStyles = makeStyles(() => ({
     fontSize: 18,
     lineHeight: 1.4,
     color: "rgb(0,31,96)",
+    textAlign: "justify",
   },
   Banschrift2: {
     fontFamily: "Banschrift",
@@ -48,6 +49,14 @@ export const useTextStyles = makeStyles(() => ({
     fontSize: 14,
     lineHeight: 1.4,
     color: "rgb(0,31,96)",
+    textAlign: "justify",
+  },
+  contentText2: {
+    fontFamily: "Banschrift",
+    fontWeight: 100,
+    fontSize: 14,
+    lineHeight: 1.4,
+    color: "rgb(0,102,102)",
   },
   contentTextLight2: {
     fontFamily: "Banschrift",
@@ -65,11 +74,11 @@ export const useTextStyles = makeStyles(() => ({
   },
   contentTextGreen: {
     fontFamily: "Banschrift",
-    fontWeight: 100,
+    fontWeight: 600,
     fontSize: 18,
     lineHeight: 1.4,
     marginTop: 0,
-    color: "rgb(0,102,102)",
+    color: "rgb(0,31,96)",
   },
   contentTextLightTight: {
     fontFamily: "Banschrift",
@@ -78,6 +87,7 @@ export const useTextStyles = makeStyles(() => ({
     lineHeight: 1.4,
     marginTop: -10,
     color: "rgb(0,31,96)",
+    textAlign: "justify",
   },
   greenContentLead: {
     fontFamily: "Banschrift",

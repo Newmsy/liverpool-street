@@ -7,7 +7,10 @@ import { useTextStyles } from "../Styles/TextStyles";
 export const People = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-
+  // match empty space above between photos
+  // bring images more central
+  // justify left right text, make skinnier and taller
+  // left right justify all text across site
   return (
     <Grid item container xs={12} className={styles.peopleContainer}>
       <Grid item container xs={10} spacing={4}>
@@ -49,18 +52,48 @@ export const People = compose(() => {
               alt="Jason Green"
               className={styles.peoplePhoto}
             />
-            <h1 className={styles.peopleName}>
-              Jason Green, <span className={styles.peopleRole}>Partner</span>
+            <h1
+              className={styles.peopleName}
+              style={{
+                textAlign: "center",
+                color: "rgb(0,31,96)",
+                fontWeight: 600,
+              }}
+            >
+              Jason Green
+            </h1>
+            <h1
+              className={styles.peopleName}
+              style={{
+                textAlign: "center",
+                color: "rgb(0,102,102)",
+                marginTop: -20,
+              }}
+            >
+              <span className={styles.peopleRole}>Partner</span>
             </h1>
           </Grid>
           <Grid item xs={5}>
             <img
-              src="/AndrewPeopleImage.png"
+              src="/AndrewPeopleImage2.png"
               alt="Andrew Golding"
-              className={styles.peoplePhoto}
+              className={styles.peoplePhoto2}
             />
-            <h1 className={styles.peopleName}>
-              Andrew Golding, <span className={styles.peopleRole}>Partner</span>
+            <h1
+              className={styles.peopleName}
+              style={{ textAlign: "center", color: "rgb(0,31,96)" }}
+            >
+              Andrew Golding
+            </h1>
+            <h1
+              className={styles.peopleName}
+              style={{
+                textAlign: "center",
+                color: "rgb(0,102,102)",
+                marginTop: -20,
+              }}
+            >
+              <span className={styles.peopleRole}>Partner</span>
             </h1>
           </Grid>
           <Grid container xs={6} className={styles.previousRoles}>
@@ -175,11 +208,15 @@ const useStyles = makeStyles(() => ({
     height: 235,
     boxShadow: "5px 5px 15px #000000",
   },
+  peoplePhoto2: {
+    width: 200,
+    height: 235,
+    boxShadow: "5px 5px 15px #000000",
+  },
   peopleName: {
     fontFamily: "Banschrift",
     fontSize: 30,
     fontWeight: 100,
-    opacity: 0.8,
   },
   peopleIndividual: {
     textAlign: "center",

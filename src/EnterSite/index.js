@@ -60,7 +60,7 @@ export const EnterSite = compose(() => {
                   style={{ justifyContent: "center", display: "flex" }}
                 >
                   <img
-                    src="/UnconventionalWisdom.svg"
+                    src="/UnconventionalWisdom.png"
                     alt="Liverpool Street Capital Advisors"
                     className={styles.mottoUn}
                   />
@@ -136,7 +136,7 @@ const useStyles = makeStyles(() => ({
   },
   mottoUn: {
     width: 240,
-    marginLeft: 25,
+    marginLeft: 45,
     imageRendering: "-webkit-optimize-contrast",
   },
   enterSiteButton: {
