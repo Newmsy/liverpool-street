@@ -696,14 +696,6 @@ const TransactionItem = ({
 
   return (
     <Grid item container className={styles.tabContainerItem}>
-      <Grid item style={{ marginTop: -10 }}>
-        <h1
-          className={textStyles.mediumSubtitle}
-          style={{ textAlign: "center", color: "rgb(255,255,255)" }}
-        >
-          {title}
-        </h1>
-      </Grid>
       <Grid item container xs={12} className={styles.subPaper}>
         <Grid item>
           {company.length > 0 && (
@@ -766,21 +758,23 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     justifyContent: "space-between",
     backgroundColor: "white",
-    minHeight: 150,
-    marginTop: -30,
-    borderRadius: 5,
+    minHeight: 190,
+    marginTop: 0,
+    borderRadius: 15,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
     overflowY: "hidden",
     overflowX: "hidden",
   },
   tabContainerItem: {
-    minHeight: 200,
+    minHeight: 0,
     boxShadow: "1px 1px 8px #000000",
     backgroundColor: "rgb(0,102,102)",
-    borderRadius: 5,
+    borderRadius: 15,
     marginLeft: "1%",
     marginRight: "1%",
+    paddingRight: 5,
+    paddingBottom: 5,
     marginTop: 10,
     width: "18%",
     marginBottom: 5,

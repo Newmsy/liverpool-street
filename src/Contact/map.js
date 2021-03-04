@@ -17,6 +17,16 @@ export const Map = compose(() => {
             marginTop: 8,
           }}
         >
+          <img
+            src="/MapsPin.png"
+            style={{
+              position: "relative",
+              top: 5,
+              width: 15,
+              marginRight: 5,
+              marginLeft: -5,
+            }}
+          />
           Liverpool Street Capital Advisors
         </p>
         <p
@@ -25,6 +35,7 @@ export const Map = compose(() => {
             fontSize: 16,
             color: "rgb(0,102,102)",
             marginTop: 8,
+            marginLeft: 15,
           }}
         >
           46, New Broad Street
@@ -35,6 +46,7 @@ export const Map = compose(() => {
             fontSize: 16,
             color: "rgb(0,102,102)",
             marginTop: 8,
+            marginLeft: 15,
           }}
         >
           London
@@ -45,18 +57,20 @@ export const Map = compose(() => {
             fontSize: 16,
             color: "rgb(0,102,102)",
             marginTop: 8,
+            marginLeft: 15,
           }}
         >
           EC2M 1JH
         </p>
       </Box>
       <img
-        src="/Map2.png"
+        src="/MapClearPin.png"
         style={{
+          width: 460,
+          objectFit: "cover",
           boxShadow: "2px 3px 10px #888888",
-          marginTop: 100,
-          width: 425,
-          marginRight: 200,
+          marginTop: 120,
+          height: 480,
         }}
       />
       {/* <iframe
@@ -78,8 +92,8 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "white",
     position: "absolute",
     height: 120,
-    width: 250,
-    top: 57,
+    width: 270,
+    top: 37,
     left: 0,
     paddingLeft: 15,
     borderRadius: 10,

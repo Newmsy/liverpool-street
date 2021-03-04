@@ -7,7 +7,7 @@ import { Slides } from "./slides";
 export const Home = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-  //jusitfy text left and right
+
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
       <Grid item container alignItems="space-between" justify="center">
@@ -125,7 +125,7 @@ const useStyles = makeStyles(() => ({
     padding: 10,
     paddingLeft: 20,
     borderRadius: 5,
-    //boxShadow: "2px 3px 10px #888888",
-    marginBottom: 15,
+
+    marginBottom: 0,
   },
 }));

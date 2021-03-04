@@ -7,8 +7,22 @@ import ReactCardFlip from "react-card-flip";
 export const Slides = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-  const [flipped, setFlipped] = React.useState("Strategic Review");
-  //top left flips 2 seconds into landing then 5 secoonds after flips back
+  const [flipped, setFlipped] = React.useState("");
+  const [canAutoFlip, setCanAutoFlip] = React.useState(true);
+
+  window.onload = setTimeout(() => {
+    if (canAutoFlip) {
+      setFlipped("Strategic Review");
+      setCanAutoFlip(false);
+    }
+  }, 2000);
+
+  window.onload = setTimeout(() => {
+    if (canAutoFlip) {
+      setFlipped("");
+      setCanAutoFlip(false);
+    }
+  }, 7000);
 
   return (
     <Grid container className={styles.slidesContainer} spacing={2}>
@@ -22,13 +36,13 @@ export const Slides = compose(() => {
           Business / shareholder change
         </p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Identify and rank debt / equity solutions
           </p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Achieve stakeholder objectives
           </p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Minimise transaction time / disruption / cost
           </p>
         </div>
@@ -41,13 +55,13 @@ export const Slides = compose(() => {
       >
         <p className={textStyles.contentTextGreen}>Financial change</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Improve lending terms / generate cash out
           </p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Introduce new lenders / investors
           </p>
-          <p className={textStyles.contentText}>• Extend maturities</p>
+          <p className={textStyles.contentText2}>• Extend maturities</p>
         </div>
       </CardItem>
       <CardItem
@@ -60,11 +74,11 @@ export const Slides = compose(() => {
           Business / financial distress
         </p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Keep you in control / preserve equity value
           </p>
-          <p className={textStyles.contentText}>• Remove problem lenders</p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>• Remove problem lenders</p>
+          <p className={textStyles.contentText2}>
             • Introduce new capital to facilitate turnaround plan
           </p>
         </div>
@@ -79,13 +93,13 @@ export const Slides = compose(() => {
           Asset / division divestment
         </p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Disposal to delever / raise money
           </p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Part of financial restructuring / balance sheet optimisation
           </p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Transform borrower leverage profile
           </p>
         </div>
@@ -98,9 +112,11 @@ export const Slides = compose(() => {
       >
         <p className={textStyles.contentTextGreen}>Sell-side advice</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>• Remove funding uncertainty</p>
-          <p className={textStyles.contentText}>• Set hurdle for bidders</p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
+            • Remove funding uncertainty
+          </p>
+          <p className={textStyles.contentText2}>• Set hurdle for bidders</p>
+          <p className={textStyles.contentText2}>
             • Maximise competitive tension in your process
           </p>
         </div>
@@ -113,11 +129,11 @@ export const Slides = compose(() => {
       >
         <p className={textStyles.contentTextGreen}>Buy-side advice</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Beat staple to give you competitive advantage
           </p>
-          <p className={textStyles.contentText}>• Confirm deliverability</p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>• Confirm deliverability</p>
+          <p className={textStyles.contentText2}>
             • Enable you to focus on deal fundamentals / value drivers
           </p>
         </div>
@@ -130,12 +146,12 @@ export const Slides = compose(() => {
       >
         <p className={textStyles.contentTextGreen}>Risk reduction</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Linking hedging products to financing goals across
           </p>
-          <p className={textStyles.contentText}>• Rates</p>
-          <p className={textStyles.contentText}>• Currency</p>
-          <p className={textStyles.contentText}>• Commodity</p>
+          <p className={textStyles.contentText2}>• Rates</p>
+          <p className={textStyles.contentText2}>• Currency</p>
+          <p className={textStyles.contentText2}>• Commodity</p>
         </div>
       </CardItem>
       <CardItem
@@ -146,11 +162,11 @@ export const Slides = compose(() => {
       >
         <p className={textStyles.contentTextGreen}>Rating re / negotiation</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>
             • Effective presentation of credit profile to agencies
           </p>
-          <p className={textStyles.contentText}>• Optimise rating outcome</p>
-          <p className={textStyles.contentText}>
+          <p className={textStyles.contentText2}>• Optimise rating outcome</p>
+          <p className={textStyles.contentText2}>
             • Achieve tightest spread to gilts
           </p>
         </div>
@@ -233,13 +249,14 @@ const useStyles = makeStyles(() => ({
   slidesContainer: {
     marginBottom: 50,
     marginTop: 40,
+    alignContent: "flex-start",
     width: "35%",
     height: "auto",
     paddingBottom: 50,
   },
   slideItem: {
     borderRadius: 15,
-    marginBottom: -50,
+    marginBottom: 15,
     height: 140,
     cursor: "default",
   },

@@ -46,7 +46,7 @@ export const useTextStyles = makeStyles(() => ({
   contentText: {
     fontFamily: "Banschrift",
     fontWeight: 100,
-    fontSize: 14,
+    fontSize: 18,
     lineHeight: 1.4,
     color: "rgb(0,31,96)",
     textAlign: "justify",
@@ -83,9 +83,9 @@ export const useTextStyles = makeStyles(() => ({
   contentTextLightTight: {
     fontFamily: "Banschrift",
     fontWeight: 100,
-    fontSize: 14,
+    fontSize: 18,
     lineHeight: 1.4,
-    marginTop: -10,
+    marginTop: -16,
     color: "rgb(0,31,96)",
     textAlign: "justify",
   },
@@ -93,5 +93,7 @@ export const useTextStyles = makeStyles(() => ({
     fontFamily: "Banschrift",
     fontSize: 36,
     color: "rgba(20,122,122, 1)",
+    marginBottom: 0,
+    lineHeight: 0.5,
   },
 }));

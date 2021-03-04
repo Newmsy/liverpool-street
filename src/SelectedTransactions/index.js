@@ -14,9 +14,11 @@ export const SelectedTransactions = compose(() => {
     console.log(activeTab);
   }, []);
 
+  // blue arrow goes above current location of tabs
+
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
-      <Grid item container xs={7} alignItems="space-between" justify="center">
+      <Grid item container xs={6} alignItems="space-between" justify="center">
         <Tabs
           value={activeTab}
           onChange={onChangeTab}
@@ -31,7 +33,7 @@ export const SelectedTransactions = compose(() => {
         >
           <Tab
             className={styles.transactionTab}
-            label={"Transactions as Borrower"}
+            label={"Transactions as borrower"}
             style={{
               backgroundColor:
                 activeTab === 0 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -63,7 +65,7 @@ export const SelectedTransactions = compose(() => {
           />
           <Tab
             className={styles.transactionTab}
-            label={"Energy, Mining & Infrastructure (1)"}
+            label={"Infrastructure"}
             style={{
               backgroundColor:
                 activeTab === 4 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -71,7 +73,7 @@ export const SelectedTransactions = compose(() => {
           />
           <Tab
             className={styles.transactionTab}
-            label={"Energy, Mining & Infrastructure (2)"}
+            label={"Energy & Mining"}
             style={{
               backgroundColor:
                 activeTab === 5 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -87,11 +89,11 @@ export const SelectedTransactions = compose(() => {
 const useStyles = makeStyles(() => ({
   transactionsContainer: {
     justifyContent: "center",
-    marginTop: 100,
+    marginTop: 0,
     flexDirection: "column",
     alignItems: "center",
     position: "absolute",
-    bottom: 0,
+    bottom: 50,
   },
   transactionTab: {
     backgroundColor: "transparent",

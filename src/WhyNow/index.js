@@ -7,6 +7,9 @@ export const WhyNow = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
   const [index, setIndex] = React.useState(0);
+  // change colour of graphics
+  // use left and right arrows to navigate
+  // slide the cards
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
       <Grid

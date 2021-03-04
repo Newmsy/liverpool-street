@@ -21,8 +21,9 @@ export const Contact = compose(() => {
                 width: 420,
                 objectFit: "cover",
                 boxShadow: "2px 3px 10px #888888",
-                marginTop: 60,
-                marginLeft: 150,
+                marginTop: 40,
+                height: 560,
+                marginLeft: 100,
               }}
             />
           </Grid>
@@ -31,7 +32,7 @@ export const Contact = compose(() => {
           item
           container
           xs={4}
-          style={{ height: "auto", alignContent: "flex-start" }}
+          style={{ height: "auto", alignContent: "flex-start", marginTop: 40 }}
         >
           <Grid item xs={12} className={styles.textContainer}>
             <p
@@ -59,25 +60,40 @@ export const Contact = compose(() => {
               className={textStyles.contentTextLight2}
               style={{ color: "rgb(0,102,102)", textAlign: "center" }}
             >
-              <b>+44 (0) 203 651 5560</b>
+              <b>
+                +44 (0) 203 651 5560
+                <span
+                  style={{
+                    marginLeft: 15,
+                    marginRight: 15,
+                    color: "rgb(0,31,96)",
+                  }}
+                >
+                  |
+                </span>
+                +44 (0) 7764 235474
+              </b>
             </p>
             <p
               className={textStyles.contentTextLight2}
               style={{ color: "rgb(0,102,102)", textAlign: "center" }}
             >
-              <b>+44 (0) 7764 235 474</b>
+              <b></b>
             </p>
             <p
               className={textStyles.contentTextLight2}
               style={{
                 color: "rgb(0,102,102)",
                 textAlign: "center",
-                fontSize: 18,
+                fontSize: 20,
               }}
             >
               <a
                 href="mailto:jasongreen@lscapitaladvisors.co.uk"
-                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+                style={{
+                  color: "rgb(0,102,102)",
+                  textAlign: "center",
+                }}
               >
                 jasongreen@lscapitaladvisors.co.uk
               </a>
@@ -109,25 +125,40 @@ export const Contact = compose(() => {
               className={textStyles.contentTextLight2}
               style={{ color: "rgb(0,102,102)", textAlign: "center" }}
             >
-              <b>+44 (0) 203 651 5561</b>
+              <b>
+                +44 (0) 203 651 5561
+                <span
+                  style={{
+                    marginLeft: 15,
+                    marginRight: 15,
+                    color: "rgb(0,31,96)",
+                  }}
+                >
+                  |
+                </span>
+                +44 (0) 7788 233006
+              </b>
             </p>
             <p
               className={textStyles.contentTextLight2}
               style={{ color: "rgb(0,102,102)", textAlign: "center" }}
             >
-              <b>+44 (0) 7788 233006</b>
+              <b></b>
             </p>
             <p
               className={textStyles.contentTextLight2}
               style={{
                 color: "rgb(0,102,102)",
                 textAlign: "center",
-                fontSize: 18,
+                fontSize: 20,
               }}
             >
               <a
                 href="mailto:andrewgolding@lscapitaladvisors.co.uk"
-                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+                style={{
+                  color: "rgb(0,102,102)",
+                  textAlign: "center",
+                }}
               >
                 andrewgolding@lscapitaladvisors.co.uk
               </a>
@@ -161,8 +192,16 @@ export const Contact = compose(() => {
                 style={{ color: "rgb(0,102,102)", textAlign: "center" }}
               >
                 <b>
-                  +44 (0) 203 651 5562 <span style={{ marginLeft: 5 }}></span>|
-                  <span style={{ marginLeft: 5 }}></span>
+                  +44 (0) 203 651 5562{" "}
+                  <span
+                    style={{
+                      marginLeft: 15,
+                      marginRight: 15,
+                      color: "rgb(0,31,96)",
+                    }}
+                  >
+                    |
+                  </span>
                   +44 (0) 7584 668337
                 </b>
               </p>
@@ -177,12 +216,16 @@ export const Contact = compose(() => {
                 style={{
                   color: "rgb(0,102,102)",
                   textAlign: "center",
-                  fontSize: 18,
+                  fontSize: 20,
                 }}
               >
                 <a
                   href="mailto:kelseynorth@lscapitaladvisors.co.uk"
-                  style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+                  style={{
+                    color: "rgb(0,102,102)",
+                    textAlign: "center",
+                    fontWeight: 300,
+                  }}
                 >
                   kelseynorth@lscapitaladvisors.co.uk
                 </a>
@@ -195,7 +238,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-
+                  marginTop: 120,
                   textAlign: "center",
                 }}
               >
@@ -209,7 +252,7 @@ export const Contact = compose(() => {
             </div>
           </Grid>
         </Grid>
-        <Grid item container style={{ justifyContent: "center" }} xs={4}>
+        <Grid item container style={{ justifyContent: "flex-start" }} xs={4}>
           <Map />
         </Grid>
       </Grid>
@@ -226,7 +269,7 @@ const useStyles = makeStyles(() => ({
     marginTop: 100,
   },
   textContainer: {
-    marginBottom: 30,
+    marginBottom: 15,
     paddingTop: 10,
   },
   textContainer2: {
