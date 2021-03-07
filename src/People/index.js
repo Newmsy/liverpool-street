@@ -50,7 +50,7 @@ export const People = compose(() => {
         >
           <Grid item xs={5}>
             <img
-              src="/Jason.png"
+              src="/JasonBW.png"
               alt="Jason Green"
               className={styles.peoplePhoto}
             />
@@ -77,7 +77,7 @@ export const People = compose(() => {
           </Grid>
           <Grid item xs={5}>
             <img
-              src="/AndrewPeopleImage2.png"
+              src="/AndrewPeopleImageBW.png"
               alt="Andrew Golding"
               className={styles.peoplePhoto2}
             />
@@ -170,13 +170,11 @@ const useStyles = makeStyles(() => ({
     width: 200,
     height: 235,
     boxShadow: "5px 5px 15px #000000",
-    filter: "grayscale(100%)",
   },
   peoplePhoto2: {
     width: 200,
     height: 235,
     boxShadow: "5px 5px 15px #000000",
-    filter: "grayscale(100%)",
   },
   peopleName: {
     fontFamily: "Banschrift",
