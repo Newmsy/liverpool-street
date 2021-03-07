@@ -2,15 +2,27 @@ import React from "react";
 import { compose } from "redux";
 import { Box, Grid, makeStyles, Tab, Tabs, Paper } from "@material-ui/core";
 import { useTextStyles } from "../Styles/TextStyles";
+import Carousel from "react-material-ui-carousel";
 
 export const TabContent = ({ index }) => {
   const styles = useStyles();
   const textStyles = useTextStyles();
+  const [currIndex, setCurrIndex] = React.useState(index);
 
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
-      {index === 0 && (
-        <>
+      <Carousel
+        animation="slide"
+        indicators={false}
+        autoplay={false}
+        interval={1000000000}
+        navButtonsAlwaysInvisible={true}
+        onChange={(index, active) => {
+          setCurrIndex(index);
+        }}
+        index={index}
+      >
+        <Grid item container xs={12}>
           <TransactionItem
             title={"Borrower"}
             imageUrl={""}
@@ -101,10 +113,9 @@ export const TabContent = ({ index }) => {
             value={"2.5M"}
             description={"Working Capital Facility"}
           />
-        </>
-      )}
-      {index === 1 && (
-        <>
+        </Grid>
+
+        <Grid item container xs={12}>
           <TransactionItem
             title={"Financial Advisor"}
             company={"Public Service Properties Investments"}
@@ -213,10 +224,9 @@ export const TabContent = ({ index }) => {
             value={"125M"}
             description={"Marine Assets Refinancing"}
           />
-        </>
-      )}
-      {index === 2 && (
-        <>
+        </Grid>
+
+        <Grid item container xs={12}>
           <TransactionItem
             title={"Financial Advisor"}
             company={"Unilever"}
@@ -329,10 +339,9 @@ export const TabContent = ({ index }) => {
             value={"57.5M"}
             description={"Reserve Based Lending Facility"}
           />
-        </>
-      )}
-      {index === 3 && (
-        <>
+        </Grid>
+
+        <Grid item container xs={12}>
           <TransactionItem
             title={"Financial Advisor"}
             company={"Newcastle International / Macquire Bank"}
@@ -439,10 +448,9 @@ export const TabContent = ({ index }) => {
             value={"55M"}
             description={"Buyside Financing Advice for Seed Assets"}
           />
-        </>
-      )}
-      {index === 4 && (
-        <>
+        </Grid>
+
+        <Grid item container xs={12}>
           <TransactionItem
             title={"Financial Advisor"}
             company={"Innisfree"}
@@ -553,10 +561,9 @@ export const TabContent = ({ index }) => {
             value={"200M"}
             description={"Power Plant Construction, Brazil"}
           />
-        </>
-      )}
-      {index === 5 && (
-        <>
+        </Grid>
+
+        <Grid item container xs={12}>
           <TransactionItem
             title={"Lender To"}
             company={"BHP Billiton"}
@@ -677,8 +684,8 @@ export const TabContent = ({ index }) => {
             value={"182M"}
             description={"Power Plant Construction, Indonesia"}
           />
-        </>
-      )}
+        </Grid>
+      </Carousel>
     </Grid>
   );
 };

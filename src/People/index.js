@@ -170,11 +170,13 @@ const useStyles = makeStyles(() => ({
     width: 200,
     height: 235,
     boxShadow: "5px 5px 15px #000000",
+    filter: "grayscale(100%)",
   },
   peoplePhoto2: {
     width: 200,
     height: 235,
     boxShadow: "5px 5px 15px #000000",
+    filter: "grayscale(100%)",
   },
   peopleName: {
     fontFamily: "Banschrift",
