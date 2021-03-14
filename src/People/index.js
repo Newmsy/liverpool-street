@@ -13,30 +13,62 @@ export const People = compose(() => {
     <Grid item container xs={12} className={styles.peopleContainer}>
       <Grid item container xs={10} spacing={4}>
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "90%", marginLeft: "5%" }}>
+          <div style={{ width: "95%", marginLeft: "0%" }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Jason </span> has
               more than 25 years’ financial markets experience having held
-              senior financial roles in a FTSE100 company, corporate &
-              investment banks, and is a former ‘Big 4’ corporate finance
-              partner.
+              senior financial roles in industry, corporate and investment
+              banking, professional services and, most recently, Group CEO of a
+              single family office. During his career, Jason has sat on all
+              sides of the table as lender, investor, borrower and advisor,
+              giving him a unique perspective on financing negotiations. Key
+              previous roles include:
             </p>
+            <div className={styles.indented}>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Chief executive of single family office;
+                </span>
+              </p>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Global Structured Finance at Investec Bank, Natwest Markets,
+                  National Australia Bank;
+                </span>
+              </p>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Co-Founder / Co-Head of Debt Advisory at PwC;
+                </span>
+              </p>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Senior Financial Analyst at RELX plc, the FTSE100 information
+                  and analytics company;
+                </span>
+              </p>
+            </div>
+
             <p className={textStyles.contentTextLarge}>
-              Most recently, Jason has operated in a principal role, as Group
-              CEO, overseeing all financing and investment activities for a
-              single family office Substantial transaction leadership experience
-              in M&A, refinancings, restructurings and recapitalisations, risk
+              Jason has substantial transaction leadership experience in M&A,
+              refinancings, restructurings and recapitalisations, risk
               committees and credit committees and has provided written and oral
-              expert testimony, having been called as an expert witness in
-              US$2.2bn ICC Arbitration proceedings Emerging and developed
-              markets experience in EMEA, Americas and SE Asia.
+              expert testimony having been called as an expert witness in
+              USD2.2BN ICC Arbitration proceedings.
             </p>
             <p className={textStyles.contentTextLarge}>
-              Experienced across the entire range of public and private debt /
-              capital markets products and the credit rating spectrum MBA from
-              Aston Business School in 1992. First time pass in Securities &
-              Futures Authority’s (now Financial Conduct Authority) corporate
-              finance exams in 1999
+              Emerging and developed markets experience in EMEA, Americas and SE
+              Asia. Experienced across the entire range of public and private
+              debt / capital markets and the credit rating spectrum.
+            </p>
+            <p className={textStyles.contentTextLarge}>
+              MBA from Aston Business School in 1992. First time pass in the
+              Securities Institute’s (now Chartered Institute for Securities &
+              Investment) corporate finance exams in 1999.
             </p>
           </div>
         </Grid>
@@ -102,32 +134,78 @@ export const People = compose(() => {
               <span className={styles.peopleRole}>Partner</span>
             </h1>
           </Grid>
+          <Grid item xs={12} style={{ position: "relative", top: 0 }}>
+            <p
+              className={textStyles.contentTextLarge}
+              style={{ fontSize: 20, color: "rgb(0,102,102)" }}
+            >
+              Jason and Andrew are two of the most experienced advisors in the
+              EMEA Financing Advisory and Restructuring marketplace. We believe
+              this depth of market knowledge and experience of having sat at
+              every seat at the table during our careers is unique in the debt
+              advisory and financial restructuring markets.
+            </p>
+          </Grid>
         </Grid>
 
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "90%", marginLeft: "5%" }}>
+          <div style={{ width: "90%", marginLeft: "10%" }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Andrew </span> has
               more than 35 years’ financial markets experience having held
-              senior financial roles in investment banking and private equity
-              and sat on numerous bank and fund boards in both executive and
-              non-executive capacities.
+              senior financial roles in investment banking, private equity and,
+              most recently, as banking advisor for a leading pan-European
+              mid-market private equity investor. During his career, Andrew has
+              sat on all sides of the table as lender, investor, borrower and
+              advisor, giving him a unique perspective on financing
+              negotiations. Key previous roles include:
+            </p>
+
+            <div className={styles.indented}>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Chief executive of single family office;
+                </span>
+              </p>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Head of Debt Management / Banking Partner, 3i Buyouts;
+                </span>
+              </p>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Head of Financial Sponsors / Leveraged Finance at Bank of
+                  America, Barclays Capital, HSBC;
+                </span>
+              </p>
+              <p className={textStyles.contentTextLightTight}>
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Banking Officer graduate traineeship at Continental Illinois
+                  National Bank in Chicago;
+                </span>
+              </p>
+            </div>
+
+            <p className={textStyles.contentTextLarge}>
+              Andrew has substantial transaction leadership experience in LBOs,
+              leveraged loans / growth capital and syndications, investment
+              committees and credit committees and founded debt management
+              businesses for 3i (built £4BN AUM) and Spire, a UK-based boutique,
+              managing USD500M fund.
             </p>
             <p className={textStyles.contentTextLarge}>
-              Most recently, Andrew has advised Alcentra, a sub investment grade
-              credit management firm and Bira, a UK SME Bank Substantial
-              transaction leadership experience in LBOs, leveraged loans /
-              growth capital and syndications, investment committees and credit
-              committees and founded debt management businesses for 3i (built
-              £4bn AUM) and Spire, UK-based boutique managing US$500M fund
-              Experience in major capital markets in UK, Europe and the United
-              States.
+              Experience in major capital markets in the UK, Europe and the
+              United States. Experienced across investment grade and sub
+              investment grade credit.
             </p>
             <p className={textStyles.contentTextLarge}>
-              Experience across investment grade and sub investment grade credit
               MA in Modern History from Magdalen College, Oxford in 1984. Rotary
-              Scholarship in Political Science from Tulane University, New
-              Orleans, in 1985
+              Scholarship in Political Science to Tulane University, New
+              Orleans, in 1985.
             </p>
           </div>
         </Grid>
@@ -145,7 +223,6 @@ const useStyles = makeStyles(() => ({
     fontFamily: "Banschrift",
     fontSize: 30,
     fontWeight: 100,
-    opacity: 0.8,
   },
   titleContainer: {
     textAlign: "center",
@@ -171,14 +248,14 @@ const useStyles = makeStyles(() => ({
     height: 235,
     boxShadow: "5px 5px 15px #000000",
     filter: "grayscale(100%)",
-    borderRadius: 15,
+    borderRadius: 5,
   },
   peoplePhoto2: {
     width: 200,
     height: 235,
     boxShadow: "5px 5px 15px #000000",
     filter: "grayscale(100%)",
-    borderRadius: 15,
+    borderRadius: 5,
   },
   peopleName: {
     fontFamily: "Banschrift",
@@ -208,7 +285,11 @@ const useStyles = makeStyles(() => ({
     marginLeft: -15,
   },
   descriptionTextBox: {
-    marginTop: 100,
+    marginTop: 10,
     //sort out the width of this to reduce by 20% or so
+  },
+  indented: {
+    marginLeft: 10,
+    marginTop: 30,
   },
 }));

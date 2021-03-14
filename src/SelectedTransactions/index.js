@@ -22,7 +22,7 @@ export const SelectedTransactions = compose(() => {
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
       <Grid container xs={11} className={styles.transactionsContainer2}>
-        <Grid item container xs={7} alignItems="space-between" justify="center">
+        <Grid item container xs={6} alignItems="space-between" justify="center">
           <Tabs
             value={activeTab}
             onChange={onChangeTab}
@@ -37,7 +37,7 @@ export const SelectedTransactions = compose(() => {
           >
             <Tab
               className={styles.transactionTab}
-              label={"Transactions as borrower"}
+              label={"Corporate"}
               style={{
                 backgroundColor:
                   activeTab === 0 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -45,7 +45,7 @@ export const SelectedTransactions = compose(() => {
             />
             <Tab
               className={styles.transactionTab}
-              label={"Real Estate"}
+              label={"Private Equity"}
               style={{
                 backgroundColor:
                   activeTab === 1 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -53,7 +53,7 @@ export const SelectedTransactions = compose(() => {
             />
             <Tab
               className={styles.transactionTab}
-              label={"Corporate"}
+              label={"Real Estate"}
               style={{
                 backgroundColor:
                   activeTab === 2 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -61,7 +61,7 @@ export const SelectedTransactions = compose(() => {
             />
             <Tab
               className={styles.transactionTab}
-              label={"Private Equity"}
+              label={"Real Assets"}
               style={{
                 backgroundColor:
                   activeTab === 3 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -69,18 +69,10 @@ export const SelectedTransactions = compose(() => {
             />
             <Tab
               className={styles.transactionTab}
-              label={"Infrastructure"}
+              label={"Natural Resources"}
               style={{
                 backgroundColor:
                   activeTab === 4 ? "rgba(0,102,102, 0.15)" : "transparent",
-              }}
-            />
-            <Tab
-              className={styles.transactionTab}
-              label={"Energy & Mining"}
-              style={{
-                backgroundColor:
-                  activeTab === 5 ? "rgba(0,102,102, 0.15)" : "transparent",
               }}
             />
           </Tabs>
@@ -97,7 +89,8 @@ export const SelectedTransactions = compose(() => {
             <div
               style={{
                 position: "absolute",
-                top: 300,
+                bottom: 55,
+                height: 0,
                 width: "100%",
                 display: "flex",
                 flexDirection: "row",
@@ -124,20 +117,20 @@ export const SelectedTransactions = compose(() => {
                 onClick={() => {
                   setActiveTab(activeTab + 1);
                 }}
-                disabled={activeTab === 5}
+                disabled={activeTab === 4}
               >
                 <ArrowRight
                   style={{
                     width: 40,
                     fill: "rgb(0,102,102)",
-                    display: activeTab === 5 ? "none" : "",
+                    display: activeTab === 4 ? "none" : "",
                   }}
                 />
               </IconButton>
             </div>
           </Grid>
-          <TabContent index={activeTab} />
         </Grid>
+        <TabContent index={activeTab} />
       </Grid>
     </Grid>
   );
@@ -146,23 +139,23 @@ export const SelectedTransactions = compose(() => {
 const useStyles = makeStyles(() => ({
   leftArrow: {
     position: "relative",
-    right: 100,
+    right: 80,
+    height: 60,
   },
   rightArrow: {
     left: 100,
     position: "relative",
+    height: 60,
   },
   transactionsContainer: {
     justifyContent: "center",
     marginTop: 0,
     flexDirection: "column",
     alignItems: "center",
-    position: "absolute",
-    bottom: 50,
   },
   transactionsContainer2: {
     justifyContent: "center",
-    marginTop: 0,
+    marginTop: 80,
     flexDirection: "column",
     alignItems: "center",
   },

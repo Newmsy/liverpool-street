@@ -29,10 +29,10 @@ export const AppBar = compose(({ changeLoc }) => {
             onClick={() => changeLoc("/world-class-advice")}
           >
             <h1 className={styles.navText}>WORLD CLASS ADVICE</h1>
-            {currentLoc === "/world-class-advice" && (
-              <ArrowWhite fill="black" className={styles.arrow} />
-            )}
           </div>
+          {currentLoc === "/world-class-advice" && (
+            <ArrowWhite fill="black" className={styles.arrow} />
+          )}
         </Grid>
         <NavBreakPoint />
 
@@ -42,10 +42,10 @@ export const AppBar = compose(({ changeLoc }) => {
             onClick={() => changeLoc("/world-class-experience")}
           >
             <h1 className={styles.navText}>WORLD CLASS EXPERIENCE</h1>
-            {currentLoc === "/world-class-experience" && (
-              <ArrowWhite fill="black" className={styles.arrow} />
-            )}
           </div>
+          {currentLoc === "/world-class-experience" && (
+            <ArrowWhite fill="black" className={styles.arrow} />
+          )}
         </Grid>
 
         <NavBreakPoint />
@@ -55,10 +55,10 @@ export const AppBar = compose(({ changeLoc }) => {
             onClick={() => changeLoc("/why-now")}
           >
             <h1 className={styles.navText}>Why Now?</h1>
-            {currentLoc === "/why-now" && (
-              <ArrowWhite fill="black" className={styles.arrow} />
-            )}
           </div>
+          {currentLoc === "/why-now" && (
+            <ArrowWhite fill="black" className={styles.arrow} />
+          )}
         </Grid>
         <NavBreakPoint />
 
@@ -68,10 +68,10 @@ export const AppBar = compose(({ changeLoc }) => {
             onClick={() => changeLoc("/selected-transactions")}
           >
             <h1 className={styles.navText}>Transactions</h1>
-            {currentLoc === "/selected-transactions" && (
-              <ArrowWhite fill="black" className={styles.arrow} />
-            )}
           </div>
+          {currentLoc === "/selected-transactions" && (
+            <ArrowWhite fill="black" className={styles.arrow} />
+          )}
         </Grid>
 
         <NavBreakPoint />
@@ -81,10 +81,10 @@ export const AppBar = compose(({ changeLoc }) => {
             onClick={() => changeLoc("/contact")}
           >
             <h1 className={styles.navText}>Contact us</h1>
-            {currentLoc === "/contact" && (
-              <ArrowWhite fill="black" className={styles.arrow} />
-            )}
           </div>
+          {currentLoc === "/contact" && (
+            <ArrowWhite fill="black" className={styles.arrow} />
+          )}
         </Grid>
       </Grid>
       <Grid item xs={2} style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -138,8 +138,10 @@ const useStyles = makeStyles(() => ({
   arrow: {
     height: 15,
     position: "relative",
-    bottom: 10,
+    top: 22,
+    zIndex: 50000,
     fill: "rgb(0,31,96)",
+    marginLeft: "45%",
   },
   appbarNav: {
     marginTop: 0,
@@ -163,7 +165,6 @@ const useStyles = makeStyles(() => ({
     fontSize: 18,
     fontWeight: 100,
     color: "white",
-    cursor: "pointer",
   },
   navBreakpoint: {
     height: 60,

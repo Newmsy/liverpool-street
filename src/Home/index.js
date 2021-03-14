@@ -13,73 +13,96 @@ export const Home = compose(() => {
       <Grid item container alignItems="space-between" justify="center">
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12} className={styles.textContainer}>
-            <p className={textStyles.contentText}>
-              We are a mid-market focussed adviser covering:
-            </p>
-            <div className={styles.indented}>
-              <p className={textStyles.contentTextLightTight}>• Real Estate</p>
-              <p className={textStyles.contentTextLightTight}>• Corporate</p>
-              <p className={textStyles.contentTextLightTight}>
-                • Energy, Mining & Infrastructure
-              </p>
-              <p className={textStyles.contentTextLightTight}>
-                • Private (bank and fund) markets and public (capital) markets
+            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+              <p className={textStyles.contentText}>
+                Liverpool Street Capital Advisors is a mid-market focused
+                boutique advisor applying our experience to cover Corporate,
+                Private Equity, Real Estate, Real Assets and Natural Resources
+                clients.
               </p>
             </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <p className={textStyles.contentText}>
-              We apply our world class experience across all major credit
-              classes to help your business.
-            </p>
+            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+              <p className={textStyles.contentText}>
+                Financing markets have changed dramatically over the past 20
+                years and new entrants to the market mean this change remains in
+                its infancy. This trend is no longer ‘high finance’; it is
+                relevant to companies of all sizes, across UK plc and
+                internationally.
+              </p>
+            </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <p className={textStyles.contentText}>
-              We strive to select the best elements from each credit market in
-              order to create bespoke solutions for our clients.
-            </p>
+            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+              <p className={textStyles.contentText}>
+                As well as providing our clients with access to the public
+                financing markets, we also connect our clients to the clearers,
+                challengers, fintechs, investment funds, family offices and
+                niche providers which are playing an increasingly important role
+                in financing business.
+              </p>
+            </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <p className={textStyles.contentText} style={{ textAlign: "left" }}>
-              We believe this is unique in the debt advisory and financial
-              restructuring market which is why we call this
-              <img
-                src="/UnconventionalWisdom.png"
-                alt="Liverpool Street Capital Advisors"
-                className={styles.unconventionalWisdom}
-              />
-            </p>
+            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+              <p
+                className={textStyles.contentText}
+                style={{ textAlign: "left" }}
+              >
+                Liverpool Street Capital Advisors enable our clients to navigate
+                this changing landscape to find and execute the best financing.
+              </p>
+            </div>
           </Grid>
         </Grid>
 
         <Slides />
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12} className={styles.textContainer}>
-            <p className={textStyles.contentText}>
-              Liverpool Street Capital Advisors have been lenders, advisors and
-              borrowers in all major private and public credit classes
-            </p>
+            <div style={{ width: "120%" }}>
+              <p className={textStyles.contentText}>
+                Our partners have deep experience in developed and emerging
+                markets across all major credit classes in both public financing
+                markets (capital markets) and private markets (bank and
+                non-bank).
+              </p>
+            </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <p className={textStyles.contentText}>
-              We believe this depth of market knowledge and experience of having
-              sat at every seat at the table during our careers is unique in the
-              debt advisory and financial restructuring market
-            </p>
+            <div style={{ width: "120%" }}>
+              <p className={textStyles.contentText}>
+                Our partners have acted on 177 career transactions, involving
+                finance totalling GBP42.7BN. They have been lenders, investors,
+                borrowers and advisors, giving them a unique perspective on
+                financing negotiations, whether for growth or restructuring.
+              </p>
+            </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            {/* jusitfy text left and right */}
-            <p className={textStyles.contentText}>We have:</p>
-            <div className={styles.indented}>
-              <p className={textStyles.contentTextLightTight}>
-                • The depth of technical product and market knowledge
+            <div style={{ width: "120%" }}>
+              <p className={textStyles.contentText}>
+                Liverpool Street Capital Advisors is a pure-play financing
+                advisor, free from conflicts of interest. Our partners seek to
+                select the best elements from each credit market in order to
+                create bespoke solutions for our clients, applying our world
+                class experience to help your business succeed.
               </p>
-              <p className={textStyles.contentTextLightTight}>• Corporate</p>
-              <p className={textStyles.contentTextLightTight}>
-                • The experience of having sat at every seat at the table
-              </p>
-              <p className={textStyles.contentTextLightTight}>
-                • The understanding of what you, as client, need and by when
+            </div>
+          </Grid>
+          <Grid item xs={12} className={styles.textContainer}>
+            <div style={{ width: "120%" }}>
+              <p
+                className={textStyles.contentText}
+                style={{ textAlign: "left" }}
+              >
+                We believe this is unique in the debt advisory and financial
+                restructuring market which is why we call this
+                <img
+                  src="/UnconventionalWisdom.png"
+                  alt="Liverpool Street Capital Advisors"
+                  className={styles.unconventionalWisdom}
+                />
               </p>
             </div>
           </Grid>
@@ -100,8 +123,9 @@ const useStyles = makeStyles(() => ({
     width: 230,
     verticalAlign: "text-top",
     position: "relative",
-    bottom: 5,
-    left: 8,
+    bottom: 10,
+    marginBottom: -10,
+    left: 0,
     imageRendering: "-webkit-optimize-contrast",
   },
   homeTitle: {
@@ -122,10 +146,9 @@ const useStyles = makeStyles(() => ({
   },
   textContainer: {
     backgroundColor: "transparent",
-    padding: 10,
-    paddingLeft: 20,
+    padding: 0,
     borderRadius: 5,
-
     marginBottom: 0,
+    marginTop: 0,
   },
 }));
