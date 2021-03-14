@@ -45,7 +45,6 @@ export const Contact = compose(() => {
                     className={styles.linkedIn}
                     style={{ top: 20, width: 63 }}
                   />
-                  dimensional-carnation-8tur50g8ouriqcvsjah05lu8.herokudns.com
                 </a>
               </p>
             </div>
