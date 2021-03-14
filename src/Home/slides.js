@@ -22,7 +22,10 @@ export const Slides = compose(() => {
       setFlipped("");
       setCanAutoFlip(false);
     }
-  }, 7000);
+  }, 4000);
+
+  // 2s to turn on
+  // 2s to turn ovber after
 
   return (
     <Grid container className={styles.slidesContainer} spacing={2}>
@@ -37,13 +40,13 @@ export const Slides = compose(() => {
         </p>
         <div className={styles.indented}>
           <p className={textStyles.contentText2}>
-            • Identify and rank debt / equity solutions
+            • Compare financing structure to best-in-class
           </p>
           <p className={textStyles.contentText2}>
-            • Achieve stakeholder objectives
+            • Identify universe of options
           </p>
           <p className={textStyles.contentText2}>
-            • Minimise transaction time / disruption / cost
+            • Implement change to meet stakeholder objectives
           </p>
         </div>
       </CardItem>
@@ -61,7 +64,9 @@ export const Slides = compose(() => {
           <p className={textStyles.contentText2}>
             • Introduce new lenders / investors
           </p>
-          <p className={textStyles.contentText2}>• Extend maturities</p>
+          <p className={textStyles.contentText2}>
+            • Term out / extend maturities
+          </p>
         </div>
       </CardItem>
       <CardItem
@@ -79,7 +84,7 @@ export const Slides = compose(() => {
           </p>
           <p className={textStyles.contentText2}>• Remove problem lenders</p>
           <p className={textStyles.contentText2}>
-            • Introduce new capital to facilitate turnaround plan
+            • Introduce new capital to facilitate turnaround
           </p>
         </div>
       </CardItem>
@@ -97,7 +102,8 @@ export const Slides = compose(() => {
             • Disposal to delever / raise money
           </p>
           <p className={textStyles.contentText2}>
-            • Part of financial restructuring / balance sheet optimisation
+            • Component in financial restructuring / balance sheet
+            reoptimisation
           </p>
           <p className={textStyles.contentText2}>
             • Transform borrower leverage profile
@@ -117,7 +123,7 @@ export const Slides = compose(() => {
           </p>
           <p className={textStyles.contentText2}>• Set hurdle for bidders</p>
           <p className={textStyles.contentText2}>
-            • Maximise competitive tension in your process
+            • Maximise competitive tension in sale proces
           </p>
         </div>
       </CardItem>
@@ -147,11 +153,19 @@ export const Slides = compose(() => {
         <p className={textStyles.contentTextGreen}>Risk reduction</p>
         <div className={styles.indented}>
           <p className={textStyles.contentText2}>
-            • Linking hedging products to financing goals across
+            • Hedging strategy supporting financing goals across:
           </p>
-          <p className={textStyles.contentText2}>• Rates</p>
-          <p className={textStyles.contentText2}>• Currency</p>
-          <p className={textStyles.contentText2}>• Commodity</p>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
+              • Rates
+            </p>
+            <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
+              • Currencies
+            </p>
+            <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
+              • Commodities
+            </p>
+          </div>
         </div>
       </CardItem>
       <CardItem
@@ -165,9 +179,9 @@ export const Slides = compose(() => {
           <p className={textStyles.contentText2}>
             • Effective presentation of credit profile to agencies
           </p>
-          <p className={textStyles.contentText2}>• Optimise rating outcome</p>
+          <p className={textStyles.contentText2}>• Optimise rating outcomes</p>
           <p className={textStyles.contentText2}>
-            • Achieve tightest spread to gilts
+            • Achieve tightest spread to benchmark
           </p>
         </div>
       </CardItem>
@@ -179,12 +193,13 @@ export const Slides = compose(() => {
       >
         <p className={textStyles.contentTextGreen}>Corporate acquisition</p>
         <div className={styles.indented}>
-          <p className={textStyles.contentText2}>• Raise incremental finance</p>
           <p className={textStyles.contentText2}>
-            • Provide funding / bid certainty
+            • New facilities to finance bid
           </p>
+          <p className={textStyles.contentText2}>• Funding / bid certainty</p>
           <p className={textStyles.contentText2}>
-            • Integrate new financing into existing acquiror balance sheet
+            • Integration of new facilities with terms of existing facilities /
+            security
           </p>
         </div>
       </CardItem>

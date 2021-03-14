@@ -144,7 +144,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: "45%",
   },
   appbarNav: {
-    marginTop: 0,
+    marginTop: -5,
     height: 150,
     zIndex: 100,
     justifyContent: "center",
@@ -154,7 +154,7 @@ const useStyles = makeStyles(() => ({
   },
   navText: {
     fontFamily: "Banschrift",
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 100,
     color: "white",
     textDecoration: "none",
@@ -162,7 +162,7 @@ const useStyles = makeStyles(() => ({
   },
   navTextBreakPoint: {
     fontFamily: "Arial",
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 100,
     color: "white",
   },

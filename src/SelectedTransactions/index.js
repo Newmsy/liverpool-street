@@ -6,23 +6,38 @@ import { useTextStyles } from "../Styles/TextStyles";
 import { TabContent } from "./tabContent";
 import { ReactComponent as ArrowRight } from "../Assets/ArrowRight.svg";
 import { ReactComponent as ArrowLeft } from "../Assets/ArrowLeft.svg";
+import { ReactComponent as ArrowWhite } from "../Assets/ArrowWhite.svg";
 
 export const SelectedTransactions = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-  const [activeTab, setActiveTab] = React.useState(0);
+  const [activeTab, setActiveTab] = React.useState(2);
 
   const onChangeTab = React.useCallback((event, newValue) => {
     setActiveTab(newValue);
     console.log(activeTab);
   }, []);
 
-  // blue arrow goes above current location of tabs
+  // blue arrow goes above current location of tabs to show where you are
+  // move
+  // squeeze the background width of the tabs
 
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
       <Grid container xs={11} className={styles.transactionsContainer2}>
-        <Grid item container xs={6} alignItems="space-between" justify="center">
+        <Grid item container xs={7}>
+          <div
+            style={{
+              marginLeft: `${activeTab * 18.2 + 13}%`,
+              position: "relative",
+              top: 55,
+              animationDuration: "1s",
+            }}
+          >
+            <ArrowWhite fill="black" className={styles.arrow} />
+          </div>
+        </Grid>
+        <Grid item container xs={7} alignItems="space-between" justify="center">
           <Tabs
             value={activeTab}
             onChange={onChangeTab}
@@ -30,6 +45,8 @@ export const SelectedTransactions = compose(() => {
               style: {
                 backgroundColor: "rgb(0,102,102)",
                 height: 7,
+                width: 150,
+                marginLeft: 5,
               },
             }}
             variant="fullWidth"
@@ -37,15 +54,16 @@ export const SelectedTransactions = compose(() => {
           >
             <Tab
               className={styles.transactionTab}
-              label={"Corporate"}
+              label={"Real Assets"}
               style={{
                 backgroundColor:
                   activeTab === 0 ? "rgba(0,102,102, 0.15)" : "transparent",
               }}
             />
+
             <Tab
               className={styles.transactionTab}
-              label={"Private Equity"}
+              label={"Real Estate"}
               style={{
                 backgroundColor:
                   activeTab === 1 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -53,7 +71,7 @@ export const SelectedTransactions = compose(() => {
             />
             <Tab
               className={styles.transactionTab}
-              label={"Real Estate"}
+              label={"Corporate"}
               style={{
                 backgroundColor:
                   activeTab === 2 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -61,7 +79,7 @@ export const SelectedTransactions = compose(() => {
             />
             <Tab
               className={styles.transactionTab}
-              label={"Real Assets"}
+              label={"Private Equity"}
               style={{
                 backgroundColor:
                   activeTab === 3 ? "rgba(0,102,102, 0.15)" : "transparent",
@@ -97,7 +115,7 @@ export const SelectedTransactions = compose(() => {
                 justifyContent: "space-between",
               }}
             >
-              <IconButton
+              {/* <IconButton
                 className={styles.leftArrow}
                 onClick={() => {
                   setActiveTab(activeTab - 1);
@@ -126,7 +144,7 @@ export const SelectedTransactions = compose(() => {
                     display: activeTab === 4 ? "none" : "",
                   }}
                 />
-              </IconButton>
+              </IconButton> */}
             </div>
           </Grid>
         </Grid>
@@ -164,12 +182,24 @@ const useStyles = makeStyles(() => ({
     fontFamily: "Banschrift",
     marginTop: 5,
     marginBottom: 5,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 100,
-    color: "rgb(0,102,102)",
+    width: 150,
+    color: "rgb(0,31,96)",
+    marginRight: 10,
+    marginLeft: 10,
+    padding: 0,
+    opacity: 1,
   },
   tabBar: {
-    width: "100%",
+    width: "91%",
     marginBottom: -5,
+  },
+  arrow: {
+    height: 15,
+    position: "relative",
+    top: 22,
+    zIndex: 50000,
+    fill: "rgb(0,31,96)",
   },
 }));

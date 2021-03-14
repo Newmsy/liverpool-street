@@ -18,14 +18,37 @@ export const Contact = compose(() => {
             <img
               src={"/Building1.jpg"}
               style={{
-                width: 420,
+                width: 460,
                 objectFit: "cover",
                 boxShadow: "2px 3px 10px #888888",
-                marginTop: 40,
+                marginTop: 45,
                 height: 560,
-                marginLeft: 100,
+                marginLeft: 60,
               }}
             />
+          </Grid>
+          <Grid item xs={12}>
+            <div className={styles.textContainer}>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{
+                  fontSize: 22,
+                  marginTop: 2,
+                  textAlign: "center",
+                  marginLeft: 65,
+                }}
+              >
+                Associate members of
+                <a href="https://www.hbf.co.uk/" target="_blank">
+                  <img
+                    src={"/HBF.png"}
+                    className={styles.linkedIn}
+                    style={{ top: 20, width: 63 }}
+                  />
+                  dimensional-carnation-8tur50g8ouriqcvsjah05lu8.herokudns.com
+                </a>
+              </p>
+            </div>
           </Grid>
         </Grid>
         <Grid
@@ -238,7 +261,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 120,
+                  marginTop: 5,
                   textAlign: "center",
                 }}
               >
@@ -251,9 +274,51 @@ export const Contact = compose(() => {
               </p>
             </div>
           </Grid>
+          <Grid item xs={12}>
+            <div className={styles.textContainer}>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{
+                  fontSize: 22,
+                  marginTop: 5,
+                  textAlign: "center",
+                }}
+              >
+                Find us on
+                <a
+                  href="https://www.linkedin.com/company/liverpool-street-capital-advisors/about/?viewAsMember=true"
+                  target="_blank"
+                >
+                  <img src={"/linkedIn.jpg"} className={styles.linkedIn} />
+                </a>
+              </p>
+            </div>
+          </Grid>
         </Grid>
         <Grid item container style={{ justifyContent: "flex-start" }} xs={4}>
           <Map />
+          <Grid item xs={12}>
+            <div className={styles.textContainer}>
+              <p
+                className={textStyles.contentTextLight2}
+                style={{
+                  fontSize: 22,
+                  marginTop: -20,
+                  marginLeft: -50,
+                  textAlign: "center",
+                }}
+              >
+                Associate members of
+                <a href="https://www.r3.org.uk/" target="_blank">
+                  <img
+                    src={"/R3-Logo.png"}
+                    className={styles.linkedIn}
+                    style={{ top: 30, width: 75 }}
+                  />
+                </a>
+              </p>
+            </div>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
@@ -291,5 +356,11 @@ const useStyles = makeStyles(() => ({
     marginRight: 10,
     position: "relative",
     top: 5,
+  },
+  linkedIn: {
+    position: "relative",
+    top: 8,
+    left: 5,
+    width: 30,
   },
 }));

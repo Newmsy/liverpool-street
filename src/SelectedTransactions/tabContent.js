@@ -22,6 +22,308 @@ export const TabContent = ({ index }) => {
         }}
         index={index}
       >
+        {/* ______________________________________Real Assets______________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        <Grid item container xs={12}>
+          <Grid
+            item
+            container
+            xs={12}
+            style={{
+              justifyContent: "center",
+              justifyItems: "center",
+            }}
+          >
+            <TransactionItem
+              company={"UK Infrastructure Portfolio"}
+              cur={""}
+              value={"Undisclosed"}
+              description={"Sellside Portfolio Valuation Advice"}
+            />
+
+            <TransactionItem
+              company={"UK Hospital"}
+              value={"138M"}
+              description={"Inflation Linked Private Placement"}
+            />
+            <TransactionItem
+              company={"UK Electricity Generator"}
+              value={"1,600M"}
+              description={"Acquisition Facilities"}
+            />
+            <TransactionItem
+              company={"Italian Electricity Generator"}
+              value={"970M"}
+              cur={"USD"}
+              description={"Development Facilities"}
+            />
+            <TransactionItem
+              company={"UK Energy Regulator"}
+              value={"Undisclosed"}
+              cur={""}
+              description={"Strategic Review of Industry Financing"}
+            />
+          </Grid>
+          <Grid
+            item
+            container
+            xs={12}
+            style={{
+              justifyContent: "center",
+              justifyItems: "center",
+            }}
+          >
+            <TransactionItem
+              company={"African Marine Vessels"}
+              value={"30M"}
+              description={"Refinancing Options Review"}
+              cur={"USD"}
+            />
+            <TransactionItem
+              company={"Swedish Light Rail"}
+              value={"Undisclosed"}
+              cur={""}
+              description={"Financial Restructuring Advice"}
+            />
+            <TransactionItem
+              company={"Pakistan Electricity Generator"}
+              value={"338M"}
+              cur={"USD"}
+              description={"Bank Finance"}
+            />
+            <TransactionItem
+              company={"UK Facilities Management"}
+              value={"100M"}
+              description={"Sellside Portfolio  Valuation Advice"}
+            />
+            <TransactionItem
+              company={"UK Hospital"}
+              value={"125M"}
+              description={"Inflation Linked Bond Refinancing"}
+            />
+          </Grid>
+          <Grid
+            item
+            container
+            xs={12}
+            style={{
+              justifyContent: "center",
+              justifyItems: "center",
+            }}
+          >
+            <TransactionItem
+              company={"Indonesian Electricity Generator"}
+              value={"182M"}
+              cur={"USD"}
+              description={"Development Facilities"}
+            />
+            <TransactionItem
+              company={"Global Infrastructure Fund"}
+              value={"Undisclosed"}
+              cur={""}
+              description={"Fundraising Advice"}
+            />
+            <TransactionItem
+              company={"UK Wind Power"}
+              value={"55M"}
+              description={"Bank Facilities"}
+            />
+
+            <TransactionItem
+              company={"Brazilian Electricity Generator"}
+              value={"200M"}
+              cur={"USD"}
+              description={"Development Facilities"}
+            />
+            <TransactionItem
+              company={"UK Infrastructure Portfolio"}
+              value={"Undisclosed"}
+              cur={""}
+              description={"Valuation Advice for Fund JV"}
+            />
+          </Grid>
+        </Grid>
+        {/* ______________________________________Real Estate______________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        {/* _______________________________________________________________________________________________________________________________ */}
+        <Grid item container xs={12}>
+          <Grid
+            item
+            container
+            xs={12}
+            style={{
+              justifyContent: "center",
+              justifyItems: "center",
+            }}
+          >
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"18M"}
+              description={"Dividend Recap Development Facility "}
+            />
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"12M"}
+              description={"Finish and Exit Facility"}
+            />
+            <TransactionItem
+              company={"AIM Care Homes PropCo"}
+              value={"326M"}
+              description={"WholeCo Refinancing"}
+            />
+            <TransactionItem
+              company={"Australian Investment Fund"}
+              value={"250M"}
+              description={"UK Shopping Centre Acquisition Facility"}
+            />
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"5M"}
+              description={"Mezzanine Top Up "}
+            />
+            <TransactionItem
+              company={"Int’l Engineering & Construction"}
+              value={"450M"}
+              description={"Establishment of Protected Cell Fund"}
+            />
+            <TransactionItem
+              company={"Cape Verdean Hotels Group"}
+              value={"17M"}
+              cur={"USD"}
+              description={"Development Facility"}
+            />
+            <TransactionItem
+              company={"UK Strategic Land Promoter"}
+              value={"26M"}
+              description={"Bridge Facility"}
+            />
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"18M"}
+              description={"Finish and Exit Facility"}
+            />
+          </Grid>
+          <Grid
+            item
+            container
+            xs={12}
+            style={{
+              justifyContent: "center",
+              justifyItems: "center",
+            }}
+          >
+            <TransactionItem
+              company={"UK Strategic Land Promoter"}
+              value={"36M"}
+              description={"Amend and Extend"}
+            />
+            <TransactionItem
+              company={"UK Strategic Land Promoter"}
+              value={"12M"}
+              description={"Bridge Facility"}
+            />
+            <TransactionItem
+              company={"US Real Estate Investment Fund "}
+              value={"9,000M"}
+              cur={"EUR"}
+              description={"Buyside Advice"}
+            />
+            <TransactionItem
+              company={"IoM Strategic Land Promoter"}
+              value={"24M"}
+              description={"Financial Restructuring"}
+            />
+            <TransactionItem
+              company={"Global Real Estate Developer & Operator"}
+              value={"300M"}
+              description={"Financial Restructuring"}
+            />
+            <TransactionItem
+              company={"UK Real Estate Investor & Developer"}
+              value={"820M"}
+              description={"Restructuring Advice"}
+            />
+            <TransactionItem
+              company={"UK Industrial Premises"}
+              value={"7M"}
+              description={"Bridge to Development Facility"}
+            />
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"17M"}
+              description={"Covenant Reset"}
+            />
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"2M"}
+              description={"Development Exit Facility"}
+            />
+          </Grid>
+          <Grid
+            item
+            container
+            xs={12}
+            style={{
+              justifyContent: "center",
+              justifyItems: "center",
+            }}
+          >
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"5M"}
+              description={"Second Charge Loan"}
+            />
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"11M"}
+              description={"Amend and Extend"}
+            />
+            <TransactionItem
+              company={"UK Property Data Analytics"}
+              value={"8M"}
+              description={"Mezzanine Facility"}
+            />
+            <TransactionItem
+              company={"MoD Accommodation Provider"}
+              value={"110M"}
+              description={"Refinancing Advice"}
+            />
+            <TransactionItem
+              company={"Global Hotels Group"}
+              value={"85M"}
+              description={"Financing for New Build Hotel"}
+            />
+            <TransactionItem
+              company={"UK Supermarkets Group"}
+              value={"2,200M"}
+              description={"Property Portfolio Securitisation"}
+            />
+            <TransactionItem
+              company={"Diversified Private Group"}
+              value={"125M"}
+              description={"Marine & Property  Refinancing"}
+            />
+            <TransactionItem
+              company={"UK Strategic Land Promoter"}
+              value={"6M"}
+              description={"Bridge Facility"}
+            />
+            <TransactionItem
+              company={"UK Housebuilder"}
+              value={"6M"}
+              description={"Financial Restructuring"}
+            />
+          </Grid>
+        </Grid>
         <Grid
           item
           container
@@ -290,324 +592,7 @@ export const TabContent = ({ index }) => {
             />
           </Grid>
         </Grid>
-        {/* ______________________________________Real Estate______________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        <Grid item container xs={12}>
-          <Grid
-            item
-            container
-            xs={12}
-            style={{
-              justifyContent: "center",
-              justifyItems: "center",
-            }}
-          >
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"18M"}
-              description={"Dividend Recap Development Facility "}
-            />
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"12M"}
-              description={"Finish and Exit Facility"}
-            />
-            <TransactionItem
-              company={"AIM Care Homes PropCo"}
-              value={"326M"}
-              description={"WholeCo Refinancing"}
-            />
-            <TransactionItem
-              company={"Australian Investment Fund"}
-              value={"250M"}
-              description={"UK Shopping Centre Acquisition Facility"}
-            />
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"5M"}
-              description={"Mezzanine Top Up "}
-            />
-            <TransactionItem
-              company={"Int’l Engineering & Construction"}
-              value={"450M"}
-              description={"Establishment of Protected Cell Fund"}
-            />
-            <TransactionItem
-              company={"Cape Verdean Hotels Group"}
-              value={"17M"}
-              cur={"USD"}
-              description={"Development Facility"}
-            />
-            <TransactionItem
-              company={"UK Strategic Land Promoter"}
-              value={"26M"}
-              description={"Bridge Facility"}
-            />
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"18M"}
-              description={"Finish and Exit Facility"}
-            />
-          </Grid>
-          <Grid
-            item
-            container
-            xs={12}
-            style={{
-              justifyContent: "center",
-              justifyItems: "center",
-            }}
-          >
-            <TransactionItem
-              company={"UK Strategic Land Promoter"}
-              value={"36M"}
-              description={"Amend and Extend"}
-            />
-            <TransactionItem
-              company={"UK Strategic Land Promoter"}
-              value={"12M"}
-              description={"Bridge Facility"}
-            />
-            <TransactionItem
-              company={"US Real Estate Investment Fund "}
-              value={"9,000M"}
-              cur={"EUR"}
-              description={"Buyside Advice"}
-            />
-            <TransactionItem
-              company={"IoM Strategic Land Promoter"}
-              value={"24M"}
-              description={"Financial Restructuring"}
-            />
-            <TransactionItem
-              company={"Global Real Estate Developer & Operator"}
-              value={"300M"}
-              description={"Financial Restructuring"}
-            />
-            <TransactionItem
-              company={"UK Real Estate Investor & Developer"}
-              value={"820M"}
-              description={"Restructuring Advice"}
-            />
-            <TransactionItem
-              company={"UK Industrial Premises"}
-              value={"7M"}
-              description={"Bridge to Development Facility"}
-            />
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"17M"}
-              description={"Covenant Reset"}
-            />
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"2M"}
-              description={"Development Exit Facility"}
-            />
-          </Grid>
-          <Grid
-            item
-            container
-            xs={12}
-            style={{
-              justifyContent: "center",
-              justifyItems: "center",
-            }}
-          >
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"5M"}
-              description={"Second Charge Loan"}
-            />
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"11M"}
-              description={"Amend and Extend"}
-            />
-            <TransactionItem
-              company={"UK Property Data Analytics"}
-              value={"8M"}
-              description={"Mezzanine Facility"}
-            />
-            <TransactionItem
-              company={"MoD Accommodation Provider"}
-              value={"110M"}
-              description={"Refinancing Advice"}
-            />
-            <TransactionItem
-              company={"Global Hotels Group"}
-              value={"85M"}
-              description={"Financing for New Build Hotel"}
-            />
-            <TransactionItem
-              company={"UK Supermarkets Group"}
-              value={"2,200M"}
-              description={"Property Portfolio Securitisation"}
-            />
-            <TransactionItem
-              company={"Diversified Private Group"}
-              value={"125M"}
-              description={"Marine & Property  Refinancing"}
-            />
-            <TransactionItem
-              company={"UK Strategic Land Promoter"}
-              value={"6M"}
-              description={"Bridge Facility"}
-            />
-            <TransactionItem
-              company={"UK Housebuilder"}
-              value={"6M"}
-              description={"Financial Restructuring"}
-            />
-          </Grid>
-        </Grid>
-        {/* ______________________________________Real Assets______________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        {/* _______________________________________________________________________________________________________________________________ */}
-        <Grid item container xs={12}>
-          <Grid
-            item
-            container
-            xs={12}
-            style={{
-              justifyContent: "center",
-              justifyItems: "center",
-            }}
-          >
-            <TransactionItem
-              company={"UK Infrastructure Portfolio"}
-              cur={""}
-              value={"Undisclosed"}
-              description={"Sellside Portfolio Valuation Advice"}
-            />
-            <TransactionItem
-              company={"Trinidadian Methanol Processing"}
-              value={"200M"}
-              cur={"USD"}
-              description={"Bank / ECA Funding for Plant"}
-            />
-            <TransactionItem
-              company={"UK Hospital"}
-              value={"138M"}
-              description={"Inflation Linked Private Placement"}
-            />
-            <TransactionItem
-              company={"UK Electricity Generator"}
-              value={"1,600M"}
-              description={"Acquisition Facilities"}
-            />
-            <TransactionItem
-              company={"Italian Electricity Generator"}
-              value={"970M"}
-              cur={"USD"}
-              description={"Development Facilities"}
-            />
-            <TransactionItem
-              company={"UK Energy Regulator"}
-              value={"Undisclosed"}
-              cur={""}
-              description={"Strategic Review of Industry Financing"}
-            />
-          </Grid>
-          <Grid
-            item
-            container
-            xs={12}
-            style={{
-              justifyContent: "center",
-              justifyItems: "center",
-            }}
-          >
-            <TransactionItem
-              company={"Trinidadian LNG"}
-              value={"600M"}
-              cur={"USD"}
-              description={"Bank / ECA LNG Train Financing "}
-            />
-            <TransactionItem
-              company={"African Marine Vessels"}
-              value={"30M"}
-              description={"Refinancing Options Review"}
-              cur={"USD"}
-            />
-            <TransactionItem
-              company={"Swedish Light Rail"}
-              value={"Undisclosed"}
-              cur={""}
-              description={"Financial Restructuring Advice"}
-            />
-            <TransactionItem
-              company={"Pakistan Electricity Generator"}
-              value={"338M"}
-              cur={"USD"}
-              description={"Bank Finance"}
-            />
-            <TransactionItem
-              company={"UK Facilities Management"}
-              value={"100M"}
-              description={"Sellside Portfolio  Valuation Advice"}
-            />
-            <TransactionItem
-              company={"UK Hospital"}
-              value={"125M"}
-              description={"Inflation Linked Bond Refinancing"}
-            />
-          </Grid>
-          <Grid
-            item
-            container
-            xs={12}
-            style={{
-              justifyContent: "center",
-              justifyItems: "center",
-            }}
-          >
-            <TransactionItem
-              company={"Indonesian Electricity Generator"}
-              value={"182M"}
-              cur={"USD"}
-              description={"Development Facilities"}
-            />
-            <TransactionItem
-              company={"Global Infrastructure Fund"}
-              value={"Undisclosed"}
-              cur={""}
-              description={"Fundraising Advice"}
-            />
-            <TransactionItem
-              company={"UK Wind Power"}
-              value={"55M"}
-              description={"Bank Facilities"}
-            />
-            <TransactionItem
-              company={"International Upstream Oil & Gas"}
-              value={"165M"}
-              cur={"USD"}
-              description={"Capex Facilities"}
-            />
-            <TransactionItem
-              company={"Brazilian Electricity Generator"}
-              value={"200M"}
-              cur={"USD"}
-              description={"Development Facilities"}
-            />
-            <TransactionItem
-              company={"UK Infrastructure Portfolio"}
-              value={"Undisclosed"}
-              cur={""}
-              description={"Valuation Advice for Fund JV"}
-            />
-          </Grid>
-        </Grid>
+
         {/* ______________________________________Natural Resources________________________________________________________________________ */}
         {/* _______________________________________________________________________________________________________________________________ */}
         {/* _______________________________________________________________________________________________________________________________ */}
@@ -649,6 +634,12 @@ export const TabContent = ({ index }) => {
               cur={"USD"}
               description={"Aluminium Tolling Facility"}
             />
+            <TransactionItem
+              company={"Trinidadian Methanol Processing"}
+              value={"200M"}
+              cur={"USD"}
+              description={"Bank / ECA Funding for Plant"}
+            />
           </Grid>
           <Grid
             item
@@ -659,6 +650,12 @@ export const TabContent = ({ index }) => {
               justifyItems: "center",
             }}
           >
+            <TransactionItem
+              company={"Trinidadian LNG"}
+              value={"600M"}
+              cur={"USD"}
+              description={"Bank / ECA LNG Train Financing "}
+            />
             <TransactionItem
               company={"Canadian Platinum Producer"}
               value={"175M"}
@@ -694,6 +691,12 @@ export const TabContent = ({ index }) => {
             }}
           >
             <TransactionItem
+              company={"International Upstream Oil & Gas"}
+              value={"165M"}
+              cur={"USD"}
+              description={"Capex Facilities"}
+            />
+            <TransactionItem
               company={"European Aluminium Smelting"}
               value={"80M"}
               cur={"USD"}
@@ -724,14 +727,7 @@ export const TabContent = ({ index }) => {
   );
 };
 
-const TransactionItem = ({
-  title,
-  company = "",
-  imageUrl,
-  value,
-  description,
-  cur = "GBP",
-}) => {
+const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
   const styles = useStyles();
   const textStyles = useTextStyles();
 

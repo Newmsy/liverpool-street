@@ -13,7 +13,14 @@ export const Home = compose(() => {
       <Grid item container alignItems="space-between" justify="center">
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+            <div
+              style={{
+                width: "120%",
+                right: "20%",
+                position: "relative",
+                marginTop: 60,
+              }}
+            >
               <p className={textStyles.contentText}>
                 Liverpool Street Capital Advisors is a mid-market focused
                 boutique advisor applying our experience to cover Corporate,
@@ -26,10 +33,9 @@ export const Home = compose(() => {
             <div style={{ width: "120%", right: "20%", position: "relative" }}>
               <p className={textStyles.contentText}>
                 Financing markets have changed dramatically over the past 20
-                years and new entrants to the market mean this change remains in
-                its infancy. This trend is no longer ‘high finance’; it is
-                relevant to companies of all sizes, across UK plc and
-                internationally.
+                years and new market entrants mean this change remains in its
+                infancy. This trend is no longer ‘high finance’; it is relevant
+                to companies of all sizes, across UK plc and internationally.
               </p>
             </div>
           </Grid>
@@ -60,7 +66,7 @@ export const Home = compose(() => {
         <Slides />
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%" }}>
+            <div style={{ width: "120%", marginTop: 60 }}>
               <p className={textStyles.contentText}>
                 Our partners have deep experience in developed and emerging
                 markets across all major credit classes in both public financing
@@ -96,13 +102,14 @@ export const Home = compose(() => {
                 className={textStyles.contentText}
                 style={{ textAlign: "left" }}
               >
-                We believe this is unique in the debt advisory and financial
-                restructuring market which is why we call this
+                We believe this is unique in the debt advisory and restructuring
+                market and we like to call this
                 <img
                   src="/UnconventionalWisdom.png"
                   alt="Liverpool Street Capital Advisors"
                   className={styles.unconventionalWisdom}
                 />
+                .
               </p>
             </div>
           </Grid>
@@ -120,12 +127,14 @@ const useStyles = makeStyles(() => ({
     marginTop: "15vh",
   },
   unconventionalWisdom: {
-    width: 230,
+    width: 220,
     verticalAlign: "text-top",
     position: "relative",
-    bottom: 10,
+    bottom: 20,
     marginBottom: -10,
-    left: 0,
+    marginLeft: -35,
+    marginRight: 3,
+    left: 22,
     imageRendering: "-webkit-optimize-contrast",
   },
   homeTitle: {
@@ -142,13 +151,13 @@ const useStyles = makeStyles(() => ({
     marginRight: 50,
     paddingBottom: 50,
     flexDirection: "row",
-    alignContent: "space-between",
+    alignContent: "flex-start",
   },
   textContainer: {
     backgroundColor: "transparent",
     padding: 0,
     borderRadius: 5,
-    marginBottom: 0,
+    marginBottom: -20,
     marginTop: 0,
   },
 }));

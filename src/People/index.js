@@ -13,7 +13,7 @@ export const People = compose(() => {
     <Grid item container xs={12} className={styles.peopleContainer}>
       <Grid item container xs={10} spacing={4}>
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "95%", marginLeft: "0%" }}>
+          <div style={{ width: "95%", marginLeft: "0%", marginTop: 50 }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Jason </span> has
               more than 25 years’ financial markets experience having held
@@ -61,14 +61,14 @@ export const People = compose(() => {
               USD2.2BN ICC Arbitration proceedings.
             </p>
             <p className={textStyles.contentTextLarge}>
-              Emerging and developed markets experience in EMEA, Americas and SE
+              Emerging / developed markets experience in EMEA, Americas and SE
               Asia. Experienced across the entire range of public and private
               debt / capital markets and the credit rating spectrum.
             </p>
             <p className={textStyles.contentTextLarge}>
-              MBA from Aston Business School in 1992. First time pass in the
-              Securities Institute’s (now Chartered Institute for Securities &
-              Investment) corporate finance exams in 1999.
+              MBA from Aston Business School in 1992. Qualified with the
+              Securities Institute (now Chartered Institute for Securities &
+              Investment), in 1999.
             </p>
           </div>
         </Grid>
@@ -134,22 +134,37 @@ export const People = compose(() => {
               <span className={styles.peopleRole}>Partner</span>
             </h1>
           </Grid>
-          <Grid item xs={12} style={{ position: "relative", top: 0 }}>
+          <Grid
+            item
+            xs={12}
+            style={{
+              position: "relative",
+              top: 0,
+              paddingLeft: 33,
+              paddingRight: 33,
+            }}
+          >
             <p
               className={textStyles.contentTextLarge}
               style={{ fontSize: 20, color: "rgb(0,102,102)" }}
             >
               Jason and Andrew are two of the most experienced advisors in the
-              EMEA Financing Advisory and Restructuring marketplace. We believe
-              this depth of market knowledge and experience of having sat at
-              every seat at the table during our careers is unique in the debt
-              advisory and financial restructuring markets.
+              EMEA Financing Advisory and Restructuring marketplace.{" "}
+              <span style={{ position: "relative", top: 20 }}>
+                We believe this depth of market knowledge and experience of
+                having sat at every seat at the table during our careers is
+                unique in the debt advisory and financial restructuring markets.
+              </span>
             </p>
+            <p
+              className={textStyles.contentTextLarge}
+              style={{ fontSize: 20, color: "rgb(0,102,102)" }}
+            ></p>
           </Grid>
         </Grid>
 
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "90%", marginLeft: "10%" }}>
+          <div style={{ width: "95%", marginLeft: "10%", marginTop: 50 }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Andrew </span> has
               more than 35 years’ financial markets experience having held
@@ -198,9 +213,9 @@ export const People = compose(() => {
               managing USD500M fund.
             </p>
             <p className={textStyles.contentTextLarge}>
-              Experience in major capital markets in the UK, Europe and the
-              United States. Experienced across investment grade and sub
-              investment grade credit.
+              Experience in all major private funding and capital markets in the
+              UK, Europe and the United States. Experienced across investment
+              grade and sub investment grade credit.
             </p>
             <p className={textStyles.contentTextLarge}>
               MA in Modern History from Magdalen College, Oxford in 1984. Rotary
@@ -239,7 +254,7 @@ const useStyles = makeStyles(() => ({
   },
   employeeContainer: {
     minHeight: 600,
-    marginTop: 55,
+    marginTop: 25,
     display: "flex",
     justifyContent: "space-around",
   },
@@ -286,10 +301,11 @@ const useStyles = makeStyles(() => ({
   },
   descriptionTextBox: {
     marginTop: 10,
+
     //sort out the width of this to reduce by 20% or so
   },
   indented: {
-    marginLeft: 10,
+    marginLeft: 20,
     marginTop: 30,
   },
 }));
