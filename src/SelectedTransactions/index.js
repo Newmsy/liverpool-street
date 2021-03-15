@@ -28,7 +28,7 @@ export const SelectedTransactions = compose(() => {
         <Grid item container xs={10}>
           <div
             style={{
-              marginLeft: `calc(50% - ${(activeTab - 2) * 150}px)`,
+              marginLeft: `calc(50% + ${(activeTab - 2) * 190}px)`,
               position: "relative",
               top: 55,
               animationDuration: "1s",
