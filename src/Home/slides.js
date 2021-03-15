@@ -1,6 +1,6 @@
 import React from "react";
 import { compose } from "redux";
-import { Box, Grid, makeStyles, Paper } from "@material-ui/core";
+import { Box, Grid, makeStyles, Paper, Slide } from "@material-ui/core";
 import { useTextStyles } from "../Styles/TextStyles";
 import ReactCardFlip from "react-card-flip";
 
@@ -10,200 +10,203 @@ export const Slides = compose(() => {
   const [flipped, setFlipped] = React.useState("");
   const [canAutoFlip, setCanAutoFlip] = React.useState(true);
 
-  window.onload = setTimeout(() => {
-    if (canAutoFlip) {
-      setFlipped("Strategic Review");
-      setCanAutoFlip(false);
-    }
-  }, 2000);
-
-  window.onload = setTimeout(() => {
-    if (canAutoFlip) {
-      setFlipped("");
-      setCanAutoFlip(false);
-    }
-  }, 4000);
-
-  // 2s to turn on
-  // 2s to turn ovber after
-
   return (
-    <Grid container className={styles.slidesContainer} spacing={2}>
-      <CardItem
-        title={"Strategic Review"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={3}
+    <>
+      <Slide
+        in={true}
+        timeout={2000}
+        onEntered={() => setFlipped("Strategic Review")}
       >
-        <p className={textStyles.contentTextGreen}>
-          Business / shareholder change
-        </p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Compare financing structure to best-in-class
-          </p>
-          <p className={textStyles.contentText2}>
-            • Identify universe of options
-          </p>
-          <p className={textStyles.contentText2}>
-            • Implement change to meet stakeholder objectives
-          </p>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Refinancing"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={3}
+        <div></div>
+      </Slide>
+      <Slide
+        in={true}
+        timeout={4000}
+        onEntered={() => {
+          if (flipped === "Strategic Review") setFlipped("");
+        }}
       >
-        <p className={textStyles.contentTextGreen}>Financial change</p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Improve lending terms / generate cash out
-          </p>
-          <p className={textStyles.contentText2}>
-            • Introduce new lenders / investors
-          </p>
-          <p className={textStyles.contentText2}>
-            • Term out / extend maturities
-          </p>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Restructuring"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={3}
-      >
-        <p className={textStyles.contentTextGreen}>
-          Business / financial distress
-        </p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Keep you in control / preserve equity value
-          </p>
-          <p className={textStyles.contentText2}>• Remove problem lenders</p>
-          <p className={textStyles.contentText2}>
-            • Introduce new capital to facilitate turnaround
-          </p>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Accelerated M&A"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={2}
-      >
-        <p className={textStyles.contentTextGreen}>
-          Asset / division divestment
-        </p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Disposal to delever / raise money
-          </p>
-          <p className={textStyles.contentText2}>
-            • Component in financial restructuring / balance sheet
-            reoptimisation
-          </p>
-          <p className={textStyles.contentText2}>
-            • Transform borrower leverage profile
-          </p>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Staple Financing"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={2}
-      >
-        <p className={textStyles.contentTextGreen}>Sell-side advice</p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Remove funding uncertainty
-          </p>
-          <p className={textStyles.contentText2}>• Set hurdle for bidders</p>
-          <p className={textStyles.contentText2}>
-            • Maximise competitive tension in sale proces
-          </p>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Acquisition Facilities"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={2}
-      >
-        <p className={textStyles.contentTextGreen}>Buy-side advice</p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Beat staple to give you competitive advantage
-          </p>
-          <p className={textStyles.contentText2}>• Confirm deliverability</p>
-          <p className={textStyles.contentText2}>
-            • Enable you to focus on deal fundamentals / value drivers
-          </p>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Hedging Products"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={1}
-      >
-        <p className={textStyles.contentTextGreen}>Risk reduction</p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Hedging strategy supporting financing goals across:
+        <div></div>
+      </Slide>
+      <Grid container className={styles.slidesContainer} spacing={2}>
+        <CardItem
+          title={"Strategic Review"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={3}
+        >
+          <p className={textStyles.contentTextGreen}>
+            Business / shareholder change
           </p>
           <div className={styles.indented}>
-            <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
-              • Rates
+            <p className={textStyles.contentText2}>
+              • Compare financing structure to best-in-class
             </p>
-            <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
-              • Currencies
+            <p className={textStyles.contentText2}>
+              • Identify universe of options
             </p>
-            <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
-              • Commodities
+            <p className={textStyles.contentText2}>
+              • Implement change to meet stakeholder objectives
             </p>
           </div>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Rating Support"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={1}
-      >
-        <p className={textStyles.contentTextGreen}>Rating re / negotiation</p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • Effective presentation of credit profile to agencies
+        </CardItem>
+        <CardItem
+          title={"Refinancing"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={3}
+        >
+          <p className={textStyles.contentTextGreen}>Financial change</p>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • Improve lending terms / generate cash out
+            </p>
+            <p className={textStyles.contentText2}>
+              • Introduce new lenders / investors
+            </p>
+            <p className={textStyles.contentText2}>
+              • Term out / extend maturities
+            </p>
+          </div>
+        </CardItem>
+        <CardItem
+          title={"Restructuring"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={3}
+        >
+          <p className={textStyles.contentTextGreen}>
+            Business / financial distress
           </p>
-          <p className={textStyles.contentText2}>• Optimise rating outcomes</p>
-          <p className={textStyles.contentText2}>
-            • Achieve tightest spread to benchmark
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • Keep you in control / preserve equity value
+            </p>
+            <p className={textStyles.contentText2}>• Remove problem lenders</p>
+            <p className={textStyles.contentText2}>
+              • Introduce new capital to facilitate turnaround
+            </p>
+          </div>
+        </CardItem>
+        <CardItem
+          title={"Accelerated M&A"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={2}
+        >
+          <p className={textStyles.contentTextGreen}>
+            Asset / division divestment
           </p>
-        </div>
-      </CardItem>
-      <CardItem
-        title={"Corporate M&A"}
-        flipped={flipped}
-        setFlipped={setFlipped}
-        zIndex={1}
-      >
-        <p className={textStyles.contentTextGreen}>Corporate acquisition</p>
-        <div className={styles.indented}>
-          <p className={textStyles.contentText2}>
-            • New facilities to finance bid
-          </p>
-          <p className={textStyles.contentText2}>• Funding / bid certainty</p>
-          <p className={textStyles.contentText2}>
-            • Integration of new facilities with terms of existing facilities /
-            security
-          </p>
-        </div>
-      </CardItem>
-    </Grid>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • Disposal to delever / raise money
+            </p>
+            <p className={textStyles.contentText2}>
+              • Component in financial restructuring / balance sheet
+              reoptimisation
+            </p>
+            <p className={textStyles.contentText2}>
+              • Transform borrower leverage profile
+            </p>
+          </div>
+        </CardItem>
+        <CardItem
+          title={"Staple Financing"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={2}
+        >
+          <p className={textStyles.contentTextGreen}>Sell-side advice</p>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • Remove funding uncertainty
+            </p>
+            <p className={textStyles.contentText2}>• Set hurdle for bidders</p>
+            <p className={textStyles.contentText2}>
+              • Maximise competitive tension in sale proces
+            </p>
+          </div>
+        </CardItem>
+        <CardItem
+          title={"Acquisition Facilities"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={2}
+        >
+          <p className={textStyles.contentTextGreen}>Buy-side advice</p>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • Beat staple to give you competitive advantage
+            </p>
+            <p className={textStyles.contentText2}>• Confirm deliverability</p>
+            <p className={textStyles.contentText2}>
+              • Enable you to focus on deal fundamentals / value drivers
+            </p>
+          </div>
+        </CardItem>
+        <CardItem
+          title={"Hedging Products"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={1}
+        >
+          <p className={textStyles.contentTextGreen}>Risk reduction</p>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • Hedging strategy supporting financing goals across:
+            </p>
+            <div className={styles.indented}>
+              <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
+                • Rates
+              </p>
+              <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
+                • Currencies
+              </p>
+              <p className={textStyles.contentText2} style={{ marginTop: -12 }}>
+                • Commodities
+              </p>
+            </div>
+          </div>
+        </CardItem>
+        <CardItem
+          title={"Rating Support"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={1}
+        >
+          <p className={textStyles.contentTextGreen}>Rating re / negotiation</p>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • Effective presentation of credit profile to agencies
+            </p>
+            <p className={textStyles.contentText2}>
+              • Optimise rating outcomes
+            </p>
+            <p className={textStyles.contentText2}>
+              • Achieve tightest spread to benchmark
+            </p>
+          </div>
+        </CardItem>
+        <CardItem
+          title={"Corporate M&A"}
+          flipped={flipped}
+          setFlipped={setFlipped}
+          zIndex={1}
+        >
+          <p className={textStyles.contentTextGreen}>Corporate acquisition</p>
+          <div className={styles.indented}>
+            <p className={textStyles.contentText2}>
+              • New facilities to finance bid
+            </p>
+            <p className={textStyles.contentText2}>• Funding / bid certainty</p>
+            <p className={textStyles.contentText2}>
+              • Integration of new facilities with terms of existing facilities
+              / security
+            </p>
+          </div>
+        </CardItem>
+      </Grid>
+    </>
   );
 });
 

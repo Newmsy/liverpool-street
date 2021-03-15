@@ -25,10 +25,10 @@ export const SelectedTransactions = compose(() => {
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
       <Grid container xs={11} className={styles.transactionsContainer2}>
-        <Grid item container xs={7}>
+        <Grid item container xs={10}>
           <div
             style={{
-              marginLeft: `${activeTab * 18.2 + 13}%`,
+              marginLeft: `calc(50% - ${(activeTab - 2) * 150}px)`,
               position: "relative",
               top: 55,
               animationDuration: "1s",
@@ -37,7 +37,13 @@ export const SelectedTransactions = compose(() => {
             <ArrowWhite fill="black" className={styles.arrow} />
           </div>
         </Grid>
-        <Grid item container xs={7} alignItems="space-between" justify="center">
+        <Grid
+          item
+          container
+          xs={10}
+          alignItems="space-between"
+          justify="center"
+        >
           <Tabs
             value={activeTab}
             onChange={onChangeTab}
@@ -46,10 +52,9 @@ export const SelectedTransactions = compose(() => {
                 backgroundColor: "rgb(0,102,102)",
                 height: 7,
                 width: 150,
-                marginLeft: 5,
               },
             }}
-            variant="fullWidth"
+            centered
             className={styles.tabBar}
           >
             <Tab
@@ -59,7 +64,7 @@ export const SelectedTransactions = compose(() => {
                 backgroundColor:
                   activeTab === 0 ? "rgba(0,102,102, 0.15)" : "transparent",
               }}
-            />
+            ></Tab>
 
             <Tab
               className={styles.transactionTab}
@@ -94,59 +99,6 @@ export const SelectedTransactions = compose(() => {
               }}
             />
           </Tabs>
-          <Grid
-            item
-            xs={12}
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              position: "relative",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                bottom: 55,
-                height: 0,
-                width: "100%",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-              }}
-            >
-              {/* <IconButton
-                className={styles.leftArrow}
-                onClick={() => {
-                  setActiveTab(activeTab - 1);
-                }}
-                disabled={activeTab === 0}
-              >
-                <ArrowLeft
-                  style={{
-                    width: 40,
-                    fill: "rgb(0,102,102)",
-                    display: activeTab === 0 ? "none" : "",
-                  }}
-                />
-              </IconButton>
-              <IconButton
-                className={styles.rightArrow}
-                onClick={() => {
-                  setActiveTab(activeTab + 1);
-                }}
-                disabled={activeTab === 4}
-              >
-                <ArrowRight
-                  style={{
-                    width: 40,
-                    fill: "rgb(0,102,102)",
-                    display: activeTab === 4 ? "none" : "",
-                  }}
-                />
-              </IconButton> */}
-            </div>
-          </Grid>
         </Grid>
         <TabContent index={activeTab} />
       </Grid>
@@ -185,14 +137,16 @@ const useStyles = makeStyles(() => ({
     fontSize: 18,
     fontWeight: 100,
     width: 150,
+    minWidth: 150,
+    maxWidth: 150,
     color: "rgb(0,31,96)",
-    marginRight: 10,
-    marginLeft: 10,
+    marginRight: 17,
+    marginLeft: 12,
     padding: 0,
     opacity: 1,
   },
   tabBar: {
-    width: "91%",
+    width: "90%",
     marginBottom: -5,
   },
   arrow: {
