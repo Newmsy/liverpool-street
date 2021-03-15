@@ -54,7 +54,7 @@ export const Home = compose(() => {
             <div style={{ width: "120%", right: "20%", position: "relative" }}>
               <p
                 className={textStyles.contentText}
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "justify" }}
               >
                 Liverpool Street Capital Advisors enable our clients to navigate
                 this changing landscape to find and execute the best financing.
@@ -100,7 +100,7 @@ export const Home = compose(() => {
             <div style={{ width: "120%" }}>
               <p
                 className={textStyles.contentText}
-                style={{ textAlign: "left" }}
+                style={{ textAlign: "justify" }}
               >
                 We believe this is unique in the debt advisory and restructuring
                 market and we like to call this

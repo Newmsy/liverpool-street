@@ -38,14 +38,15 @@ export const Contact = compose(() => {
                   marginLeft: 65,
                 }}
               >
-                Associate members of
+                Associate
                 <a href="https://www.hbf.co.uk/" target="_blank">
                   <img
                     src={"/HBF.png"}
                     className={styles.linkedIn}
-                    style={{ top: 20, width: 63 }}
+                    style={{ top: 20, width: 63, marginRight: 10 }}
                   />
                 </a>
+                Members
               </p>
             </div>
           </Grid>
@@ -65,7 +66,17 @@ export const Contact = compose(() => {
                 textAlign: "center",
               }}
             >
-              <b>Jason Green</b>
+              <b>Jason Green,</b>{" "}
+              <span
+                style={{
+                  color: "rgb(0,31,96)",
+                  textAlign: "center",
+                  fontSize: 18,
+                  fontWeight: 600,
+                }}
+              >
+                Partner
+              </span>
             </p>
             <p
               className={textStyles.contentTextLight2}
@@ -75,7 +86,7 @@ export const Contact = compose(() => {
                 fontSize: 18,
               }}
             >
-              <b>Partner</b>
+              <b></b>
             </p>
 
             <p
@@ -130,7 +141,17 @@ export const Contact = compose(() => {
                 textAlign: "center",
               }}
             >
-              <b>Andrew Golding</b>
+              <b>Andrew Golding, </b>
+              <span
+                style={{
+                  color: "rgb(0,31,96)",
+                  textAlign: "center",
+                  fontSize: 18,
+                  fontWeight: 600,
+                }}
+              >
+                Partner
+              </span>
             </p>
             <p
               className={textStyles.contentTextLight2}
@@ -140,7 +161,7 @@ export const Contact = compose(() => {
                 fontSize: 18,
               }}
             >
-              <b>Partner</b>
+              <b></b>
             </p>
 
             <p
@@ -196,7 +217,17 @@ export const Contact = compose(() => {
                   textAlign: "center",
                 }}
               >
-                <b>Kelsey North</b>
+                <b>Kelsey North, </b>
+                <span
+                  style={{
+                    color: "rgb(0,31,96)",
+                    textAlign: "center",
+                    fontSize: 18,
+                    fontWeight: 600,
+                  }}
+                >
+                  EA to the Partners
+                </span>
               </p>
               <p
                 className={textStyles.contentTextLight2}
@@ -206,7 +237,7 @@ export const Contact = compose(() => {
                   fontSize: 18,
                 }}
               >
-                <b>EA to the Partners</b>
+                <b></b>
               </p>
 
               <p
@@ -268,7 +299,7 @@ export const Contact = compose(() => {
                   href="mailto:info@lscapitaladvisors.com"
                   style={{ color: "rgb(0,31,96)" }}
                 >
-                  <b>info@lscapitaladvisors.com</b>
+                  info@lscapitaladvisors.com
                 </a>
               </p>
             </div>
@@ -279,11 +310,11 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 5,
+                  marginTop: 20,
                   textAlign: "center",
                 }}
               >
-                Find us on
+                Follow us on
                 <a
                   href="https://www.linkedin.com/company/liverpool-street-capital-advisors/about/?viewAsMember=true"
                   target="_blank"
@@ -307,14 +338,15 @@ export const Contact = compose(() => {
                   textAlign: "center",
                 }}
               >
-                Associate members of
+                Associate
                 <a href="https://www.r3.org.uk/" target="_blank">
                   <img
                     src={"/R3-Logo.png"}
                     className={styles.linkedIn}
-                    style={{ top: 30, width: 75 }}
+                    style={{ top: 30, width: 75, marginRight: 10 }}
                   />
                 </a>
+                Members
               </p>
             </div>
           </Grid>
@@ -333,7 +365,7 @@ const useStyles = makeStyles(() => ({
     marginTop: 100,
   },
   textContainer: {
-    marginBottom: 15,
+    marginBottom: 40,
     paddingTop: 10,
   },
   textContainer2: {

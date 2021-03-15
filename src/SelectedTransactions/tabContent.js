@@ -742,7 +742,8 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
               textAlign: "center",
               marginBottom: -15,
               marginTop: 2,
-              color: "rgb(0,102,102)",
+              color: "rgb(0,82,82)",
+              opacity: 1,
             }}
           >
             {company}

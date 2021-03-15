@@ -13,7 +13,7 @@ export const People = compose(() => {
     <Grid item container xs={12} className={styles.peopleContainer}>
       <Grid item container xs={10} spacing={4}>
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "95%", marginLeft: "0%", marginTop: 50 }}>
+          <div style={{ width: "93.5%", marginLeft: "0%", marginTop: 50 }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Jason </span> has
               more than 25 years’ financial markets experience having held
@@ -28,27 +28,27 @@ export const People = compose(() => {
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Chief executive of single family office;
+                  Chief executive of single family office.
                 </span>
               </p>
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
                   Global Structured Finance at Investec Bank, Natwest Markets,
-                  National Australia Bank;
+                  National Australia Bank.
                 </span>
               </p>
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Co-Founder / Co-Head of Debt Advisory at PwC;
+                  Co-Founder / Co-Head of Debt Advisory at PwC.
                 </span>
               </p>
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
                   Senior Financial Analyst at RELX plc, the FTSE100 information
-                  and analytics company;
+                  and analytics company.
                 </span>
               </p>
             </div>
@@ -150,11 +150,14 @@ export const People = compose(() => {
             >
               Jason and Andrew are two of the most experienced advisors in the
               EMEA Financing Advisory and Restructuring marketplace.{" "}
-              <span style={{ position: "relative", top: 20 }}>
-                We believe this depth of market knowledge and experience of
-                having sat at every seat at the table during our careers is
-                unique in the debt advisory and financial restructuring markets.
-              </span>
+            </p>
+            <p
+              className={textStyles.contentTextLarge}
+              style={{ fontSize: 20, color: "rgb(0,102,102)" }}
+            >
+              We believe this depth of market knowledge and experience of having
+              sat at every seat at the table during our careers is unique in the
+              debt advisory and financial restructuring markets.
             </p>
             <p
               className={textStyles.contentTextLarge}
@@ -164,7 +167,7 @@ export const People = compose(() => {
         </Grid>
 
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "95%", marginLeft: "10%", marginTop: 50 }}>
+          <div style={{ width: "93.5%", marginLeft: "10%", marginTop: 50 }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Andrew </span> has
               more than 35 years’ financial markets experience having held
@@ -180,27 +183,27 @@ export const People = compose(() => {
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Chief executive of single family office;
+                  Chief executive of single family office.
                 </span>
               </p>
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Head of Debt Management / Banking Partner, 3i Buyouts;
+                  Head of Debt Management / Banking Partner, 3i Buyouts.
                 </span>
               </p>
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
                   Head of Financial Sponsors / Leveraged Finance at Bank of
-                  America, Barclays Capital, HSBC;
+                  America, Barclays Capital, HSBC.
                 </span>
               </p>
               <p className={textStyles.contentTextLightTight}>
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
                   Banking Officer graduate traineeship at Continental Illinois
-                  National Bank in Chicago;
+                  National Bank in Chicago.
                 </span>
               </p>
             </div>
