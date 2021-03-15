@@ -8,54 +8,54 @@ import { AppBar } from "./Layout/AppBar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { WhyNow } from "./WhyNow/index";
 import { SelectedTransactions } from "./SelectedTransactions/index";
-import { Fade } from "@material-ui/core";
+import { Hidden } from "@material-ui/core";
 import { compose } from "redux";
 import { Contact } from "./Contact";
 
 function App() {
   return (
     <>
-      <Router>
-        <div
-          style={{
-            backgroundColor: "rgba(150,150,150,0.1)",
-            minHeight: "100vh",
-            overflowY: "hidden",
-          }}
-        >
-          <Switch>
-            <Route path="/world-class-experience">
-              <Page>
-                <People />
-              </Page>
-            </Route>
-            <Route path="/world-class-advice">
-              <Page>
-                <Home />
-              </Page>
-            </Route>
-            <Route path="/why-now">
-              <Page>
-                <WhyNow />
-              </Page>
-            </Route>
-            <Route path="/selected-transactions">
-              <Page>
-                <SelectedTransactions />
-              </Page>
-            </Route>
-            <Route path="/contact">
-              <Page>
-                <Contact />
-              </Page>
-            </Route>
+      <Hidden mdDown>
+        <Router>
+          <div
+            style={{
+              minHeight: "100vh",
+            }}
+          >
+            <Switch>
+              <Route path="/world-class-experience">
+                <Page>
+                  <People />
+                </Page>
+              </Route>
+              <Route path="/world-class-advice">
+                <Page>
+                  <Home />
+                </Page>
+              </Route>
+              <Route path="/why-now">
+                <Page>
+                  <WhyNow />
+                </Page>
+              </Route>
+              <Route path="/selected-transactions">
+                <Page>
+                  <SelectedTransactions />
+                </Page>
+              </Route>
+              <Route path="/contact">
+                <Page>
+                  <Contact />
+                </Page>
+              </Route>
 
-            <Route path="/">
-              <EnterSite />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+              <Route path="/">
+                <EnterSite />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </Hidden>
     </>
   );
 }

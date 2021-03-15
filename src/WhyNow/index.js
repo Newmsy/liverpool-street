@@ -7,9 +7,7 @@ export const WhyNow = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
   const [index, setIndex] = React.useState(0);
-  // change colour of graphics
-  // use left and right arrows to navigate
-  // slide the cards
+  //
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
       <Grid
@@ -17,7 +15,7 @@ export const WhyNow = compose(() => {
         container
         alignItems="flex-start"
         justifyContent="center"
-        spacing={10}
+        spacing={8}
         xs={9}
       >
         <Card imagePath="/Globe.svg">
@@ -35,11 +33,7 @@ export const WhyNow = compose(() => {
             throughout 2021/22 and credit losses are likely to accelerate
             putting pressure on new credit creation.
           </p>
-          <p className={textStyles.contentTextLarge}>
-            • <span className={styles.spacing}></span>Liverpool Street Capital
-            Advisors has been created to meet the expected need for high quality
-            financial restructuring advice in 2021 and beyond.
-          </p>
+
           <p className={textStyles.contentTextLarge}>
             • <span className={styles.spacing}></span>The 2008 global financial
             crash was marked by liquidity problems, with a worldwide shortage of
@@ -49,19 +43,13 @@ export const WhyNow = compose(() => {
             switching off demand overnight. The financing techniques used in
             2008 will not, on their own, work in 2021.
           </p>
-          <p className={textStyles.contentTextLarge}>
-            • <span className={styles.spacing}></span>The challenge today is to
-            tap into the ample liquidity which is available through thoughtful
-            and careful positioning of the credit / investment proposition.
-          </p>
-          <p className={textStyles.contentTextLarge}>
-            • <span className={styles.spacing}></span>Flexible financial
-            structures are required, able to withstand a much wider range of
-            possible trading outcomes and capable of supporting growth as
-            economies emerge from their national lockdowns.
-          </p>
         </Card>
         <Card imagePath="/Handshake.svg">
+          <p className={textStyles.contentTextLarge}>
+            • <span className={styles.spacing}></span>Liverpool Street Capital
+            Advisors has been created to meet the expected need for high quality
+            financial restructuring advice in 2021 and beyond.
+          </p>
           <p className={textStyles.contentTextLarge}>
             • <span className={styles.spacing}></span>As well as having long
             careers in financing markets as lenders, investors and advisors,
@@ -77,6 +65,15 @@ export const WhyNow = compose(() => {
             extension of the client’s executive team. We do this by becoming
             integral to your strategic goals.
           </p>
+
+          <p className={textStyles.contentTextLarge}>
+            • <span className={styles.spacing}></span>Flexible financial
+            structures are required, able to withstand a much wider range of
+            possible trading outcomes and capable of supporting growth as
+            economies emerge from their national lockdowns.
+          </p>
+        </Card>
+        <Card imagePath="/Stocks.svg">
           <p
             className={textStyles.contentTextLarge}
             style={{ marginBottom: 10 }}
@@ -131,7 +128,7 @@ export const Card = compose((props) => {
   const styles = useStyles();
   const textStyles = useTextStyles();
   return (
-    <Grid item xs={6} justify="center" style={{ marginBottom: 30 }}>
+    <Grid item xs={4} justify="center" style={{ marginBottom: 30 }}>
       <Paper className={styles.cardPaper} elevation={0}>
         <Box marginTop={2} marginBottom={3}>
           <img src={props.imagePath} className={styles.cardImage} />
@@ -145,7 +142,7 @@ export const Card = compose((props) => {
 const useStyles = makeStyles(() => ({
   homePageContainer: {
     justifyContent: "center",
-    marginTop: 40,
+    marginTop: 90,
     flexDirection: "column",
     alignItems: "center",
   },

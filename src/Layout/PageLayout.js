@@ -25,7 +25,7 @@ export const PageLayout = compose((props) => {
             {props.children}
           </Fade>
         </Grid>
-        <div>
+        <div style={{ overflowY: "hidden" }}>
           <img
             src="/LiverpoolStreet.png"
             alt="Liverpool Street Capital Advisors"
@@ -46,10 +46,10 @@ const useStyles = makeStyles(() => ({
     top: 0,
     left: 0,
     zIndex: 0,
+    overflowY: "hidden",
   },
   container: {
     zIndex: 2,
-    height: "100vh",
     overflowY: "hidden",
   },
 }));
