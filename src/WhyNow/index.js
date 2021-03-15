@@ -18,7 +18,7 @@ export const WhyNow = compose(() => {
         alignItems="flex-start"
         justifyContent="center"
         spacing={10}
-        xs={8}
+        xs={9}
       >
         <Card imagePath="/Globe.svg">
           <p className={textStyles.contentTextLarge}>
@@ -79,7 +79,7 @@ export const WhyNow = compose(() => {
           </p>
           <p
             className={textStyles.contentTextLarge}
-            style={{ marginBottom: 0 }}
+            style={{ marginBottom: 10 }}
           >
             • <span className={styles.spacing}></span>This is particularly
             relevant for clients who:{" "}
@@ -87,21 +87,21 @@ export const WhyNow = compose(() => {
           <div className={styles.indented}>
             <p
               className={textStyles.contentTextLarge}
-              style={{ marginBottom: 0, marginTop: 0 }}
+              style={{ marginBottom: 0, marginTop: 5 }}
             >
               • <span className={styles.spacing}></span>
               have many moving parts to their businesses;
             </p>
             <p
               className={textStyles.contentTextLarge}
-              style={{ marginBottom: 0, marginTop: 0 }}
+              style={{ marginBottom: 0, marginTop: 5 }}
             >
               • <span className={styles.spacing}></span>
               are frequent users of financing markets;
             </p>
             <p
               className={textStyles.contentTextLarge}
-              style={{ marginBottom: 0, marginTop: 0 }}
+              style={{ marginBottom: 0, marginTop: 5 }}
             >
               • <span className={styles.spacing}></span>
               do not always fit the standard categorisations used by lenders
@@ -151,8 +151,8 @@ const useStyles = makeStyles(() => ({
   },
   indented: {
     position: "relative",
-    left: 10,
-    paddingRight: 10,
+    left: 20,
+    paddingRight: 20,
     marginTop: 0,
   },
   contentContainer: {
