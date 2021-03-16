@@ -23,7 +23,7 @@ export const TabContent = ({ index, setActiveTab }) => {
         interval={1000000000}
         navButtonsAlwaysInvisible={true}
         onChange={(index, active) => {
-          setCurrIndex(index);
+          setActiveTab(index % 5);
         }}
         index={index}
       >
@@ -857,7 +857,7 @@ const useStyles = makeStyles(() => ({
     alignContent: "flex-start",
     backgroundColor: "transparent",
     marginTop: 20,
-    minWidth: 1000,
+    minWidth: 1620,
     overflowX: "visible",
   },
 

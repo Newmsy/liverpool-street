@@ -17,41 +17,37 @@ export const PageLayout = compose((props) => {
   };
 
   return (
-    <div style={{ width: "100%" }}>
-      <Grid container xs={12} justify="center" className={styles.container}>
+    <div
+      style={{ width: "100%" }}
+      class="backgroundimage"
+      className={"backgroundimage"}
+    >
+      <Grid
+        container
+        xs={12}
+        justify="center"
+        className={styles.container}
+        style={{
+          minWidth: 1620,
+        }}
+      >
         <AppBar changeLoc={changeLoc} />
         <Grid xs={12} className={styles.container}>
-          <Fade in={!hide} timeout={1000}>
-            {props.children}
-          </Fade>
+          <div>
+            <Fade in={!hide} timeout={1000}>
+              {props.children}
+            </Fade>
+          </div>
         </Grid>
-        <div style={{ overflowY: "hidden" }}>
-          <img
-            src="/LiverpoolStreet.png"
-            alt="Liverpool Street Capital Advisors"
-            className={styles.backgroundImage}
-            style={{ opacity: 0.1 }}
-          />
-        </div>
       </Grid>
     </div>
   );
 });
 
 const useStyles = makeStyles(() => ({
-  backgroundImage: {
-    position: "absolute",
-    minWidth: 1600,
-    width: "100vw",
-    height: "100vh",
-    top: 0,
-    left: 0,
-    zIndex: 0,
-    overflowY: "hidden",
-  },
   container: {
     zIndex: 2,
     overflowY: "hidden",
-    minWidth: 1600,
+    minWidth: 1620,
   },
 }));

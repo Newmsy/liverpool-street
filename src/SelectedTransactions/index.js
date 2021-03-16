@@ -16,8 +16,8 @@ export const SelectedTransactions = compose(() => {
 
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
-      <Grid container xs={11} className={styles.transactionsContainer2}>
-        <Grid item container xs={10}>
+      <Grid container xs={12} className={styles.transactionsContainer2}>
+        <Grid item container xs={12}>
           <div
             style={{
               marginLeft: `calc(50% + ${(activeTab - 2) * 180}px - 6px)`,
@@ -32,7 +32,7 @@ export const SelectedTransactions = compose(() => {
         <Grid
           item
           container
-          xs={10}
+          xs={12}
           alignItems="space-between"
           justify="center"
         >
