@@ -17,7 +17,7 @@ function App() {
   const textStyles = useTextStyles();
   return (
     <>
-      <Hidden mdUp>
+      {/* <Hidden mdUp>
         <div style={{ height: "100vh" }}>
           <div
             style={{
@@ -36,47 +36,47 @@ function App() {
           </div>
         </div>
       </Hidden>
-      <Hidden smDown>
-        <Router>
-          <div
-            style={{
-              minHeight: "100vh",
-            }}
-          >
-            <Switch>
-              <Route path="/world-class-experience">
-                <Page>
-                  <People />
-                </Page>
-              </Route>
-              <Route path="/world-class-advice">
-                <Page>
-                  <Home />
-                </Page>
-              </Route>
-              <Route path="/why-now">
-                <Page>
-                  <WhyNow />
-                </Page>
-              </Route>
-              <Route path="/selected-transactions">
-                <Page>
-                  <SelectedTransactions />
-                </Page>
-              </Route>
-              <Route path="/contact">
-                <Page>
-                  <Contact />
-                </Page>
-              </Route>
+      <Hidden smDown> */}
+      <Router>
+        <div
+          style={{
+            minHeight: "100vh",
+          }}
+        >
+          <Switch>
+            <Route path="/world-class-experience">
+              <Page>
+                <People />
+              </Page>
+            </Route>
+            <Route path="/world-class-advice">
+              <Page>
+                <Home />
+              </Page>
+            </Route>
+            <Route path="/why-now">
+              <Page>
+                <WhyNow />
+              </Page>
+            </Route>
+            <Route path="/selected-transactions">
+              <Page>
+                <SelectedTransactions />
+              </Page>
+            </Route>
+            <Route path="/contact">
+              <Page>
+                <Contact />
+              </Page>
+            </Route>
 
-              <Route path="/">
-                <EnterSite />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-      </Hidden>
+            <Route path="/">
+              <EnterSite />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+      {/* </Hidden> */}
     </>
   );
 }

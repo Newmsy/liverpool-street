@@ -1,11 +1,8 @@
 import React from "react";
 import { compose } from "redux";
 import { Box, Grid, makeStyles, Tab, Tabs } from "@material-ui/core";
-import IconButton from "@material-ui/core/IconButton";
 import { useTextStyles } from "../Styles/TextStyles";
 import { TabContent } from "./tabContent";
-import { ReactComponent as ArrowRight } from "../Assets/ArrowRight.svg";
-import { ReactComponent as ArrowLeft } from "../Assets/ArrowLeft.svg";
 import { ReactComponent as ArrowWhite } from "../Assets/ArrowWhite.svg";
 
 export const SelectedTransactions = compose(() => {
@@ -15,12 +12,7 @@ export const SelectedTransactions = compose(() => {
 
   const onChangeTab = React.useCallback((event, newValue) => {
     setActiveTab(newValue);
-    console.log(activeTab);
   }, []);
-
-  // blue arrow goes above current location of tabs to show where you are
-  // move
-  // squeeze the background width of the tabs
 
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
@@ -100,7 +92,8 @@ export const SelectedTransactions = compose(() => {
             />
           </Tabs>
         </Grid>
-        <TabContent index={activeTab} />
+
+        <TabContent index={activeTab} setActiveTab={setActiveTab} />
       </Grid>
     </Grid>
   );

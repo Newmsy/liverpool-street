@@ -3,11 +3,16 @@ import { compose } from "redux";
 import { Box, Grid, makeStyles, Tab, Tabs, Paper } from "@material-ui/core";
 import { useTextStyles } from "../Styles/TextStyles";
 import Carousel from "react-material-ui-carousel";
+import SwipeableViews from "react-swipeable-views";
 
-export const TabContent = ({ index }) => {
+export const TabContent = ({ index, setActiveTab }) => {
   const styles = useStyles();
   const textStyles = useTextStyles();
   const [currIndex, setCurrIndex] = React.useState(index);
+
+  const handleChangeIndex = (index) => {
+    setActiveTab(index % 5);
+  };
 
   return (
     <Grid container xs={12} className={styles.transactionsContainer}>
@@ -37,6 +42,7 @@ export const TabContent = ({ index }) => {
             style={{
               justifyContent: "center",
               justifyItems: "center",
+              WebkitFontSmoothing: "antialiased",
             }}
           >
             <TransactionItem
@@ -163,6 +169,7 @@ export const TabContent = ({ index }) => {
             style={{
               justifyContent: "center",
               justifyItems: "center",
+              WebkitFontSmoothing: "antialiased",
             }}
           >
             <TransactionItem
@@ -452,7 +459,14 @@ export const TabContent = ({ index }) => {
         {/* _______________________________________________________________________________________________________________________________ */}
         {/* _______________________________________________________________________________________________________________________________ */}
         {/* _______________________________________________________________________________________________________________________________ */}
-        <Grid item container xs={12}>
+        <Grid
+          item
+          container
+          xs={12}
+          style={{
+            WebkitFontSmoothing: "antialiased",
+          }}
+        >
           <Grid
             item
             container
@@ -467,6 +481,7 @@ export const TabContent = ({ index }) => {
               value={"30M"}
               description={"Senior & Junior Debt Raising"}
             />
+
             <TransactionItem
               company={"UK Regional Airport"}
               value={"377M"}
@@ -481,6 +496,17 @@ export const TabContent = ({ index }) => {
               company={"UK Medical Services"}
               value={"55M"}
               description={"Staple Financing"}
+            />
+            <TransactionItem
+              company={"UK Healthcare Services"}
+              value={"30M"}
+              description={"MBO"}
+            />
+            <TransactionItem
+              company={"EU IT Services"}
+              value={"82M"}
+              cur={"EUR"}
+              description={"MBO"}
             />
             <TransactionItem
               company={"UK Corporate Vehicle Rental"}
@@ -524,6 +550,16 @@ export const TabContent = ({ index }) => {
               description={"Covenant Reset"}
             />
             <TransactionItem
+              company={"UK Debt Warehouse"}
+              value={"400M"}
+              description={"Leveraged loan securitisation"}
+            />
+            <TransactionItem
+              company={"Scandinavia Network Services"}
+              value={"400M"}
+              description={"Leveraged loan securitisation"}
+            />
+            <TransactionItem
               company={"UK Pharma Contract Manufacturing"}
               value={"32M"}
               description={"Expansion Facilities"}
@@ -554,23 +590,34 @@ export const TabContent = ({ index }) => {
             }}
           >
             <TransactionItem
-              company={"European Business Services              "}
+              company={"European Business Services"}
               value={"60M"}
               cur={"EUR"}
               description={"Senior Recapitalisation"}
             />
             <TransactionItem
-              company={"Industrial Pumps Manufacturing              "}
+              company={"Industrial Pumps Manufacturing"}
               value={"295M"}
               description={"Bank and ECA Refinancing"}
             />
             <TransactionItem
-              company={"UK Stationer              "}
+              company={"Germany Transportation"}
+              value={"1500M"}
+              cur={"EUR"}
+              description={"LBO"}
+            />
+            <TransactionItem
+              company={"UK Consumer Products"}
+              value={"125M"}
+              description={"Leveraged recap"}
+            />
+            <TransactionItem
+              company={"UK Stationer"}
               value={"40M"}
               description={"Refinancing"}
             />
             <TransactionItem
-              company={"Euro Pharma Contract Manufacturing              "}
+              company={"Euro Pharma Contract Manufacturing"}
               value={"67M"}
               cur={"EUR"}
               description={"Refinancing"}
@@ -742,8 +789,10 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
               textAlign: "center",
               marginBottom: -15,
               marginTop: 2,
-              color: "rgb(0,82,82)",
+
+              color: "rgb(0,92,92)",
               opacity: 1,
+              WebkitFontSmoothing: "antialiased",
             }}
           >
             {company}
@@ -767,6 +816,7 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
             color: "rgb(0,31,96)",
             marginTop: 0,
             marginBottom: 0,
+            WebkitFontSmoothing: "antialiased",
           }}
         >
           {cur}
@@ -788,8 +838,9 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
           style={{
             textAlign: "center",
             fontSize: 17,
-            color: "rgb(0,102,102)",
+            color: "rgb(0,92,92)",
             marginTop: 0,
+            WebkitFontSmoothing: "antialiased",
           }}
         >
           {description}
@@ -806,6 +857,8 @@ const useStyles = makeStyles(() => ({
     alignContent: "flex-start",
     backgroundColor: "transparent",
     marginTop: 20,
+    minWidth: 1000,
+    overflowX: "visible",
   },
 
   tabContainerItem: {
@@ -824,5 +877,6 @@ const useStyles = makeStyles(() => ({
     position: "relative",
     backgroundColor: "white",
     padding: 5,
+    WebkitFontSmoothing: "antialiased",
   },
 }));
