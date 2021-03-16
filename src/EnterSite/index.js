@@ -17,7 +17,7 @@ export const EnterSite = compose(() => {
   const history = useHistory();
   const textStyles = useTextStyles();
 
-  const [hide, setHide] = React.useState(true);
+  const [hide, setHide] = React.useState(false);
 
   const enterSite = () => {
     setHide(true);
@@ -30,18 +30,15 @@ export const EnterSite = compose(() => {
         <div>
           <Fade in={!hide} timeout={5000} style={{ transitionDelay: 10000 }}>
             <div>
-              <img
-                src="/LiverpoolStreet.png"
-                alt="Liverpool Street Capital Advisors"
+              <div
                 className={styles.backgroundImage}
                 style={{ opacity: 0.3 }}
-                onLoad={() => setHide(false)}
-              />
+              ></div>
             </div>
           </Fade>
 
           <Grid container xs={12} className={styles.enterSiteContainer}>
-            <Grid xs={3} md={3}>
+            <Grid>
               <img src={"/swipe.gif"} className={styles.logoGreen} />
             </Grid>
             <Fade in={!hide} timeout={5000} style={{ transitionDelay: 5000 }}>
@@ -53,10 +50,10 @@ export const EnterSite = compose(() => {
                 />
               </Grid>
             </Fade>
-            <Grid xs={10} md={3} container className={styles.mottoContainer}>
+            <Grid xs={5} container className={styles.mottoContainer}>
               <Fade in={!hide} timeout={5000} style={{ transitionDelay: 7000 }}>
                 <Grid
-                  xs={10}
+                  xs={12}
                   style={{ justifyContent: "center", display: "flex" }}
                 >
                   <img
@@ -107,7 +104,9 @@ const useStyles = makeStyles(() => ({
   },
   enterSiteContainer: {
     justifyContent: "center",
+    justifyItems: "center",
     alignItems: "center",
+    alignContent: "center",
     flexDirection: "column",
 
     minHeight: "100vh",
@@ -136,7 +135,8 @@ const useStyles = makeStyles(() => ({
   },
   mottoUn: {
     width: 240,
-    marginLeft: 45,
+    height: "auto",
+    marginLeft: -50,
     imageRendering: "-webkit-optimize-contrast",
   },
   enterSiteButton: {
@@ -155,10 +155,13 @@ const useStyles = makeStyles(() => ({
   },
   backgroundImage: {
     position: "absolute",
-    width: "100vw",
-    height: "100vh",
+    minWidth: "100vw",
+    minHeight: "100vh",
     top: 0,
     left: 0,
     zIndex: 0,
+    backgroundImage: 'url("/LiverpoolStreet.png")',
+    backgroundPosition: "center",
+    opacity: 0.3,
   },
 }));
