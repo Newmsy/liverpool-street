@@ -11,11 +11,32 @@ import { SelectedTransactions } from "./SelectedTransactions/index";
 import { Hidden } from "@material-ui/core";
 import { compose } from "redux";
 import { Contact } from "./Contact";
+import { useTextStyles } from "./Styles/TextStyles";
 
 function App() {
+  const textStyles = useTextStyles();
   return (
     <>
-      <Hidden mdDown>
+      <Hidden mdUp>
+        <div style={{ height: "100vh" }}>
+          <div
+            style={{
+              marginTop: -40,
+              paddingTop: "40vh",
+              width: "100vw",
+              textAlign: "center",
+            }}
+          >
+            <p
+              className={textStyles.greenContentLead}
+              style={{ lineHeight: 1 }}
+            >
+              Mobile compatibility not yet supported. Please view on desktop.
+            </p>
+          </div>
+        </div>
+      </Hidden>
+      <Hidden smDown>
         <Router>
           <div
             style={{

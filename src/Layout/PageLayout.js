@@ -17,7 +17,7 @@ export const PageLayout = compose((props) => {
   };
 
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <Grid container xs={12} justify="center" className={styles.container}>
         <AppBar changeLoc={changeLoc} />
         <Grid xs={12} className={styles.container}>
@@ -41,6 +41,7 @@ export const PageLayout = compose((props) => {
 const useStyles = makeStyles(() => ({
   backgroundImage: {
     position: "absolute",
+    minWidth: 1600,
     width: "100vw",
     height: "100vh",
     top: 0,
@@ -51,5 +52,6 @@ const useStyles = makeStyles(() => ({
   container: {
     zIndex: 2,
     overflowY: "hidden",
+    minWidth: 1600,
   },
 }));

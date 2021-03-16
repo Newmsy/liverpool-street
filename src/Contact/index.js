@@ -12,20 +12,23 @@ export const Contact = compose(() => {
   //align a bit more with top and bottom of images
   return (
     <Grid container xs={12} className={styles.contactContainer}>
-      <Grid item container xs={10}>
+      <Grid item container xs={10} style={{ minWidth: 1200 }}>
         <Grid item xs={4}>
           <Grid item xs={12}>
-            <img
-              src={"/Building1.jpg"}
-              style={{
-                width: 460,
-                objectFit: "cover",
-                boxShadow: "2px 3px 10px #888888",
-                marginTop: 45,
-                height: 560,
-                marginLeft: 60,
-              }}
-            />
+            <div style={{ position: "relative", height: 560 }}>
+              <img
+                src={"/Building1.jpg"}
+                style={{
+                  width: 460,
+                  objectFit: "cover",
+                  boxShadow: "2px 3px 10px #888888",
+                  marginTop: 45,
+                  height: 560,
+                  position: "absolute",
+                  right: 0,
+                }}
+              />
+            </div>
           </Grid>
           <Grid item xs={12}>
             <div className={styles.textContainer}>
@@ -33,7 +36,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 2,
+                  marginTop: 52,
                   textAlign: "center",
                   marginLeft: 65,
                 }}

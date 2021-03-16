@@ -5,7 +5,6 @@ export const useTextStyles = makeStyles(() => ({
     fontFamily: "Banschrift",
     fontSize: 60,
     fontWeight: 100,
-
     color: "rgb(0,0,0)",
   },
   mediumSubtitle: {
