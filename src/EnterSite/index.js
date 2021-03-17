@@ -50,7 +50,7 @@ export const EnterSite = compose(() => {
                 />
               </Grid>
             </Fade>
-            <Grid xs={5} container className={styles.mottoContainer}>
+            <Grid xs={12} container className={styles.mottoContainer}>
               <Fade in={!hide} timeout={5000} style={{ transitionDelay: 7000 }}>
                 <Grid
                   xs={12}
@@ -135,8 +135,8 @@ const useStyles = makeStyles(() => ({
   },
   mottoUn: {
     width: 240,
-    height: "auto",
-    marginLeft: -50,
+    height: 68,
+    marginLeft: "-3%",
     imageRendering: "-webkit-optimize-contrast",
   },
   enterSiteButton: {
