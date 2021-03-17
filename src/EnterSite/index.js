@@ -27,7 +27,7 @@ export const EnterSite = compose(() => {
   return (
     <>
       <Fade in={!hide} timeout={1500}>
-        <div>
+        <div style={{ overflow: "hidden" }}>
           <Fade in={!hide} timeout={5000} style={{ transitionDelay: 10000 }}>
             <div>
               <div
@@ -155,8 +155,8 @@ const useStyles = makeStyles(() => ({
   },
   backgroundImage: {
     position: "absolute",
-    minWidth: "100vw",
-    minHeight: "100vh",
+    width: "100vw",
+    height: "100vh",
     top: 0,
     left: 0,
     zIndex: 0,
