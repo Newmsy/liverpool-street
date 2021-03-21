@@ -148,7 +148,7 @@ export const Card = compose((props) => {
 const useStyles = makeStyles(() => ({
   homePageContainer: {
     justifyContent: "center",
-    marginTop: 90,
+    marginTop: 130,
     flexDirection: "column",
     alignItems: "center",
   },

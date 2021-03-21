@@ -15,6 +15,7 @@ export const Contact = compose(() => {
   //25% smaller graphics
   //leave same size
   //bring graphics a bit closer to center
+  //
 
   return (
     <Grid container xs={12} className={styles.contactContainer}>
@@ -41,7 +42,11 @@ export const Contact = compose(() => {
               />
             </div>
           </Grid>
-          <Grid item xs={12}>
+          <Grid
+            item
+            xs={12}
+            style={{ display: "flex", justifyContent: "flex-end" }}
+          >
             <div className={styles.textContainer}>
               <p
                 className={textStyles.contentTextLight2}
@@ -49,7 +54,7 @@ export const Contact = compose(() => {
                   fontSize: 22,
                   marginTop: -32,
                   textAlign: "center",
-                  marginLeft: 150,
+                  marginRight: 75,
                 }}
               >
                 Associate
@@ -69,7 +74,7 @@ export const Contact = compose(() => {
           item
           container
           xs={3}
-          style={{ height: "auto", alignContent: "flex-start", marginTop: 20 }}
+          style={{ height: "auto", alignContent: "flex-start", marginTop: 40 }}
         >
           <Grid item xs={12} className={styles.textContainer}>
             <p
@@ -282,7 +287,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 18,
-                  marginTop: 40,
+                  marginTop: 20,
                   textAlign: "center",
                 }}
               >
@@ -318,14 +323,18 @@ export const Contact = compose(() => {
         </Grid>
         <Grid item container style={{ justifyContent: "flex-start" }} xs={4}>
           <Map />
-          <Grid item xs={12}>
+          <Grid
+            item
+            xs={12}
+            style={{ display: "flex", justifyContent: "flex-start" }}
+          >
             <div className={styles.textContainer}>
               <p
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
                   marginTop: 5,
-                  marginLeft: -150,
+                  marginLeft: 69,
                   textAlign: "center",
                 }}
               >

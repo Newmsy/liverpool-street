@@ -104,7 +104,8 @@ export const People = compose(() => {
               style={{
                 textAlign: "center",
                 color: "rgb(0,102,102)",
-                marginTop: -20,
+                marginTop: -10,
+                marginBottom: 5,
                 fontSize: 20,
               }}
             >
@@ -135,7 +136,8 @@ export const People = compose(() => {
               style={{
                 textAlign: "center",
                 color: "rgb(0,102,102)",
-                marginTop: -20,
+                marginTop: -10,
+                marginBottom: 5,
                 fontSize: 20,
               }}
             >
@@ -176,11 +178,9 @@ export const People = compose(() => {
               }}
             >
               <i>
-                <b>
-                  We believe this depth of market knowledge and career
-                  experience of having sat at every seat at the table is unique
-                  in the Financing Advisory and Restructuring marketplace.
-                </b>
+                We believe this depth of market knowledge and career experience
+                of having sat at every seat at the table is unique in the
+                Financing Advisory and Restructuring marketplace.
               </i>
             </p>
           </Grid>

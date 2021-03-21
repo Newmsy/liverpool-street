@@ -77,7 +77,7 @@ export const useTextStyles = makeStyles(() => ({
     fontSize: 18,
     lineHeight: 1.4,
     marginTop: 0,
-    color: "rgb(0,31,96)",
+    color: "rgb(0,27,110)",
   },
   contentTextLightTight: {
     fontFamily: "Banschrift",
@@ -85,7 +85,7 @@ export const useTextStyles = makeStyles(() => ({
     fontSize: 18,
     lineHeight: 1.4,
     marginTop: -16,
-    color: "rgb(0,31,96)",
+    color: "rgb(0,27,110)",
     textAlign: "justify",
   },
   greenContentLead: {
