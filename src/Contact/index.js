@@ -64,7 +64,7 @@ export const Contact = compose(() => {
           item
           container
           xs={4}
-          style={{ height: "auto", alignContent: "flex-start", marginTop: 40 }}
+          style={{ height: "auto", alignContent: "flex-start", marginTop: 20 }}
         >
           <Grid item xs={12} className={styles.textContainer}>
             <p
