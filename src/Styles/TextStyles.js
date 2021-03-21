@@ -31,7 +31,7 @@ export const useTextStyles = makeStyles(() => ({
     fontWeight: 100,
     fontSize: 18,
     lineHeight: 1.4,
-    color: "rgb(0,31,96)",
+    color: "rgb(0,27,100)",
     textAlign: "justify",
   },
   Banschrift2: {
@@ -47,7 +47,7 @@ export const useTextStyles = makeStyles(() => ({
     fontWeight: 100,
     fontSize: 18,
     lineHeight: 1.4,
-    color: "rgb(0,31,96)",
+    color: "rgb(0,27,100)",
     textAlign: "justify",
   },
   contentText2: {

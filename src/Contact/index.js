@@ -10,6 +10,12 @@ export const Contact = compose(() => {
   //copy of the map pin next to the LSCA and bring down a font size
   //zoom out a bit more on map - include bank and liverpool street
   //align a bit more with top and bottom of images
+
+  //20% smaller font sizes for contact
+  //25% smaller graphics
+  //leave same size
+  //bring graphics a bit closer to center
+
   return (
     <Grid container xs={12} className={styles.contactContainer}>
       <Grid item container xs={10} style={{ minWidth: 1200 }}>
@@ -19,11 +25,11 @@ export const Contact = compose(() => {
               <img
                 src={"/Building1.jpg"}
                 style={{
-                  width: 460,
+                  width: 360,
                   objectFit: "cover",
                   boxShadow: "2px 3px 10px #888888",
-                  marginTop: 45,
-                  height: 560,
+                  marginTop: 35,
+                  height: 460,
                   position: "absolute",
                   right: 0,
                 }}
@@ -36,7 +42,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 52,
+                  marginTop: 0,
                   textAlign: "center",
                   marginLeft: 65,
                 }}
@@ -64,7 +70,7 @@ export const Contact = compose(() => {
             <p
               className={textStyles.contentTextLight2}
               style={{
-                fontSize: 22,
+                fontSize: 18,
                 color: "rgb(0,31,96)",
                 textAlign: "center",
               }}
@@ -74,27 +80,21 @@ export const Contact = compose(() => {
                 style={{
                   color: "rgb(0,31,96)",
                   textAlign: "center",
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: 600,
                 }}
               >
                 Partner
               </span>
             </p>
-            <p
-              className={textStyles.contentTextLight2}
-              style={{
-                color: "rgb(0,31,96)",
-                textAlign: "center",
-                fontSize: 18,
-              }}
-            >
-              <b></b>
-            </p>
 
             <p
               className={textStyles.contentTextLight2}
-              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              style={{
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+                fontSize: 16,
+              }}
             >
               <b>
                 +44 (0) 203 651 5560
@@ -110,18 +110,13 @@ export const Contact = compose(() => {
                 +44 (0) 7764 235474
               </b>
             </p>
-            <p
-              className={textStyles.contentTextLight2}
-              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-            >
-              <b></b>
-            </p>
+
             <p
               className={textStyles.contentTextLight2}
               style={{
                 color: "rgb(0,102,102)",
                 textAlign: "center",
-                fontSize: 20,
+                fontSize: 16,
               }}
             >
               <a
@@ -139,7 +134,7 @@ export const Contact = compose(() => {
             <p
               className={textStyles.contentTextLight2}
               style={{
-                fontSize: 22,
+                fontSize: 18,
                 color: "rgb(0,31,96)",
                 textAlign: "center",
               }}
@@ -149,27 +144,21 @@ export const Contact = compose(() => {
                 style={{
                   color: "rgb(0,31,96)",
                   textAlign: "center",
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: 600,
                 }}
               >
                 Partner
               </span>
             </p>
-            <p
-              className={textStyles.contentTextLight2}
-              style={{
-                color: "rgb(0,31,96)",
-                textAlign: "center",
-                fontSize: 18,
-              }}
-            >
-              <b></b>
-            </p>
 
             <p
               className={textStyles.contentTextLight2}
-              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+              style={{
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+                fontSize: 16,
+              }}
             >
               <b>
                 +44 (0) 203 651 5561
@@ -196,7 +185,7 @@ export const Contact = compose(() => {
               style={{
                 color: "rgb(0,102,102)",
                 textAlign: "center",
-                fontSize: 20,
+                fontSize: 16,
               }}
             >
               <a
@@ -215,7 +204,7 @@ export const Contact = compose(() => {
               <p
                 className={textStyles.contentTextLight2}
                 style={{
-                  fontSize: 22,
+                  fontSize: 18,
                   color: "rgb(0,31,96)",
                   textAlign: "center",
                 }}
@@ -225,27 +214,21 @@ export const Contact = compose(() => {
                   style={{
                     color: "rgb(0,31,96)",
                     textAlign: "center",
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: 600,
                   }}
                 >
                   EA to the Partners
                 </span>
               </p>
-              <p
-                className={textStyles.contentTextLight2}
-                style={{
-                  color: "rgb(0,31,96)",
-                  textAlign: "center",
-                  fontSize: 18,
-                }}
-              >
-                <b></b>
-              </p>
 
               <p
                 className={textStyles.contentTextLight2}
-                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
+                style={{
+                  color: "rgb(0,102,102)",
+                  textAlign: "center",
+                  fontSize: 16,
+                }}
               >
                 <b>
                   +44 (0) 203 651 5562{" "}
@@ -272,7 +255,7 @@ export const Contact = compose(() => {
                 style={{
                   color: "rgb(0,102,102)",
                   textAlign: "center",
-                  fontSize: 20,
+                  fontSize: 16,
                 }}
               >
                 <a
@@ -293,7 +276,7 @@ export const Contact = compose(() => {
               <p
                 className={textStyles.contentTextLight2}
                 style={{
-                  fontSize: 22,
+                  fontSize: 18,
                   marginTop: 5,
                   textAlign: "center",
                 }}
@@ -313,7 +296,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 20,
+                  marginTop: 30,
                   textAlign: "center",
                 }}
               >
@@ -336,7 +319,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: -20,
+                  marginTop: 35,
                   marginLeft: -50,
                   textAlign: "center",
                 }}

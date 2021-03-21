@@ -36,7 +36,6 @@ export const EnterSite = compose(() => {
               ></div>
             </div>
           </Fade>
-
           <Grid container xs={12} className={styles.enterSiteContainer}>
             <Grid>
               <img src={"/swipe.gif"} className={styles.logoGreen} />
@@ -136,7 +135,7 @@ const useStyles = makeStyles(() => ({
   mottoUn: {
     width: 240,
     height: 68,
-    marginLeft: "-3%",
+    marginLeft: "-1.9%",
     imageRendering: "-webkit-optimize-contrast",
   },
   enterSiteButton: {

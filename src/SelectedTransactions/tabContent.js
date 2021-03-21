@@ -790,7 +790,7 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
               marginBottom: -15,
               marginTop: 2,
 
-              color: "rgb(0,92,92)",
+              color: "rgb(0,102,102)",
               opacity: 1,
               WebkitFontSmoothing: "antialiased",
             }}
@@ -813,7 +813,7 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
           className={textStyles.contentText}
           style={{
             fontSize: 22,
-            color: "rgb(0,31,96)",
+            color: "rgb(0,27,100)",
             marginTop: 0,
             marginBottom: 0,
             WebkitFontSmoothing: "antialiased",
@@ -838,7 +838,7 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
           style={{
             textAlign: "center",
             fontSize: 17,
-            color: "rgb(0,92,92)",
+            color: "rgb(0,102,102)",
             marginTop: 0,
             WebkitFontSmoothing: "antialiased",
           }}

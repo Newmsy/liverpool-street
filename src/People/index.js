@@ -13,7 +13,7 @@ export const People = compose(() => {
     <Grid item container xs={12} className={styles.peopleContainer}>
       <Grid item container xs={10} spacing={4}>
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "93.5%", marginLeft: "0%", marginTop: 50 }}>
+          <div style={{ width: 437, marginLeft: "0%", marginTop: 50 }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Jason </span> has
               more than 25 years’ financial markets experience having held
@@ -25,30 +25,32 @@ export const People = compose(() => {
               previous roles include:
             </p>
             <div className={styles.indented}>
-              <p className={textStyles.contentTextLightTight}>
+              <p
+                className={textStyles.contentTextLightTight}
+                style={{ textAlign: "center" }}
+              >
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Chief executive of single family office.
+                  Chief executive, single family office
                 </span>
               </p>
-              <p className={textStyles.contentTextLightTight}>
+              <p
+                className={textStyles.contentTextLightTight}
+                style={{ textAlign: "center" }}
+              >
+                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
+                <span style={{ marginLeft: -10 }}>
+                  Co-Founder / Co-Head of Debt Advisory, PwC
+                </span>
+              </p>
+              <p
+                className={textStyles.contentTextLightTight}
+                style={{ textAlign: "center", width: "70%", marginLeft: "15%" }}
+              >
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
                   Global Structured Finance at Investec Bank, Natwest Markets,
-                  National Australia Bank.
-                </span>
-              </p>
-              <p className={textStyles.contentTextLightTight}>
-                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
-                <span style={{ marginLeft: -10 }}>
-                  Co-Founder / Co-Head of Debt Advisory at PwC.
-                </span>
-              </p>
-              <p className={textStyles.contentTextLightTight}>
-                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
-                <span style={{ marginLeft: -10 }}>
-                  Senior Financial Analyst at RELX plc, the FTSE100 information
-                  and analytics company.
+                  National Australia Bank
                 </span>
               </p>
             </div>
@@ -56,7 +58,7 @@ export const People = compose(() => {
             <p className={textStyles.contentTextLarge}>
               Jason has substantial transaction leadership experience in M&A,
               refinancings, restructurings and recapitalisations, risk
-              committees and credit committees and has provided written and oral
+              committees and credit committees and has provided written / oral
               expert testimony having been called as an expert witness in
               USD2.2BN ICC Arbitration proceedings.
             </p>
@@ -92,6 +94,7 @@ export const People = compose(() => {
                 textAlign: "center",
                 color: "rgb(0,31,96)",
                 fontWeight: 600,
+                fontSize: 20,
               }}
             >
               Jason Green
@@ -102,9 +105,12 @@ export const People = compose(() => {
                 textAlign: "center",
                 color: "rgb(0,102,102)",
                 marginTop: -20,
+                fontSize: 20,
               }}
             >
-              <span className={styles.peopleRole}>Partner</span>
+              <span className={styles.peopleRole} style={{ fontSize: 20 }}>
+                Partner
+              </span>
             </h1>
           </Grid>
           <Grid item xs={5}>
@@ -119,6 +125,7 @@ export const People = compose(() => {
                 textAlign: "center",
                 color: "rgb(0,31,96)",
                 fontWeight: 600,
+                fontSize: 20,
               }}
             >
               Andrew Golding
@@ -129,45 +136,52 @@ export const People = compose(() => {
                 textAlign: "center",
                 color: "rgb(0,102,102)",
                 marginTop: -20,
+                fontSize: 20,
               }}
             >
-              <span className={styles.peopleRole}>Partner</span>
+              <span className={styles.peopleRole} style={{ fontSize: 20 }}>
+                Partner
+              </span>
             </h1>
           </Grid>
           <Grid
             item
-            xs={12}
             style={{
               position: "relative",
               top: 0,
               paddingLeft: 33,
               paddingRight: 33,
+              width: 456,
             }}
           >
             <p
               className={textStyles.contentTextLarge}
-              style={{ fontSize: 20, color: "rgb(0,102,102)" }}
+              style={{
+                fontSize: 20,
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+              }}
             >
               Jason and Andrew are two of the most experienced advisors in the
-              EMEA Financing Advisory and Restructuring marketplace.{" "}
+              Financing Advisory and Restructuring marketplace.
             </p>
             <p
               className={textStyles.contentTextLarge}
-              style={{ fontSize: 20, color: "rgb(0,102,102)" }}
+              style={{
+                fontSize: 20,
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+              }}
             >
-              We believe this depth of market knowledge and experience of having
-              sat at every seat at the table during our careers is unique in the
-              debt advisory and financial restructuring markets.
+              We believe this depth of market knowledge and career experience of
+              having sat at every seat at the table is unique in the Financing
+              Advisory and Restructuring marketplace.
             </p>
-            <p
-              className={textStyles.contentTextLarge}
-              style={{ fontSize: 20, color: "rgb(0,102,102)" }}
-            ></p>
           </Grid>
         </Grid>
 
         <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: "93.5%", marginLeft: "10%", marginTop: 50 }}>
+          <div style={{ width: 437, marginLeft: "10%", marginTop: 50 }}>
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Andrew </span> has
               more than 35 years’ financial markets experience having held
@@ -180,30 +194,32 @@ export const People = compose(() => {
             </p>
 
             <div className={styles.indented}>
-              <p className={textStyles.contentTextLightTight}>
+              <p
+                className={textStyles.contentTextLightTight}
+                style={{ textAlign: "center" }}
+              >
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Chief executive of single family office.
+                  Chief executive, single family office
                 </span>
               </p>
-              <p className={textStyles.contentTextLightTight}>
+              <p
+                className={textStyles.contentTextLightTight}
+                style={{ textAlign: "center" }}
+              >
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Head of Debt Management / Banking Partner, 3i Buyouts.
+                  Head of Debt Management / Banking Partner, 3i Buyouts
                 </span>
               </p>
-              <p className={textStyles.contentTextLightTight}>
+              <p
+                className={textStyles.contentTextLightTight}
+                style={{ textAlign: "center", marginLeft: "10%", width: "80%" }}
+              >
                 <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
                 <span style={{ marginLeft: -10 }}>
-                  Head of Financial Sponsors / Leveraged Finance at Bank of
-                  America, Barclays Capital, HSBC.
-                </span>
-              </p>
-              <p className={textStyles.contentTextLightTight}>
-                <span style={{ marginLeft: -10, marginRight: 15 }}>•</span>
-                <span style={{ marginLeft: -10 }}>
-                  Banking Officer graduate traineeship at Continental Illinois
-                  National Bank in Chicago.
+                  Head of Financial Sponsors / Leveraged Finance at B of A,
+                  Barclays Capital, HSBC
                 </span>
               </p>
             </div>

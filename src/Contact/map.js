@@ -13,7 +13,7 @@ export const Map = compose(() => {
           className={textStyles.contentTextLight2}
           style={{
             fontSize: 22,
-            color: "rgb(0,31,96)",
+            color: "rgb(0,27,100)",
             marginTop: 8,
           }}
         >
@@ -38,7 +38,7 @@ export const Map = compose(() => {
             marginLeft: 15,
           }}
         >
-          46, New Broad Street
+          46 New Broad Street
         </p>
         <p
           className={textStyles.contentTextLight2}
@@ -66,11 +66,11 @@ export const Map = compose(() => {
       <img
         src="/MapClearPin.png"
         style={{
-          width: 460,
+          width: 360,
           objectFit: "cover",
           boxShadow: "2px 3px 10px #888888",
           marginTop: 120,
-          height: 480,
+          height: 375,
         }}
       />
       {/* <iframe

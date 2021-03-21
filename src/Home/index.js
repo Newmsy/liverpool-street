@@ -15,7 +15,7 @@ export const Home = compose(() => {
           <Grid item xs={12} className={styles.textContainer}>
             <div
               style={{
-                width: "120%",
+                width: 369,
                 right: "20%",
                 position: "relative",
                 marginTop: 60,
@@ -30,7 +30,7 @@ export const Home = compose(() => {
             </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+            <div style={{ width: 369, right: "20%", position: "relative" }}>
               <p className={textStyles.contentText}>
                 Financing markets have changed dramatically over the past 20
                 years and new market entrants mean this change remains in its
@@ -40,7 +40,7 @@ export const Home = compose(() => {
             </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+            <div style={{ width: 369, right: "20%", position: "relative" }}>
               <p className={textStyles.contentText}>
                 As well as providing our clients with access to the public
                 financing markets, we also connect our clients to the clearers,
@@ -51,7 +51,7 @@ export const Home = compose(() => {
             </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%", right: "20%", position: "relative" }}>
+            <div style={{ width: 369, right: "20%", position: "relative" }}>
               <p
                 className={textStyles.contentText}
                 style={{ textAlign: "justify" }}
@@ -66,7 +66,7 @@ export const Home = compose(() => {
         <Slides />
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%", marginTop: 60 }}>
+            <div style={{ width: 369, marginTop: 60 }}>
               <p className={textStyles.contentText}>
                 Our partners have deep experience in developed and emerging
                 markets across all major credit classes in both public financing
@@ -76,7 +76,7 @@ export const Home = compose(() => {
             </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%" }}>
+            <div style={{ width: 369 }}>
               <p className={textStyles.contentText}>
                 Our partners have acted on 177 career transactions, involving
                 finance totalling GBP42.7BN. They have been lenders, investors,
@@ -86,7 +86,7 @@ export const Home = compose(() => {
             </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%" }}>
+            <div style={{ width: 369 }}>
               <p className={textStyles.contentText}>
                 Liverpool Street Capital Advisors is a pure-play financing
                 advisor, free from conflicts of interest. Our partners seek to
@@ -97,7 +97,7 @@ export const Home = compose(() => {
             </div>
           </Grid>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: "120%" }}>
+            <div style={{ width: 369 }}>
               <p
                 className={textStyles.contentText}
                 style={{ textAlign: "justify" }}
@@ -132,8 +132,8 @@ const useStyles = makeStyles(() => ({
     position: "relative",
     bottom: 20,
     marginBottom: -10,
-    marginLeft: -35,
-    marginRight: 3,
+    marginLeft: -33,
+    marginRight: 2,
     left: 22,
     imageRendering: "-webkit-optimize-contrast",
   },
