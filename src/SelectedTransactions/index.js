@@ -132,7 +132,6 @@ const useStyles = makeStyles(() => ({
     width: 150,
     minWidth: 150,
     maxWidth: 150,
-
     color: "rgb(0,27,100)",
     marginRight: 15,
     marginLeft: 15,

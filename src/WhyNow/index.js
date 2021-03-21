@@ -30,7 +30,7 @@ export const WhyNow = compose(() => {
             are currently supportive due to ongoing policy support, market
             conditions post March 2021 remain highly uncertain. Liverpool Street
             Capital Advisors expect financing markets to remain on high alert
-            throughout 2021/22 and credit losses are likely to accelerate
+            throughout 2021 / 22 and credit losses are likely to accelerate
             putting pressure on new credit creation.
           </p>
 
@@ -48,7 +48,7 @@ export const WhyNow = compose(() => {
           <p className={textStyles.contentTextLarge}>
             • <span className={styles.spacing}></span>Liverpool Street Capital
             Advisors has been created to meet the expected need for high quality
-            financial restructuring advice in 2021 and beyond.
+            financial restructuring advice.
           </p>
           <p className={textStyles.contentTextLarge}>
             • <span className={styles.spacing}></span>As well as having long
@@ -63,7 +63,7 @@ export const WhyNow = compose(() => {
             advisors are focused on the immediate financing transaction alone,
             Jason and Andrew’s experience has been that the best advisors are an
             extension of the client’s executive team. We do this by becoming
-            integral to your strategic goals.
+            integral to our clients' strategic goals.
           </p>
 
           <p className={textStyles.contentTextLarge}>
@@ -78,8 +78,8 @@ export const WhyNow = compose(() => {
             className={textStyles.contentTextLarge}
             style={{ marginBottom: 10 }}
           >
-            • <span className={styles.spacing}></span>This is particularly
-            relevant for clients who:{" "}
+            • <span className={styles.spacing}></span>Liverpool Street Capital
+            Advisors' service offering is particularly relevant for clients who:
           </p>
           <div className={styles.indented}>
             <p
@@ -87,14 +87,14 @@ export const WhyNow = compose(() => {
               style={{ marginBottom: 0, marginTop: 5 }}
             >
               • <span className={styles.spacing}></span>
-              have many moving parts to their businesses;
+              have many moving parts to their businesses
             </p>
             <p
               className={textStyles.contentTextLarge}
               style={{ marginBottom: 0, marginTop: 5 }}
             >
               • <span className={styles.spacing}></span>
-              are frequent users of financing markets;
+              are frequent users of financing markets
             </p>
             <p
               className={textStyles.contentTextLarge}
@@ -102,21 +102,22 @@ export const WhyNow = compose(() => {
             >
               • <span className={styles.spacing}></span>
               do not always fit the standard categorisations used by lenders
-              (lenders do not easily ‘get’ their business / objectives).
+              (lenders do not easily ‘get’ their business / objectives)
             </p>
           </div>
           <p className={textStyles.contentTextLarge}>
             • <span className={styles.spacing}></span>In these circumstances, it
             is not efficient for clients to retain an advisor on a
             transaction-only basis and for the advisor to disappear the moment
-            the deal is completed.
+            the deal is completed. Having worked in high-paced, entrepreneurial
+            family offices, Jason and Andrew know responsiveness and agility are
+            key. Whether our clients are in rapid growth mode or survival mode,
+            our commitment to our clients through the business cycle is a
+            hallmark of the service we provide.
           </p>
           <p className={textStyles.contentTextLarge}>
-            • <span className={styles.spacing}></span>Having worked in
-            high-paced, entrepreneurial family offices, Jason and Andrew know
-            responsiveness and agility are key. Whether our clients are in rapid
-            growth mode or survival mode, our commitment to our clients is a
-            hallmark of the service we provide.
+            • <span className={styles.spacing}></span> We apply our experience,
+            from 177 transactions, for our clients' benefit.
           </p>
         </Card>
       </Grid>
@@ -128,7 +129,12 @@ export const Card = compose((props) => {
   const styles = useStyles();
   const textStyles = useTextStyles();
   return (
-    <Grid item xs={4} justify="center" style={{ marginBottom: 30 }}>
+    <Grid
+      item
+      xs={4}
+      justify="center"
+      style={{ marginBottom: 30, justifyContent: "center" }}
+    >
       <Paper className={styles.cardPaper} elevation={0}>
         <Box marginTop={2} marginBottom={3}>
           <img src={props.imagePath} className={styles.cardImage} />
@@ -148,8 +154,8 @@ const useStyles = makeStyles(() => ({
   },
   indented: {
     position: "relative",
-    left: 20,
-    paddingRight: 20,
+    left: 30,
+    paddingRight: 30,
     marginTop: 0,
   },
   contentContainer: {
@@ -168,8 +174,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: 5,
   },
   cardPaper: {
-    width: "100%",
-
+    width: 400,
     borderRadius: 15,
     backgroundColor: "transparent",
     padding: 20,

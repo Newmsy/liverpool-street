@@ -80,7 +80,7 @@ export const Slides = compose(() => {
           </p>
           <div className={styles.indented}>
             <p className={textStyles.contentText2}>
-              • Keep you in control / preserve equity value
+              • Keep control / preserve equity value
             </p>
             <p className={textStyles.contentText2}>• Remove problem lenders</p>
             <p className={textStyles.contentText2}>
@@ -136,11 +136,11 @@ export const Slides = compose(() => {
           <p className={textStyles.contentTextGreen}>Buy-side advice</p>
           <div className={styles.indented}>
             <p className={textStyles.contentText2}>
-              • Beat staple to give you competitive advantage
+              • Beat staple to create competitive advantage
             </p>
             <p className={textStyles.contentText2}>• Confirm deliverability</p>
             <p className={textStyles.contentText2}>
-              • Enable you to focus on deal fundamentals / value drivers
+              • Enable our clients to focus on key transaction value drivers
             </p>
           </div>
         </CardItem>

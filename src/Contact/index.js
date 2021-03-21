@@ -18,7 +18,12 @@ export const Contact = compose(() => {
 
   return (
     <Grid container xs={12} className={styles.contactContainer}>
-      <Grid item container xs={10} style={{ minWidth: 1200 }}>
+      <Grid
+        item
+        container
+        xs={10}
+        style={{ minWidth: 1200, justifyContent: "center" }}
+      >
         <Grid item xs={4}>
           <Grid item xs={12}>
             <div style={{ position: "relative", height: 560 }}>
@@ -28,7 +33,7 @@ export const Contact = compose(() => {
                   width: 360,
                   objectFit: "cover",
                   boxShadow: "2px 3px 10px #888888",
-                  marginTop: 35,
+                  marginTop: 37,
                   height: 460,
                   position: "absolute",
                   right: 0,
@@ -42,9 +47,9 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 0,
+                  marginTop: -32,
                   textAlign: "center",
-                  marginLeft: 65,
+                  marginLeft: 150,
                 }}
               >
                 Associate
@@ -63,7 +68,7 @@ export const Contact = compose(() => {
         <Grid
           item
           container
-          xs={4}
+          xs={3}
           style={{ height: "auto", alignContent: "flex-start", marginTop: 20 }}
         >
           <Grid item xs={12} className={styles.textContainer}>
@@ -277,7 +282,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 18,
-                  marginTop: 5,
+                  marginTop: 40,
                   textAlign: "center",
                 }}
               >
@@ -296,7 +301,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 50,
+                  marginTop: 24,
                   textAlign: "center",
                 }}
               >
@@ -319,8 +324,8 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 35,
-                  marginLeft: -50,
+                  marginTop: 5,
+                  marginLeft: -150,
                   textAlign: "center",
                 }}
               >
@@ -348,10 +353,10 @@ export const Contact = compose(() => {
 const useStyles = makeStyles(() => ({
   contactContainer: {
     justifyContent: "center",
-    marginTop: 100,
+    marginTop: 135,
   },
   textContainer: {
-    marginBottom: 40,
+    marginBottom: 30,
     paddingTop: 10,
   },
   textContainer2: {

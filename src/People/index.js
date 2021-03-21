@@ -162,8 +162,10 @@ export const People = compose(() => {
                 textAlign: "center",
               }}
             >
-              Jason and Andrew are two of the most experienced advisors in the
-              Financing Advisory and Restructuring marketplace.
+              <i>
+                Jason and Andrew are two of the most experienced advisors in the
+                Financing Advisory and Restructuring marketplace.
+              </i>
             </p>
             <p
               className={textStyles.contentTextLarge}
@@ -173,9 +175,13 @@ export const People = compose(() => {
                 textAlign: "center",
               }}
             >
-              We believe this depth of market knowledge and career experience of
-              having sat at every seat at the table is unique in the Financing
-              Advisory and Restructuring marketplace.
+              <i>
+                <b>
+                  We believe this depth of market knowledge and career
+                  experience of having sat at every seat at the table is unique
+                  in the Financing Advisory and Restructuring marketplace.
+                </b>
+              </i>
             </p>
           </Grid>
         </Grid>
@@ -273,7 +279,7 @@ const useStyles = makeStyles(() => ({
   },
   employeeContainer: {
     minHeight: 600,
-    marginTop: 25,
+    marginTop: 40,
     display: "flex",
     justifyContent: "space-around",
   },

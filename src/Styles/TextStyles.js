@@ -29,9 +29,9 @@ export const useTextStyles = makeStyles(() => ({
   contentTextLarge: {
     fontFamily: "Banschrift",
     fontWeight: 100,
-    fontSize: 18,
+    fontSize: 17,
     lineHeight: 1.4,
-    color: "rgb(0,27,100)",
+    color: "rgb(0,27,110)",
     textAlign: "justify",
   },
   Banschrift2: {
@@ -47,7 +47,7 @@ export const useTextStyles = makeStyles(() => ({
     fontWeight: 100,
     fontSize: 18,
     lineHeight: 1.4,
-    color: "rgb(0,27,100)",
+    color: "rgb(0,27,110)",
     textAlign: "justify",
   },
   contentText2: {

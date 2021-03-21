@@ -18,7 +18,7 @@ export const Home = compose(() => {
                 width: 369,
                 right: "20%",
                 position: "relative",
-                marginTop: 60,
+                marginTop: 50,
               }}
             >
               <p className={textStyles.contentText}>
@@ -35,7 +35,8 @@ export const Home = compose(() => {
                 Financing markets have changed dramatically over the past 20
                 years and new market entrants mean this change remains in its
                 infancy. This trend is no longer ‘high finance’; it is relevant
-                to companies of all sizes, across UK plc and internationally.
+                to companies of all sizes, in all sectors, across UK plc and
+                internationally.
               </p>
             </div>
           </Grid>
@@ -66,7 +67,7 @@ export const Home = compose(() => {
         <Slides />
         <Grid item container xs={2} className={styles.contentContainer}>
           <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: 369, marginTop: 60 }}>
+            <div style={{ width: 369, marginTop: 50 }}>
               <p className={textStyles.contentText}>
                 Our partners have deep experience in developed and emerging
                 markets across all major credit classes in both public financing
@@ -91,8 +92,8 @@ export const Home = compose(() => {
                 Liverpool Street Capital Advisors is a pure-play financing
                 advisor, free from conflicts of interest. Our partners seek to
                 select the best elements from each credit market in order to
-                create bespoke solutions for our clients, applying our world
-                class experience to help your business succeed.
+                create bespoke solutions, applying our world class experience to
+                help our clients succeed.
               </p>
             </div>
           </Grid>

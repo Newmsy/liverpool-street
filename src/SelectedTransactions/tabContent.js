@@ -812,11 +812,12 @@ const TransactionItem = ({ company = "", value, description, cur = "GBP" }) => {
         <p
           className={textStyles.contentText}
           style={{
-            fontSize: 22,
+            fontSize: 18,
             color: "rgb(0,27,100)",
             marginTop: 0,
             marginBottom: 0,
             WebkitFontSmoothing: "antialiased",
+            fontWeight: 600,
           }}
         >
           {cur}
