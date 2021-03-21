@@ -12,11 +12,21 @@ export const People = compose(() => {
   return (
     <Grid item container xs={12} className={styles.peopleContainer}>
       <Grid item container xs={10} spacing={4}>
-        <Grid item xs={4} className={styles.descriptionTextBox}>
+        <Grid
+          item
+          xs={4}
+          className={styles.descriptionTextBox}
+          style={{ display: "flex", justifyContent: "flex-end" }}
+        >
           <div style={{ width: 437, marginLeft: "0%", marginTop: 50 }}>
             <p className={textStyles.contentTextLarge}>
-              <span className={textStyles.greenContentLead}>Jason </span> has
-              more than 25 years’ financial markets experience having held
+              <span
+                className={textStyles.greenContentLead}
+                style={{ fontWeight: 100 }}
+              >
+                Jason
+              </span>
+              has more than 25 years’ financial markets experience having held
               senior financial roles in industry, corporate and investment
               banking, professional services and, most recently, Group CEO of a
               single family office. During his career, Jason has sat on all
@@ -162,6 +172,7 @@ export const People = compose(() => {
                 fontSize: 20,
                 color: "rgb(0,102,102)",
                 textAlign: "center",
+                fontWeight: 100,
               }}
             >
               <i>
@@ -175,6 +186,7 @@ export const People = compose(() => {
                 fontSize: 20,
                 color: "rgb(0,102,102)",
                 textAlign: "center",
+                fontWeight: 100,
               }}
             >
               <i>
@@ -186,8 +198,18 @@ export const People = compose(() => {
           </Grid>
         </Grid>
 
-        <Grid item xs={4} className={styles.descriptionTextBox}>
-          <div style={{ width: 437, marginLeft: "10%", marginTop: 50 }}>
+        <Grid
+          item
+          xs={4}
+          className={styles.descriptionTextBox}
+          style={{ display: "flex", justifyContent: "flex-start" }}
+        >
+          <div
+            style={{
+              width: 437,
+              marginTop: 50,
+            }}
+          >
             <p className={textStyles.contentTextLarge}>
               <span className={textStyles.greenContentLead}>Andrew </span> has
               more than 35 years’ financial markets experience having held
@@ -325,7 +347,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: -15,
   },
   descriptionTextBox: {
-    marginTop: 10,
+    marginTop: -10,
 
     //sort out the width of this to reduce by 20% or so
   },

@@ -15,6 +15,7 @@ export const Map = compose(() => {
             fontSize: 22,
             color: "rgb(0,27,100)",
             marginTop: 8,
+            fontWeight: 600,
           }}
         >
           <img

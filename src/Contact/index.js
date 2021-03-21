@@ -292,7 +292,7 @@ export const Contact = compose(() => {
               >
                 <a
                   href="mailto:info@lscapitaladvisors.com"
-                  style={{ color: "rgb(0,31,96)" }}
+                  style={{ color: "rgb(0,31,96)", fontWeight: 600 }}
                 >
                   info@lscapitaladvisors.com
                 </a>

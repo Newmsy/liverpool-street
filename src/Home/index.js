@@ -22,10 +22,12 @@ export const Home = compose(() => {
               }}
             >
               <p className={textStyles.contentText}>
-                Liverpool Street Capital Advisors is a mid-market focused
-                boutique advisor applying our experience to cover Corporate,
-                Private Equity, Real Estate, Real Assets and Natural Resources
-                clients.
+                <b>
+                  Liverpool Street Capital Advisors is a mid-market focused
+                  boutique advisor applying our experience to cover Corporate,
+                  Private Equity, Real Estate, Real Assets and Natural Resources
+                  clients.
+                </b>
               </p>
             </div>
           </Grid>
