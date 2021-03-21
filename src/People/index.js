@@ -24,7 +24,7 @@ export const People = compose(() => {
                 className={textStyles.greenContentLead}
                 style={{ fontWeight: 100 }}
               >
-                Jason
+                Jason{"   "}
               </span>
               has more than 25 years’ financial markets experience having held
               senior financial roles in industry, corporate and investment
@@ -92,7 +92,15 @@ export const People = compose(() => {
           justify="center"
           alignContent="center"
         >
-          <Grid item xs={5}>
+          <Grid
+            item
+            xs={5}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             <img
               src="/JasonBW.png"
               alt="Jason Green"
@@ -124,7 +132,15 @@ export const People = compose(() => {
               </span>
             </h1>
           </Grid>
-          <Grid item xs={5}>
+          <Grid
+            item
+            xs={5}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             <img
               src="/AndrewPeopleImageBW.png"
               alt="Andrew Golding"
@@ -211,8 +227,13 @@ export const People = compose(() => {
             }}
           >
             <p className={textStyles.contentTextLarge}>
-              <span className={textStyles.greenContentLead}>Andrew </span> has
-              more than 35 years’ financial markets experience having held
+              <span
+                className={textStyles.greenContentLead}
+                style={{ fontWeight: 100 }}
+              >
+                Andrew{" "}
+              </span>{" "}
+              has more than 35 years’ financial markets experience having held
               senior financial roles in investment banking, private equity and,
               most recently, as banking advisor for a leading pan-European
               mid-market private equity investor. During his career, Andrew has
@@ -314,6 +335,7 @@ const useStyles = makeStyles(() => ({
   },
   peoplePhoto2: {
     width: 200,
+
     height: 235,
     boxShadow: "5px 5px 15px #000000",
     filter: "grayscale(100%)",

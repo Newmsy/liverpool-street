@@ -35,7 +35,10 @@ export const Slides = compose(() => {
           setFlipped={setFlipped}
           zIndex={3}
         >
-          <p className={textStyles.contentTextGreen}>
+          <p
+            className={textStyles.contentTextGreen}
+            style={{ color: "rgb(0,27,110)" }}
+          >
             Business / shareholder change
           </p>
           <div className={styles.indented}>

@@ -77,6 +77,7 @@ export const useTextStyles = makeStyles(() => ({
     fontSize: 18,
     lineHeight: 1.4,
     marginTop: 0,
+    opacity: 1,
     color: "rgb(0,27,110)",
   },
   contentTextLightTight: {
