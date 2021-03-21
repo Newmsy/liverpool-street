@@ -54,7 +54,7 @@ export const Contact = compose(() => {
                   fontSize: 22,
                   marginTop: -32,
                   textAlign: "center",
-                  marginRight: 75,
+                  marginRight: 115,
                 }}
               >
                 Associate
@@ -334,7 +334,7 @@ export const Contact = compose(() => {
                 style={{
                   fontSize: 22,
                   marginTop: 5,
-                  marginLeft: 69,
+                  marginLeft: 109,
                   textAlign: "center",
                 }}
               >
