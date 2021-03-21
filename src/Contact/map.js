@@ -67,11 +67,12 @@ export const Map = compose(() => {
       <img
         src="/MapClearPin.png"
         style={{
-          width: 360,
+          width: 440,
           objectFit: "cover",
           boxShadow: "2px 3px 10px #888888",
-          marginTop: 120,
-          height: 375,
+          marginTop: 38,
+          height: 459,
+          objectPosition: "37% 50%",
         }}
       />
       {/* <iframe

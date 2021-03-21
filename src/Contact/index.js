@@ -30,10 +30,11 @@ export const Contact = compose(() => {
               <img
                 src={"/Building1.jpg"}
                 style={{
-                  width: 360,
+                  width: 440,
                   objectFit: "cover",
+                  objectPosition: "50% 65%",
                   boxShadow: "2px 3px 10px #888888",
-                  marginTop: 37,
+                  marginTop: 38,
                   height: 460,
                   position: "absolute",
                   right: 0,
