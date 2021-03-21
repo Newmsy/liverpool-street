@@ -15,7 +15,6 @@ export const Contact = compose(() => {
   //25% smaller graphics
   //leave same size
   //bring graphics a bit closer to center
-  //
 
   return (
     <Grid container xs={12} className={styles.contactContainer}>
