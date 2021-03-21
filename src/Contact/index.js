@@ -296,7 +296,7 @@ export const Contact = compose(() => {
                 className={textStyles.contentTextLight2}
                 style={{
                   fontSize: 22,
-                  marginTop: 30,
+                  marginTop: 50,
                   textAlign: "center",
                 }}
               >
