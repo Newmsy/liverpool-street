@@ -12,13 +12,17 @@ export const Home = compose(() => {
     <Grid container xs={12} className={styles.homePageContainer}>
       <Grid item container alignItems="space-between" justify="center">
         <Grid item container xs={2} className={styles.contentContainer}>
-          <Grid item xs={12} className={styles.textContainer}>
+          <Grid
+            item
+            xs={12}
+            className={styles.textContainer}
+            style={{ justifyContent: "flex-end", display: "flex" }}
+          >
             <div
               style={{
                 width: 369,
-                right: "20%",
-                position: "relative",
-                marginTop: 50,
+                minWidth: 369,
+                marginTop: 32,
               }}
             >
               <p className={textStyles.contentText}>
@@ -31,8 +35,13 @@ export const Home = compose(() => {
               </p>
             </div>
           </Grid>
-          <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: 369, right: "20%", position: "relative" }}>
+          <Grid
+            item
+            xs={12}
+            className={styles.textContainer}
+            style={{ justifyContent: "flex-end", display: "flex" }}
+          >
+            <div style={{ width: 369, minWidth: 369 }}>
               <p className={textStyles.contentText}>
                 Financing markets have changed dramatically over the past 20
                 years and new market entrants mean this change remains in its
@@ -42,8 +51,13 @@ export const Home = compose(() => {
               </p>
             </div>
           </Grid>
-          <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: 369, right: "20%", position: "relative" }}>
+          <Grid
+            item
+            xs={12}
+            className={styles.textContainer}
+            style={{ justifyContent: "flex-end", display: "flex" }}
+          >
+            <div style={{ width: 369, minWidth: 369 }}>
               <p className={textStyles.contentText}>
                 As well as providing our clients with access to the public
                 financing markets, we also connect our clients to the clearers,
@@ -53,8 +67,13 @@ export const Home = compose(() => {
               </p>
             </div>
           </Grid>
-          <Grid item xs={12} className={styles.textContainer}>
-            <div style={{ width: 369, right: "20%", position: "relative" }}>
+          <Grid
+            item
+            xs={12}
+            className={styles.textContainer}
+            style={{ justifyContent: "flex-end", display: "flex" }}
+          >
+            <div style={{ width: 369, minWidth: 369 }}>
               <p
                 className={textStyles.contentText}
                 style={{ textAlign: "justify" }}

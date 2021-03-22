@@ -7,7 +7,6 @@ import { useTextStyles } from "../Styles/TextStyles";
 export const People = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-  //Background of photos
 
   return (
     <Grid item container xs={12} className={styles.peopleContainer}>
