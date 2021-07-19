@@ -18,12 +18,7 @@ export const Contact = compose(() => {
 
   return (
     <Grid container xs={12} className={styles.contactContainer}>
-      <Grid
-        item
-        container
-        xs={10}
-        style={{ minWidth: 1200, justifyContent: "center" }}
-      >
+      <Grid item container xs={10} style={{ minWidth: 1200, justifyContent: "center" }}>
         <Grid item xs={4}>
           <Grid item xs={12}>
             <div style={{ position: "relative", height: 560 }}>
@@ -42,11 +37,7 @@ export const Contact = compose(() => {
               />
             </div>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            style={{ display: "flex", justifyContent: "flex-end" }}
-          >
+          <Grid item xs={12} style={{ display: "flex", justifyContent: "flex-end" }}>
             <div className={styles.textContainer}>
               <p
                 className={textStyles.contentTextLight2}
@@ -59,23 +50,14 @@ export const Contact = compose(() => {
               >
                 Associate
                 <a href="https://www.hbf.co.uk/" target="_blank">
-                  <img
-                    src={"/HBF.png"}
-                    className={styles.linkedIn}
-                    style={{ top: 20, width: 63, marginRight: 10 }}
-                  />
+                  <img src={"/HBF.png"} className={styles.linkedIn} style={{ top: 20, width: 63, marginRight: 10 }} />
                 </a>
                 Members
               </p>
             </div>
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          xs={3}
-          style={{ height: "auto", alignContent: "flex-start", marginTop: 40 }}
-        >
+        <Grid item container xs={3} style={{ height: "auto", alignContent: "flex-start", marginTop: 40 }}>
           <Grid item xs={12} className={styles.textContainer}>
             <p
               className={textStyles.contentTextLight2}
@@ -184,10 +166,7 @@ export const Contact = compose(() => {
                 +44 (0) 7788 233006
               </b>
             </p>
-            <p
-              className={textStyles.contentTextLight2}
-              style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-            >
+            <p className={textStyles.contentTextLight2} style={{ color: "rgb(0,102,102)", textAlign: "center" }}>
               <b></b>
             </p>
             <p
@@ -254,10 +233,7 @@ export const Contact = compose(() => {
                   +44 (0) 7584 668337
                 </b>
               </p>
-              <p
-                className={textStyles.contentTextLight2}
-                style={{ color: "rgb(0,102,102)", textAlign: "center" }}
-              >
+              <p className={textStyles.contentTextLight2} style={{ color: "rgb(0,102,102)", textAlign: "center" }}>
                 <b></b>
               </p>
               <p
@@ -291,10 +267,7 @@ export const Contact = compose(() => {
                   textAlign: "center",
                 }}
               >
-                <a
-                  href="mailto:info@lscapitaladvisors.com"
-                  style={{ color: "rgb(0,31,96)", fontWeight: 600 }}
-                >
+                <a href="mailto:info@lscapitaladvisors.com" style={{ color: "rgb(0,31,96)", fontWeight: 600 }}>
                   info@lscapitaladvisors.co.uk
                 </a>
               </p>
@@ -311,10 +284,7 @@ export const Contact = compose(() => {
                 }}
               >
                 Follow us on
-                <a
-                  href="https://www.linkedin.com/company/liverpool-street-capital-advisors/about/?viewAsMember=true"
-                  target="_blank"
-                >
+                <a href="https://www.linkedin.com/company/liverpool-street-capital-advisors/about/?viewAsMember=true" target="_blank">
                   <img src={"/linkedIn.jpg"} className={styles.linkedIn} />
                 </a>
               </p>
@@ -323,11 +293,7 @@ export const Contact = compose(() => {
         </Grid>
         <Grid item container style={{ justifyContent: "flex-start" }} xs={4}>
           <Map />
-          <Grid
-            item
-            xs={12}
-            style={{ display: "flex", justifyContent: "flex-start" }}
-          >
+          <Grid item xs={12} style={{ display: "flex", justifyContent: "flex-start" }}>
             <div className={styles.textContainer}>
               <p
                 className={textStyles.contentTextLight2}
@@ -340,11 +306,7 @@ export const Contact = compose(() => {
               >
                 Associate
                 <a href="https://www.r3.org.uk/" target="_blank">
-                  <img
-                    src={"/R3-Logo.png"}
-                    className={styles.linkedIn}
-                    style={{ top: 30, width: 75, marginRight: 10 }}
-                  />
+                  <img src={"/R3-Logo.png"} className={styles.linkedIn} style={{ top: 30, width: 75, marginRight: 10 }} />
                 </a>
                 Members
               </p>
@@ -352,18 +314,21 @@ export const Contact = compose(() => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid><div style={{marginTop: 30}}>
-        <p
-              className={textStyles.contentTextLight2}
-              style={{
-                color: "rgb(0,102,102)",
-                textAlign: "center",
-                fontSize: 16,
-              }}
-            >
-              Liverpool Street Capital Advisors Limited is an appointed representative of Talbot Capital Limited which is authorised and regulated by the Financial Conduct Authority
-            </p>
-            </div></Grid>
+      <Grid>
+        <div style={{ marginTop: 15, marginBottom: 20 }}>
+          <p
+            className={textStyles.contentTextLight2}
+            style={{
+              color: "rgb(0,102,102)",
+              textAlign: "center",
+              fontSize: 16,
+            }}
+          >
+            Liverpool Street Capital Advisors Limited is an appointed representative of Talbot Capital Limited which is authorised and
+            regulated by the Financial Conduct Authority
+          </p>
+        </div>
+      </Grid>
     </Grid>
   );
 });
