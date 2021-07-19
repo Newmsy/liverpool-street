@@ -6,7 +6,6 @@ import Carousel from "react-material-ui-carousel";
 export const WhyNow = compose(() => {
   const styles = useStyles();
   const textStyles = useTextStyles();
-  const [index, setIndex] = React.useState(0);
   //
   return (
     <Grid container xs={12} className={styles.homePageContainer}>
@@ -15,8 +14,8 @@ export const WhyNow = compose(() => {
         container
         alignItems="flex-start"
         justifyContent="center"
-        spacing={8}
-        xs={9}
+        spacing={2}
+        xs={10}
       >
         <Card imagePath="/Globe.svg">
           <p className={textStyles.contentTextLarge}>
@@ -131,16 +130,19 @@ export const Card = compose((props) => {
   return (
     <Grid
       item
+      container
       xs={4}
       justify="center"
-      style={{ marginBottom: 30, justifyContent: "center" }}
+      style={{ marginBottom: 30, justifyContent: "center", }}
     >
+      <Grid item>
       <Paper className={styles.cardPaper} elevation={0}>
         <Box marginTop={2} marginBottom={3}>
           <img src={props.imagePath} className={styles.cardImage} />
         </Box>
         <Box>{props.children}</Box>
       </Paper>
+      </Grid>
     </Grid>
   );
 });
@@ -149,7 +151,7 @@ const useStyles = makeStyles(() => ({
   homePageContainer: {
     justifyContent: "center",
     marginTop: 130,
-    flexDirection: "column",
+    flexDirection: "row",
     alignItems: "center",
   },
   indented: {
@@ -160,8 +162,6 @@ const useStyles = makeStyles(() => ({
   },
   contentContainer: {
     marginTop: 20,
-    marginLeft: 50,
-    marginRight: 50,
     paddingBottom: 50,
     flexDirection: "row",
     alignContent: "flex-start",
@@ -177,6 +177,6 @@ const useStyles = makeStyles(() => ({
     width: 400,
     borderRadius: 15,
     backgroundColor: "transparent",
-    padding: 20,
+    padding: 0,
   },
 }));

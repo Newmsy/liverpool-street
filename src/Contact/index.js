@@ -295,7 +295,7 @@ export const Contact = compose(() => {
                   href="mailto:info@lscapitaladvisors.com"
                   style={{ color: "rgb(0,31,96)", fontWeight: 600 }}
                 >
-                  info@lscapitaladvisors.com
+                  info@lscapitaladvisors.co.uk
                 </a>
               </p>
             </div>
@@ -352,6 +352,18 @@ export const Contact = compose(() => {
           </Grid>
         </Grid>
       </Grid>
+      <Grid><div style={{marginTop: 30}}>
+        <p
+              className={textStyles.contentTextLight2}
+              style={{
+                color: "rgb(0,102,102)",
+                textAlign: "center",
+                fontSize: 16,
+              }}
+            >
+              Liverpool Street Capital Advisors Limited is an appointed representative of Talbot Capital Limited which is authorised and regulated by the Financial Conduct Authority
+            </p>
+            </div></Grid>
     </Grid>
   );
 });
